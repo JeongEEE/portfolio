@@ -4,6 +4,7 @@ import Info from '/src/info'
 import About from '/src/about'
 import Skills from '/src/skills'
 import Grid from '@mui/material/Grid';
+import useMediaQuery from '@mui/material/useMediaQuery';
 
 const wrap = css`
 	width: 100vw;
@@ -25,6 +26,7 @@ const info = css`
 `
 
 function App() {
+	const isMobile = useMediaQuery("(max-width: 600px)");
 
   return (
     <div css={wrap}>
@@ -34,12 +36,12 @@ function App() {
 						<Info />
 					</Grid>
 				</Grid>
-				<Grid container css={css`height:600px;width:100%;`}>
+				<Grid container css={css`width:100%;`}>
 					<Grid container css={content}>
 						<About />
 					</Grid>
 				</Grid>
-				<Grid container css={css`height:600px;width:100%;`}>
+				<Grid container css={css`height:600px;width:100%;background-color:#5870f3;`}>
 					<Grid container css={content}>
 						<Skills />
 					</Grid>
