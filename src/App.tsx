@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react'
 import { css } from '@emotion/react'
 import Info from '/src/info'
 import About from '/src/about'
+import Skills from '/src/skills'
 import Grid from '@mui/material/Grid';
 
 const wrap = css`
@@ -12,15 +13,37 @@ const content = css`
 	max-width: 1100px;
 	margin-left: auto;
 	margin-right: auto;
+	z-index: 2;
+`
+const info = css`
+	background: url("/src/assets/images/bg2.png");
+	background-size:     cover;
+  background-repeat:   no-repeat;
+  background-position: center center;
+	height: 600px;
+	width: 100%;
 `
 
 function App() {
 
   return (
     <div css={wrap}>
-			<Grid container direction="column" css={content}>
-				<Info />
-				<About />
+			<Grid container direction="column">
+				<Grid container css={css`${info};`}>
+					<Grid container css={css`${content};`}>
+						<Info />
+					</Grid>
+				</Grid>
+				<Grid container css={css`height:600px;width:100%;`}>
+					<Grid container css={content}>
+						<About />
+					</Grid>
+				</Grid>
+				<Grid container css={css`height:600px;width:100%;`}>
+					<Grid container css={content}>
+						<Skills />
+					</Grid>
+				</Grid>
 			</Grid>
     </div>
   )

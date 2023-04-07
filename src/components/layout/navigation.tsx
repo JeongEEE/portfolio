@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 
-const header = css`
+const header = (props) => css`
 	position: fixed;
 	left: 0;
 	top: 0;
@@ -11,26 +11,47 @@ const header = css`
 	height: 70px;
 	display: flex;
 	align-items: center;
+	z-index: 5;
+	box-shadow: ${props.show ? '2px 2px 2px 0px grey' : 'none'};
+	color: ${props.show ? 'black' : 'white'};
+	background-color: ${props.show ? 'white' : 'transparent'};
 `
 const content = css`
 	max-width: 1100px;
+	min-width: 1100px;
 	margin-left: auto;
 	margin-right: auto;
 	font-weight: bold;
 `
+const nav = css`
+	cursor: pointer;
+	&:hover {
+		color: blue;
+	}
+`
 
-const Navigation = () => {
+const Navigation = ({show}) => {
+
+	const scrollToTop = () => {
+    window.scroll({ top: 0, behavior: 'smooth' });
+  }
+	const scrollToBottom = (bottom) => {
+    window.scrollTo({ top: bottom, behavior: 'smooth' });
+  }
+
 	return (
-		<header css={header}>
+		<header css={header({show})}>
 			<Grid container direction="row" css={content} justifyContent="space-between" alignItems="center">
-				<Grid item container xs={2}>
+				<Grid item container xs={2} css={css`${nav};font-size:1.5rem;`}
+					onClick={scrollToTop}>
 					김규정 Portfolio
 				</Grid>
 				<Grid item container xs={10} direction="row" justifyContent="right" alignItems="center">
-					<Grid item container xs={'auto'} mr={3}>About Me</Grid>
-					<Grid item container xs={'auto'} mr={3}>Skills</Grid>
-					<Grid item container xs={'auto'} mr={3}>Projects</Grid>
-					<Grid item container xs={'auto'} mr={3}>Career</Grid>
+					<Grid item container xs={'auto'} mr={3} css={nav}
+						onClick={()=> scrollToBottom(530)}>About Me</Grid>
+					<Grid item container xs={'auto'} mr={3} css={nav}>Skills</Grid>
+					<Grid item container xs={'auto'} mr={3} css={nav}>Projects</Grid>
+					<Grid item container xs={'auto'} mr={3} css={nav}>Career</Grid>
 				</Grid>
 			</Grid>
 		</header>
