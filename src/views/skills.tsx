@@ -21,7 +21,7 @@ const Skills = () => {
 	return (
 		<Grid container>
 			<Grid container direction="column" alignItems="center" pt={10} pb={15}
-				css={css`color:black;`}>
+				css={css`color:white;`}>
 				<Typography variant="h3">SKILLS</Typography>
 				<Grid container css={css`border-bottom:5px solid white;width:70px;`} pt={2} mb={4}></Grid>
 				<Grid container direction="column" alignItems="left">
