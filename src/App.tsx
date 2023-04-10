@@ -3,8 +3,10 @@ import { css } from '@emotion/react'
 import Info from '/src/info'
 import About from '/src/about'
 import Skills from '/src/skills'
+import Link from '/src/link'
 import Grid from '@mui/material/Grid';
 import useMediaQuery from '@mui/material/useMediaQuery';
+import TopButton from '/src/components/topButton';
 
 const wrap = css`
 	width: 100vw;
@@ -46,7 +48,13 @@ function App() {
 						<Skills />
 					</Grid>
 				</Grid>
+				<Grid container css={css`width:100%;background-color:#222;`}>
+					<Grid container css={content}>
+						<Link />
+					</Grid>
+				</Grid>
 			</Grid>
+			<TopButton />
     </div>
   )
 }

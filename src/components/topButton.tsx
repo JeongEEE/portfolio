@@ -11,14 +11,15 @@ const top = css`
 	font-weight: bold;
   font-size: 15px;
   padding :15px 10px;
-  background-color: #000;
-  color:#fff;
+  background-color: #fff;
+  color: black;
   border: 1px solid rgb(210, 204, 193);
   border-radius: 50%;
   outline: none;
   cursor: pointer;
 	&:hover {
-		color :#415df9;
+		background-color: #415df9;
+		color :#fff;
 	}
 `
 

@@ -10,7 +10,7 @@ const skillItem = css`
 	color: #837df6;
 	&:hover {
 		transform: scale(1.025);
-		transition-duration: 0.5s;
+		transition-duration: 0.3s;
 		z-index: 3;
 		box-shadow: 1px 1px 1px 1px rgba(70,70,70,0.2);
 		color: blue;

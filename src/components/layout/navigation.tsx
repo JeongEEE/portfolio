@@ -50,6 +50,7 @@ const Navigation = ({show}) => {
 					<Grid item container xs={'auto'} mr={3} css={nav}
 						onClick={()=> scrollToBottom(530)}>About Me</Grid>
 					<Grid item container xs={'auto'} mr={3} css={nav}>Skills</Grid>
+					<Grid item container xs={'auto'} mr={3} css={nav}>Link</Grid>
 					<Grid item container xs={'auto'} mr={3} css={nav}>Projects</Grid>
 					<Grid item container xs={'auto'} mr={3} css={nav}>Career</Grid>
 				</Grid>
