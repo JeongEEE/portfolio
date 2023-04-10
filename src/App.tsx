@@ -41,7 +41,7 @@ function App() {
 						<About />
 					</Grid>
 				</Grid>
-				<Grid container css={css`height:600px;width:100%;background-color:#5870f3;`}>
+				<Grid container css={css`width:100%;background-color:#5870f3;`}>
 					<Grid container css={content}>
 						<Skills />
 					</Grid>
