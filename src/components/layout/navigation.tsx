@@ -2,6 +2,7 @@ import React, { Fragment, useState, useEffect } from 'react'
 import { css } from '@emotion/react'
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
+import { Link } from 'react-scroll';
 
 const header = (props) => css`
 	position: fixed;
@@ -47,12 +48,21 @@ const Navigation = ({show}) => {
 					김규정 Portfolio
 				</Grid>
 				<Grid item container xs={10} direction="row" justifyContent="right" alignItems="center">
-					<Grid item container xs={'auto'} mr={3} css={nav}
-						onClick={()=> scrollToBottom(530)}>About Me</Grid>
-					<Grid item container xs={'auto'} mr={3} css={nav}>Skills</Grid>
-					<Grid item container xs={'auto'} mr={3} css={nav}>Link</Grid>
-					<Grid item container xs={'auto'} mr={3} css={nav}>Projects</Grid>
-					<Grid item container xs={'auto'} mr={3} css={nav}>Career</Grid>
+					<Link to="about" spy={true} smooth={true}>
+						<Grid item container xs={'auto'} mr={3} css={nav}>About Me</Grid>
+					</Link>
+					<Link to="skills" spy={true} smooth={true}>
+						<Grid item container xs={'auto'} mr={3} css={nav}>Skills</Grid>
+					</Link>
+					<Link to="link" spy={true} smooth={true}>
+						<Grid item container xs={'auto'} mr={3} css={nav}>Link</Grid>
+					</Link>
+					<Link to="projects" spy={true} smooth={true}>
+						<Grid item container xs={'auto'} mr={3} css={nav}>Projects</Grid>
+					</Link>
+					<Link to="career" spy={true} smooth={true}>
+						<Grid item container xs={'auto'} mr={3} css={nav}>Career</Grid>
+					</Link>
 				</Grid>
 			</Grid>
 		</header>

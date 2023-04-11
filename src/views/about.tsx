@@ -3,7 +3,8 @@ import { css } from '@emotion/react'
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import FaceIcon from '@mui/icons-material/Face';
-import SchoolIcon from '@mui/icons-material/School';
+// import SchoolIcon from '@mui/icons-material/School';
+import BusinessCenterIcon from '@mui/icons-material/BusinessCenter';
 import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
@@ -32,11 +33,10 @@ const About = () => {
 						</Grid>
 					</Grid>
 					<Grid item container xs={4} pl={2} direction="row" alignItems="start">
-						<SchoolIcon fontSize="large" sx={{ color: 'black' }} />
+						<BusinessCenterIcon fontSize="large" sx={{ color: 'black' }} />
 						<Grid item container xs={'auto'} pl={1} direction="column" alignItems="start">
-							<Typography variant="h5">학력</Typography>
-							<Typography variant="h6">선문대학교</Typography>
-							<Typography variant="h6">(컴퓨터공학과)</Typography>
+							<Typography variant="h5">경력</Typography>
+							<Typography variant="h6">4년차</Typography>
 						</Grid>
 					</Grid>
 

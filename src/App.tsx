@@ -42,27 +42,27 @@ function App() {
 					</Grid>
 				</Grid>
 				<Grid container css={css`width:100%;`}>
-					<Grid container css={content}>
+					<Grid container css={content} id="about">
 						<About />
 					</Grid>
 				</Grid>
 				<Grid container css={css`width:100%;background-color:#5870f3;`}>
-					<Grid container css={content}>
+					<Grid container css={content} id="skills">
 						<Skills />
 					</Grid>
 				</Grid>
 				<Grid container css={css`width:100%;background-color:#222;`}>
-					<Grid container css={content}>
+					<Grid container css={content} id="link">
 						<Link />
 					</Grid>
 				</Grid>
 				<Grid container css={css`width:100%;background-color:#54acf9;`}>
-					<Grid container css={content}>
+					<Grid container css={content} id="projects">
 						<Projects />
 					</Grid>
 				</Grid>
 				<Grid container css={css`width:100%;background-color:#efefef;`}>
-					<Grid container css={content}>
+					<Grid container css={content} id="career">
 						<Career />
 					</Grid>
 				</Grid>
