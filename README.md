@@ -2,7 +2,7 @@
 Node v.18.13.0, React 18, Vite, Typescript, Material UI, Emotion, Firebase
 
 ----
-
+https://portfolio-198db.firebaseapp.com
 
 ----
 ## Getting Started
