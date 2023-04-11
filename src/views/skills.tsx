@@ -28,29 +28,29 @@ const Skills = () => {
 					<Grid container p={3} css={skillItem} direction="column">
 						<Typography variant="h4">Frontend</Typography>
 						<Grid container css={css`border-bottom:1px solid black;width:150px;`} pt={1} mb={1}></Grid>
-						<img alt="frontend" src="images/frontend.png" css={css`width:800px;`} />
+						<img alt="frontend" src="images/frontend.png" css={css`width:800px;`} loading="lazy" />
 					</Grid>
 					<Grid container p={3} mt={2} css={skillItem} direction="row">
 						<Grid item container xs={4} direction="column">
 							<Typography variant="h4">Backend</Typography>
 							<Grid container css={css`border-bottom:1px solid black;width:140px;`} pt={1} mb={1}></Grid>
-							<img alt="backend" src="images/backend.png" css={css`width:240px;`} />
+							<img alt="backend" src="images/backend.png" css={css`width:240px;`} loading="lazy" />
 						</Grid>
 						<Grid item container xs={5} direction="column">
 							<Typography variant="h4">Deployment</Typography>
 							<Grid container css={css`border-bottom:1px solid black;width:190px;`} pt={1} mb={1}></Grid>
-							<img alt="deploy" src="images/deploy.png" css={css`width:420px;`} />
+							<img alt="deploy" src="images/deploy.png" css={css`width:420px;`} loading="lazy" />
 						</Grid>
 						<Grid item container xs={3} direction="column">
 							<Typography variant="h4">Certificate</Typography>
 							<Grid container css={css`border-bottom:1px solid black;width:160px;`} pt={1} mb={1}></Grid>
-							<img alt="aws" src="images/aws_cp.png" css={css`width:100px;`} />
+							<img alt="aws" src="images/aws_cp.png" css={css`width:100px;`} loading="lazy" />
 						</Grid>
 					</Grid>
 					<Grid container p={3} mt={2} css={skillItem} direction="column">
 						<Typography variant="h4">Etc</Typography>
 						<Grid container css={css`border-bottom:1px solid black;width:60px;`} pt={1} mb={1}></Grid>
-						<img alt="etc" src="images/etc.png" css={css`width:800px;`} />
+						<img alt="etc" src="images/etc.png" css={css`width:800px;`} loading="lazy" />
 					</Grid>
 				</Grid>
 			</Grid>

@@ -27,11 +27,11 @@ const Shopping = () => {
 				<Grid item container xs={6} pr={1}>
 					<Carousel autoPlay={false} css={css`width:100%;`}>
 						<img css={css`width:100%;height:350px;`} src="images/shopping1.png" alt="shopping1" />
-						<img css={css`width:100%;height:350px;`} src="images/shopping2.png" alt="shopping2" />
-						<img css={css`width:100%;height:350px;`} src="images/shopping3.png" alt="shopping3" />
-						<img css={css`width:100%;height:350px;`} src="images/shopping4.png" alt="shopping4" />
-						<img css={css`width:100%;height:350px;`} src="images/shopping5.png" alt="shopping5" />
-						<img css={css`width:100%;height:350px;`} src="images/shopping6.png" alt="shopping6" />
+						<img css={css`width:100%;height:350px;`} src="images/shopping2.png" alt="shopping2" loading="lazy" />
+						<img css={css`width:100%;height:350px;`} src="images/shopping3.png" alt="shopping3" loading="lazy" />
+						<img css={css`width:100%;height:350px;`} src="images/shopping4.png" alt="shopping4" loading="lazy" />
+						<img css={css`width:100%;height:350px;`} src="images/shopping5.png" alt="shopping5" loading="lazy" />
+						<img css={css`width:100%;height:350px;`} src="images/shopping6.png" alt="shopping6" loading="lazy" />
 					</Carousel>
 				</Grid>
 				<Grid item container xs={6} pl={1} direction="column" css={css`color:black;`}>

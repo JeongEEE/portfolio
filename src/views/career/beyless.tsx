@@ -9,7 +9,7 @@ const Beyless = () => {
 			<Grid item container xs={3} p={2} direction="column" alignItems="center">
 				<Grid container p={2} mb={1} justifyContent="center"
 					css={css`border:1px solid #989898;border-radius:10px;`}>
-					<img src="images/beyless_logo4.png" css={css`width:150px;`} alt="beyless" />
+					<img src="images/beyless_logo4.png" css={css`width:150px;`} alt="beyless" loading="lazy" />
 				</Grid>
 				<Typography variant="h4" css={css`color:black;`}>(주)베이리스</Typography>
 				<Typography variant="h6" css={css`color:gray;`}>2019.09 ~ 현재</Typography>

@@ -27,9 +27,9 @@ const Portfolio = () => {
 				<Grid item container xs={6} pr={1}>
 					<Carousel autoPlay={false} css={css`width:100%;`}>
 						<img css={css`width:100%;height:350px;`} src="images/port1.png" alt="port1" />
-						<img css={css`width:100%;height:350px;`} src="images/port2.png" alt="port2" />
-						<img css={css`width:100%;height:350px;`} src="images/port3.png" alt="port3" />
-						<img css={css`width:100%;height:350px;`} src="images/port4.png" alt="port4" />
+						<img css={css`width:100%;height:350px;`} src="images/port2.png" alt="port2" loading="lazy" />
+						<img css={css`width:100%;height:350px;`} src="images/port3.png" alt="port3" loading="lazy" />
+						<img css={css`width:100%;height:350px;`} src="images/port4.png" alt="port4" loading="lazy" />
 					</Carousel>
 				</Grid>
 				<Grid item container xs={6} pl={1} direction="column" css={css`color:black;`}>
@@ -50,8 +50,11 @@ const Portfolio = () => {
 							<TaskAltIcon fontSize="large" sx={{ color: 'black' }} />
 							<Typography variant="h6">URL</Typography>
 						</Grid>
-						<Grid item container xs={9}>
-
+						<Grid item container xs={9}
+							onClick={() => window.open('https://portfolio-198db.firebaseapp.com', '_blank')}>
+							<Typography variant="h7" css={css`color:blue;${url};`}>
+								{'https://portfolio-198db.firebaseapp.com'}
+							</Typography>
 						</Grid>
 					</Grid>
 					<Grid container pb={1} direction="row" alignItems="start">

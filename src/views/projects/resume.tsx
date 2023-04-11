@@ -26,7 +26,7 @@ const Resume = () => {
 				<Grid item container xs={7} pr={1}>
 					<Carousel autoPlay={false} css={css`width:100%;`}>
 						<img css={css`width:100%;height:350px;`} src="images/bg1.png" alt="bg1" />
-						<img css={css`width:100%;height:350px;`} src="images/bg2.png" alt="bg2" />
+						<img css={css`width:100%;height:350px;`} src="images/bg2.png" alt="bg2" loading="lazy" />
 					</Carousel>
 				</Grid>
 				<Grid item container xs={5} direction="column">
