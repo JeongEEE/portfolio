@@ -13,6 +13,7 @@ const Beyless = () => {
 				</Grid>
 				<Typography variant="h4" css={css`color:black;`}>(주)베이리스</Typography>
 				<Typography variant="h6" css={css`color:gray;`}>2019.09 ~ 현재</Typography>
+				<Typography variant="h6" css={css`color:gray;`}>플랫폼 팀</Typography>
 			</Grid>
 			
 			<Grid item container xs={9} p={2} direction="column" alignItems="center"
