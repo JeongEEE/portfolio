@@ -26,10 +26,10 @@ const Portfolio = () => {
 			<Grid mt={2} container direction="row" alignItems="start">
 				<Grid item container xs={6} pr={1}>
 					<Carousel autoPlay={false} css={css`width:100%;`}>
-						<img css={css`width:100%;height:350px;`} src="/src/assets/images/port1.png" alt="port1" />
-						<img css={css`width:100%;height:350px;`} src="/src/assets/images/port2.png" alt="port2" />
-						<img css={css`width:100%;height:350px;`} src="/src/assets/images/port3.png" alt="port3" />
-						<img css={css`width:100%;height:350px;`} src="/src/assets/images/port4.png" alt="port4" />
+						<img css={css`width:100%;height:350px;`} src="images/port1.png" alt="port1" />
+						<img css={css`width:100%;height:350px;`} src="images/port2.png" alt="port2" />
+						<img css={css`width:100%;height:350px;`} src="images/port3.png" alt="port3" />
+						<img css={css`width:100%;height:350px;`} src="images/port4.png" alt="port4" />
 					</Carousel>
 				</Grid>
 				<Grid item container xs={6} pl={1} direction="column" css={css`color:black;`}>

@@ -34,7 +34,7 @@ const LinkPage = () => {
 				<Grid container direction="column" alignItems="left">
 					<Grid container p={2} pt={1} pb={1} css={item} direction="row" alignItems="center"
 						onClick={() => window.open('https://github.com/JeongEEE', '_blank')}>
-						<img alt="github" src="/src/assets/images/github.png" css={css`width:150px;`} />
+						<img alt="github" src="images/github.png" css={css`width:150px;`} />
 						<Typography variant="h6" css={css`color:blue;padding-top:7px;${url};`}>
 							{'https://github.com/JeongEEE'}
 						</Typography>

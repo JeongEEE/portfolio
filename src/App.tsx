@@ -22,7 +22,7 @@ const content = css`
 	z-index: 2;
 `
 const info = css`
-	background: url("/src/assets/images/bg2.png");
+	background: url("images/bg2.png");
 	background-size:     cover;
   background-repeat:   no-repeat;
   background-position: center center;
