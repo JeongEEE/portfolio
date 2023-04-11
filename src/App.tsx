@@ -5,6 +5,7 @@ import About from '/src/views/about'
 import Skills from '/src/views/skills'
 import Link from '/src/views/link'
 import Projects from '/src/views/projects/index'
+import Career from '/src/views/career/index'
 import Grid from '@mui/material/Grid';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import TopButton from '/src/components/topButton';
@@ -57,6 +58,11 @@ function App() {
 				<Grid container css={css`width:100%;background-color:#54acf9;`}>
 					<Grid container css={content}>
 						<Projects />
+					</Grid>
+				</Grid>
+				<Grid container css={css`width:100%;background-color:#efefef;`}>
+					<Grid container css={content}>
+						<Career />
 					</Grid>
 				</Grid>
 			</Grid>

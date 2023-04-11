@@ -39,7 +39,7 @@ const LinkPage = () => {
 							{'https://github.com/JeongEEE'}
 						</Typography>
 					</Grid>
-					<Grid container p={2} mt={2} css={item} direction="row" alignItems="center"
+					{/* <Grid container p={2} mt={2} css={item} direction="row" alignItems="center"
 						onClick={() => window.open('https://jeongeee.github.io/resume', '_blank')}>
 						<Grid item container xs={'auto'} pl={1} pr={2} direction="row" alignItems="center">
 							<LinkIcon fontSize="large" sx={{ color: 'black' }} />
@@ -48,7 +48,7 @@ const LinkPage = () => {
 						<Typography variant="h6" css={css`color:blue;${url};`}>
 							{'https://jeongeee.github.io/resume'}
 						</Typography>
-					</Grid>
+					</Grid> */}
 				</Grid>
 			</Grid>
 		</Grid>
