@@ -8,17 +8,18 @@ import Projects from '/src/views/projects/index'
 import Career from '/src/views/career/index'
 import Footer from '/src/views/footer'
 import Grid from '@mui/material/Grid';
-import useMediaQuery from '@mui/material/useMediaQuery';
 import TopButton from '/src/components/topButton';
+import { useRecoilState } from 'recoil';
+import { isMobileState } from '/src/states/atoms'
 
 const wrap = css`
 	width: 100vw;
 `
-const content = css`
-	min-width: 1100px;
-	max-width: 1100px;
-	margin-left: auto;
-	margin-right: auto;
+const content = (props) => css`
+	min-width: ${props.isMobile ? '0px' : '1100px'};
+	max-width: ${props.isMobile ? '100vw' : '1100px'};
+	margin-left: ${props.isMobile ? '0' : 'auto'};
+	margin-right: ${props.isMobile ? '0' : 'auto'};
 	z-index: 2;
 `
 const info = css`
@@ -31,43 +32,43 @@ const info = css`
 `
 
 function App() {
-	const isMobile = useMediaQuery("(max-width: 600px)");
+	const [isMobile, setIsMobile] = useRecoilState(isMobileState);
 
   return (
     <div css={wrap}>
 			<Grid container direction="column">
 				<Grid container css={css`${info};`}>
-					<Grid container css={css`${content};`}>
+					<Grid container css={css`${content({isMobile})};`}>
 						<Info />
 					</Grid>
 				</Grid>
 				<Grid container css={css`width:100%;`}>
-					<Grid container css={content} id="about">
+					<Grid container css={content({isMobile})} id="about">
 						<About />
 					</Grid>
 				</Grid>
 				<Grid container css={css`width:100%;background-color:#5870f3;`}>
-					<Grid container css={content} id="skills">
+					<Grid container css={content({isMobile})} id="skills">
 						<Skills />
 					</Grid>
 				</Grid>
 				<Grid container css={css`width:100%;background-color:#222;`}>
-					<Grid container css={content} id="link">
+					<Grid container css={content({isMobile})} id="link">
 						<Link />
 					</Grid>
 				</Grid>
 				<Grid container css={css`width:100%;background-color:#54acf9;`}>
-					<Grid container css={content} id="projects">
+					<Grid container css={content({isMobile})} id="projects">
 						<Projects />
 					</Grid>
 				</Grid>
 				<Grid container css={css`width:100%;background-color:#efefef;`}>
-					<Grid container css={content} id="career">
+					<Grid container css={content({isMobile})} id="career">
 						<Career />
 					</Grid>
 				</Grid>
 				<Grid container css={css`width:100%;background-color:#222;`}>
-					<Grid container css={content}>
+					<Grid container css={content({isMobile})}>
 						<Footer />
 					</Grid>
 				</Grid>

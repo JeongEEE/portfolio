@@ -3,7 +3,9 @@ import { css } from '@emotion/react'
 import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import { Link } from 'react-scroll';
-import { createTheme, ThemeProvider, useTheme } from '@mui/material/styles';
+import { useRecoilState } from 'recoil';
+import { isMobileState } from '/src/states/atoms'
+import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
@@ -46,6 +48,7 @@ const Navigation = ({show}) => {
 	// const isMobile = useMediaQuery('(max-width:600px)');
 	const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
 	// xs: 0px, sm: 600px, md: 900px, lg: 1200px, xl: 1536px
+	const [localIsMobile, setLocalIsMobile] = useRecoilState(isMobileState);
 
 	const scrollToTop = () => {
     window.scroll({ top: 0, behavior: 'smooth' });
@@ -56,6 +59,14 @@ const Navigation = ({show}) => {
 	const toggleDrawer = (status: boolean) => {
 		setOpen(status);
   };
+
+	useEffect(() => {
+		setLocalIsMobile(isMobile);
+		return () => {
+			
+		}
+	}, [isMobile])
+	
 
 	return (
 		<header css={header({show})}>
