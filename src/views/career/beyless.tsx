@@ -2,11 +2,15 @@ import React, { Fragment, useState, useEffect } from 'react'
 import { css } from '@emotion/react'
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
+import { useRecoilState } from 'recoil';
+import { isMobileState } from '/src/states/atoms'
 
 const Beyless = () => {
+	const [isMobile, setIsMobile] = useRecoilState(isMobileState);
+
 	return (
 		<Grid container direction="row" alignItems="start">
-			<Grid item container xs={3} p={2} direction="column" alignItems="center">
+			<Grid item container xs={isMobile?12:3} p={2} direction="column" alignItems="center">
 				<Grid container p={2} mb={1} justifyContent="center"
 					css={css`border:1px solid #989898;border-radius:10px;`}>
 					<img src="images/beyless_logo4.png" css={css`width:150px;`} alt="beyless" loading="lazy" />
@@ -16,7 +20,7 @@ const Beyless = () => {
 				<Typography variant="h6" css={css`color:gray;`}>플랫폼 팀</Typography>
 			</Grid>
 			
-			<Grid item container xs={9} p={2} direction="column" alignItems="center"
+			<Grid item container xs={isMobile?12:9} p={2} direction="column" alignItems="center"
 				css={css`border-left:1px solid #c4c3c3;`}>
 				<Grid container direction="column" alignItems="left">
 					<Typography variant="h4">⭐️ USEN Camera</Typography>
@@ -24,7 +28,7 @@ const Beyless = () => {
 					<Typography variant="h6" pl={2}>► 담당 역할 : 웹 프론트엔드 개발 전체</Typography>
 					<Typography variant="h6" pl={2}>► 업무 기간 : 2021.12 ~ 2023 현재</Typography>
 					<Typography variant="h6" pl={2}>► 기술 스택 : Vue.js, Vuetify, SCSS, Video.js, Chart.js</Typography>
-					<Typography variant="h6" pl={10}>AWS kinesis Video Streams, AWS Amplify</Typography>
+					<Typography variant="h6" pl={isMobile?2:10}>AWS kinesis Video Streams, AWS Amplify</Typography>
 					<Typography variant="h6" pl={2}>► 업무 내용</Typography>
 					<Typography variant="h6" pl={4}>➢ AWS 기반 CCTV 실시간 영상 스트리밍 웹 서비스 개발</Typography>
 					<Typography variant="h6" pl={4}>➢ AWS KVS 스트리밍 비디오를 Live, Ondemand 플레이 할 수 있는 서비스 구현</Typography>

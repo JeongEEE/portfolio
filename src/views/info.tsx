@@ -16,13 +16,13 @@ const Info = () => {
 				<Typography variant={isMobile ? 'h5' : 'h3'}>김규정 포트폴리오</Typography>
 				<Grid container css={css`border-bottom:5px solid blue;width:70px;`} pt={3} mb={4}></Grid>
 
-				<Grid container direction="column" alignItems="center"
-					css={css`color:#cdcdcd;`} p={isMobile?2:0}>
-					<Typography variant={isMobile ? 'h6' : 'h5'}>안녕하세요. 4년차 웹 프론트엔드 개발자로 근무하고 있습니다.</Typography>
-					<Typography variant={isMobile ? 'h6' : 'h5'}>저는 SPA에 대한 이해가 깊으며, 클라우드에 흥미가 많습니다.</Typography>
-					<Typography variant={isMobile ? 'h6' : 'h5'}>사용자의 입장에서 어떻게 하면 서비스를 편리하고</Typography>
-					<Typography variant={isMobile ? 'h6' : 'h5'}>효율적으로 접근이 가능한지 고민하는 것을 좋아합니다.</Typography>
-					<Typography variant={isMobile ? 'h6' : 'h5'}>새로운 기술을 배우고 적용하는 것에 적극적이며, 배운 기술을 팀원들과 공유하는 것을 좋아합니다.</Typography>
+				<Grid container direction="column" alignItems={isMobile?'start':'center'}
+					css={css`color:#cdcdcd;`} p={isMobile?3:0}>
+					<Typography variant={isMobile ? 'h7' : 'h5'}>안녕하세요. 4년차 웹 프론트엔드 개발자로 근무하고 있습니다.</Typography>
+					<Typography variant={isMobile ? 'h7' : 'h5'}>저는 SPA에 대한 이해가 깊으며, 클라우드에 흥미가 많습니다.</Typography>
+					<Typography variant={isMobile ? 'h7' : 'h5'}>사용자의 입장에서 어떻게 하면 서비스를 편리하고</Typography>
+					<Typography variant={isMobile ? 'h7' : 'h5'}>효율적으로 접근이 가능한지 고민하는 것을 좋아합니다.</Typography>
+					<Typography variant={isMobile ? 'h7' : 'h5'}>새로운 기술을 배우고 적용하는 것에 적극적이며, 배운 기술을 팀원들과 공유하는 것을 좋아합니다.</Typography>
 				</Grid>
 			</Grid>
 		</Grid>

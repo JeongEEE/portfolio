@@ -5,7 +5,7 @@ const scrollContainer = css`
 	position: fixed;
   right: 5%;
   bottom: 5%;
-  z-index: 1;
+  z-index: 7;
 `
 const top = css`
 	font-weight: bold;

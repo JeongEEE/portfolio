@@ -4,6 +4,8 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import Carousel from 'react-material-ui-carousel'
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
+import { useRecoilState } from 'recoil';
+import { isMobileState } from '/src/states/atoms'
 
 const item = css`
 	border-radius: 10px;
@@ -19,28 +21,30 @@ const url = css`
 `
 
 const Shopping = () => {
+	const [isMobile, setIsMobile] = useRecoilState(isMobileState);
+
 	return (
-		<Grid container p={3} mb={4} css={item} direction="column" alignItems="center">
+		<Grid container p={isMobile?2:3} mb={4} css={item} direction="column" alignItems="center">
 			<Typography variant="h4" css={css`color:black;`}>쇼핑몰</Typography>
 			<Typography variant="h6" css={css`color:gray;`}>2023.02 (2인 프로젝트)</Typography>
 			<Grid mt={2} container direction="row" alignItems="start">
-				<Grid item container xs={6} pr={1}>
+				<Grid item container xs={isMobile?12:6} pr={isMobile?0:1}>
 					<Carousel autoPlay={false} css={css`width:100%;`}>
-						<img css={css`width:100%;height:350px;`} src="images/shopping1.png" alt="shopping1" />
-						<img css={css`width:100%;height:350px;`} src="images/shopping2.png" alt="shopping2" loading="lazy" />
-						<img css={css`width:100%;height:350px;`} src="images/shopping3.png" alt="shopping3" loading="lazy" />
-						<img css={css`width:100%;height:350px;`} src="images/shopping4.png" alt="shopping4" loading="lazy" />
-						<img css={css`width:100%;height:350px;`} src="images/shopping5.png" alt="shopping5" loading="lazy" />
-						<img css={css`width:100%;height:350px;`} src="images/shopping6.png" alt="shopping6" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'250px':'350px'};`} src="images/shopping1.png" alt="shopping1" />
+						<img css={css`width:100%;height:${isMobile?'250px':'350px'};`} src="images/shopping2.png" alt="shopping2" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'250px':'350px'};`} src="images/shopping3.png" alt="shopping3" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'250px':'350px'};`} src="images/shopping4.png" alt="shopping4" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'250px':'350px'};`} src="images/shopping5.png" alt="shopping5" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'250px':'350px'};`} src="images/shopping6.png" alt="shopping6" loading="lazy" />
 					</Carousel>
 				</Grid>
-				<Grid item container xs={6} pl={1} direction="column" css={css`color:black;`}>
+				<Grid item container xs={isMobile?12:6} pl={isMobile?0:1} direction="column" css={css`color:black;`}>
 					<Grid container pb={1} direction="row" alignItems="center">
-						<Grid item container xs={3} alignItems="center">
+						<Grid item container xs={isMobile?12:3} alignItems="center">
 							<TaskAltIcon fontSize="large" sx={{ color: 'black' }} />
 							<Typography variant="h6">GitHub</Typography>
 						</Grid>
-						<Grid item container xs={9}
+						<Grid item container xs={isMobile?12:9}
 							onClick={() => window.open('https://github.com/JeongEEE/shopping-react-nextjs', '_blank')}>
 							<Typography variant="h7" css={css`color:blue;${url};`}>
 								{'https://github.com/JeongEEE/shopping-react-nextjs'}
@@ -48,11 +52,11 @@ const Shopping = () => {
 						</Grid>
 					</Grid>
 					<Grid container pb={1} direction="row" alignItems="center">
-						<Grid item container xs={3} alignItems="center">
+						<Grid item container xs={isMobile?12:3} alignItems="center">
 							<TaskAltIcon fontSize="large" sx={{ color: 'black' }} />
 							<Typography variant="h6">URL</Typography>
 						</Grid>
-						<Grid item container xs={9}
+						<Grid item container xs={isMobile?12:9}
 							onClick={() => window.open('https://shopping-react-ece42.firebaseapp.com', '_blank')}>
 							<Typography variant="h7" css={css`color:blue;${url};`}>
 								{'https://shopping-react-ece42.firebaseapp.com'}
@@ -60,20 +64,20 @@ const Shopping = () => {
 						</Grid>
 					</Grid>
 					<Grid container pb={1} direction="row" alignItems="start">
-						<Grid item container xs={3} alignItems="center">
+						<Grid item container xs={isMobile?12:3} alignItems="center">
 							<TaskAltIcon fontSize="large" sx={{ color: 'black' }} />
 							<Typography variant="h6">기술스택</Typography>
 						</Grid>
-						<Grid item container xs={9}>
+						<Grid item container xs={isMobile?12:9}>
 							<Typography variant="h6">React, Typescript, Next.js, Recoil, Material UI, Emotion, Firebase</Typography>
 						</Grid>
 					</Grid>
 					<Grid container pb={1} direction="row" alignItems="start">
-						<Grid item container xs={3} alignItems="center">
+						<Grid item container xs={isMobile?12:3} alignItems="center">
 							<TaskAltIcon fontSize="large" sx={{ color: 'black' }} />
 							<Typography variant="h6">주요기능</Typography>
 						</Grid>
-						<Grid item container xs={9}>
+						<Grid item container xs={isMobile?12:9}>
 							<Typography variant="h6">Firebase 로그인/회원가입<br />상품 목록(Pagination), 상품 검색(상품명 검색)(Pagination), 카테고리 검색(Pagination)<br />장바구니, 찜 리스트, 마이페이지<br />결제페이지(실제 결제x), 주문목록<br />관리자 페이지(Pagination)(상품관리 - 상품 추가, 수정, 삭제)<br />관리자 페이지(카테고리 관리 - 추가, 삭제)<br />상품 할인, 할인 쿠폰</Typography>
 						</Grid>
 					</Grid>
