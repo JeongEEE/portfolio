@@ -67,7 +67,7 @@ const Portfolio = () => {
 							<Typography variant="h6">기술스택</Typography>
 						</Grid>
 						<Grid item container xs={isMobile?12:9}>
-							<Typography variant="h6">React, Typescript, Vite, Material UI, Emotion, Firebase</Typography>
+							<Typography variant="h6">React, Typescript, Vite, Recoil, Material UI, Emotion, Firebase</Typography>
 						</Grid>
 					</Grid>
 					<Grid container pb={1} direction="row" alignItems="start">
@@ -76,7 +76,7 @@ const Portfolio = () => {
 							<Typography variant="h6">주요기능</Typography>
 						</Grid>
 						<Grid item container xs={isMobile?12:9}>
-							<Typography variant="h6">자기소개, 인적사항, 기술 스택, 프로젝트 경험, 업무 경력</Typography>
+							<Typography variant="h6">자기소개, 인적사항, 기술 스택, 프로젝트 경험, 업무 경력, 모바일 지원</Typography>
 						</Grid>
 					</Grid>
 					<Grid container css={css`border-bottom:1px solid gray;`} mb={1}></Grid>

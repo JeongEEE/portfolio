@@ -1,5 +1,5 @@
 # 🍎 웹 포트폴리오
-Node v.18.13.0, React 18, Vite, Typescript, Recoil, Material UI, Emotion, Firebase
+Node v.18.13.0, React 18, Vite, Typescript, Recoil, Material UI, Emotion, Firebase, 모바일 지원
 
 ----
 https://portfolio-198db.firebaseapp.com
