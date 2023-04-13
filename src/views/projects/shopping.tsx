@@ -26,7 +26,7 @@ const Shopping = () => {
 	return (
 		<Grid container p={isMobile?2:3} mb={4} css={item} direction="column" alignItems="center">
 			<Typography variant="h4" css={css`color:black;`}>쇼핑몰</Typography>
-			<Typography variant="h6" css={css`color:gray;`}>2023.02 (2인 프로젝트)</Typography>
+			<Typography variant="h6" css={css`color:gray;`}>2023.02 (2인 프로젝트)(진행중)</Typography>
 			<Grid mt={2} container direction="row" alignItems="start">
 				<Grid item container xs={isMobile?12:6} pr={isMobile?0:1}>
 					<Carousel autoPlay={false} css={css`width:100%;`}>
