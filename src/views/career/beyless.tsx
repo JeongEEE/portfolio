@@ -66,7 +66,7 @@ const Beyless = () => {
 					<Typography variant="h6" pl={2}>► 업무 내용</Typography>
 					<Typography variant="h6" pl={4}>➢ 자사 솔루션 드론관제시스템 Beflyer 리뉴얼(커피스크립트 → Vue.js)</Typography>
 					<Typography variant="h6" pl={4}>➢ 인증된 회원에게 등록된 드론을 실시간으로 지도로 관제할 수 있는 서비스 개발</Typography>
-					<Typography variant="h6" pl={4}>➢ penLayers로 지도 컴포넌트 개발. Turf.js로 위치정보 데이터 가공. 웹 소켓으로 실시간 텔레메트리 데이터 송수신. 날씨 및 비행금지구역 기능 구현</Typography>
+					<Typography variant="h6" pl={4}>➢ OpenLayers로 지도 컴포넌트 개발. Turf.js로 위치정보 데이터 가공. 웹 소켓으로 실시간 텔레메트리 데이터 송수신. 날씨 및 비행금지구역 기능 구현</Typography>
 					<Typography variant="h6" pl={2}>► 주요 성과</Typography>
 					<Typography variant="h6" pl={4}>➢ 외주 개발된 프로젝트를 자체적으로 유지보수 가능</Typography>
 					<Typography variant="h6" pl={4}>➢ 커피스크립트로 개발된 프로젝트를 Vue.js로 리팩토링하여 유지보수가 용이함</Typography>

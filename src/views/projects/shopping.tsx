@@ -78,7 +78,7 @@ const Shopping = () => {
 							<Typography variant="h6">주요기능</Typography>
 						</Grid>
 						<Grid item container xs={isMobile?12:9}>
-							<Typography variant="h6">Firebase 로그인/회원가입<br />상품 목록(Pagination), 상품 검색(상품명 검색)(Pagination), 카테고리 검색(Pagination)<br />장바구니, 찜 리스트, 마이페이지<br />결제페이지(실제 결제x), 주문목록<br />관리자 페이지(Pagination)(상품관리 - 상품 추가, 수정, 삭제)<br />관리자 페이지(카테고리 관리 - 추가, 삭제)<br />상품 할인, 할인 쿠폰</Typography>
+							<Typography variant="h6">Firebase 로그인/회원가입<br />상품 목록(Pagination)<br />오늘의 Hot한 상품 목록<br />상품 검색(상품명 검색)(Pagination)<br />카테고리 검색(Pagination)<br />장바구니, 찜 리스트, 마이페이지<br />결제페이지(실제 결제x), 주문목록<br />관리자 페이지(Pagination)(상품관리 - 상품 추가, 수정, 삭제)<br />관리자 페이지(카테고리 관리 - 추가, 삭제)<br />상품 할인, 할인 쿠폰</Typography>
 						</Grid>
 					</Grid>
 					<Grid container css={css`border-bottom:1px solid gray;`} mb={1}></Grid>
