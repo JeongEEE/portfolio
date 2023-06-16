@@ -4,6 +4,7 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { useRecoilState } from 'recoil';
 import { isMobileState } from '/src/states/atoms'
+import Carousel from 'react-material-ui-carousel'
 
 const Beyless = () => {
 	const [isMobile, setIsMobile] = useRecoilState(isMobileState);
@@ -38,10 +39,19 @@ const Beyless = () => {
 					<Typography variant="h6" pl={4}>➢ 모바일 비디오 플레이어 웹페이지 구현</Typography>
 					<Typography variant="h6" pl={4}>➢ AWS Amplify를 이용해 배포 자동화</Typography>
 					<Typography variant="h6" pl={2}>► 주요 성과</Typography>
-					<Typography variant="h6" pl={4}>➢ 상용서비스 시작 2개월 카메라 약 1044대 온라인</Typography>
+					<Typography variant="h6" pl={4}>➢ 상용서비스 시작 3개월 카메라 약 1300대 온라인</Typography>
 					<Typography variant="h6" pl={4}>➢ 동영상 타임라인 에디터를 포함한 비디오 플레이어 컴포넌트를 개발하여 이벤트 생성 및 세밀한 동영상 재생/편집 기능을 제공</Typography>
 					<Typography variant="h6" pl={4}>➢ 동영상 4개, 9개, 16개 화면 동시재생</Typography>
 					<Typography variant="h6" pl={4}>➢ 동영상의 메타데이터 획득이 안 되는 문제, 타임라인 생성 및 조작이 안 되는 문제 등 크로스 브라우징 이슈를 해결</Typography>
+					<Carousel autoPlay={false} css={css`width:100%;`}>
+						<img css={css`width:100%;height:${isMobile?'250px':'400px'};`} src="images/usen1.png" alt="usen1" />
+						<img css={css`width:100%;height:${isMobile?'250px':'400px'};`} src="images/usen2.png" alt="usen2" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'250px':'400px'};`} src="images/usen3.png" alt="usen3" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'250px':'400px'};`} src="images/usen4.png" alt="usen4" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'250px':'400px'};`} src="images/usen5.png" alt="usen5" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'250px':'400px'};`} src="images/usen6.png" alt="usen6" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'250px':'400px'};`} src="images/usen7.png" alt="usen7" loading="lazy" />
+					</Carousel>
 				</Grid>
 
 				<Grid container mt={4} direction="column" alignItems="left">
@@ -59,6 +69,11 @@ const Beyless = () => {
 					<Typography variant="h6" pl={4}>➢ 페이 앱 결제, 카드 결제 기능 구현</Typography>
 					<Typography variant="h6" pl={2}>► 주요 성과</Typography>
 					<Typography variant="h6" pl={4}>➢ 얼굴인식으로 AI 무인 매대를 이용하는 기능 개발</Typography>
+					<Carousel autoPlay={false} css={css`width:100%;`}>
+						<img css={css`width:100%;height:${isMobile?'250px':'400px'};`} src="images/facebox1.png" alt="facebox1" />
+						<img css={css`width:100%;height:${isMobile?'250px':'400px'};`} src="images/facebox2.png" alt="facebox2" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'250px':'400px'};`} src="images/facebox3.png" alt="facebox3" loading="lazy" />
+					</Carousel>
 				</Grid>
 				
 				<Grid container mt={4} direction="column" alignItems="left">
@@ -75,6 +90,14 @@ const Beyless = () => {
 					<Typography variant="h6" pl={2}>► 주요 성과</Typography>
 					<Typography variant="h6" pl={4}>➢ 외주 개발된 프로젝트를 자체적으로 유지보수 가능</Typography>
 					<Typography variant="h6" pl={4}>➢ 커피스크립트로 개발된 프로젝트를 Vue.js로 리팩토링하여 유지보수가 용이함</Typography>
+					<Carousel autoPlay={false} css={css`width:100%;`}>
+						<img css={css`width:100%;height:${isMobile?'250px':'400px'};`} src="images/beflyer1.png" alt="beflyer1" />
+						<img css={css`width:100%;height:${isMobile?'250px':'400px'};`} src="images/beflyer2.png" alt="beflyer2" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'250px':'400px'};`} src="images/beflyer3.png" alt="beflyer3" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'250px':'400px'};`} src="images/beflyer4.png" alt="beflyer4" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'250px':'400px'};`} src="images/beflyer5.png" alt="beflyer5" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'250px':'400px'};`} src="images/beflyer6.png" alt="beflyer6" loading="lazy" />
+					</Carousel>
 				</Grid>
 
 				<Grid container mt={4} direction="column" alignItems="left">
@@ -89,6 +112,11 @@ const Beyless = () => {
 					<Typography variant="h6" pl={2}>► 주요 성과</Typography>
 					<Typography variant="h6" pl={4}>➢ 게이트웨이 단말기에 동시에 여러 기기(3개 이상)들을 블루투스로 연결 가능하도록 구현</Typography>
 					<Typography variant="h6" pl={4}>➢ 센서 데이터 실시간 전송 및 앱과 연동</Typography>
+					<Carousel autoPlay={false} css={css`width:100%;`}>
+						<img css={css`width:100%;height:${isMobile?'400px':'600px'};`} src="images/catwheel1.png" alt="catwheel1" />
+						<img css={css`width:100%;height:${isMobile?'400px':'600px'};`} src="images/catwheel2.png" alt="catwheel2" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'400px':'600px'};`} src="images/catwheel3.png" alt="catwheel3" loading="lazy" />
+					</Carousel>
 				</Grid>
 
 				<Grid container mt={4} direction="column" alignItems="left">
@@ -101,6 +129,13 @@ const Beyless = () => {
 					<Typography variant="h6" pl={2}>► 주요 성과</Typography>
 					<Typography variant="h6" pl={4}>➢ 구매자/판매자/배송 기사 권한이 구분되어 하나의 앱으로 이용 가능하도록 개발</Typography>
 					<Typography variant="h6" pl={4}>➢ 구글 앱스토어 배포</Typography>
+					<Carousel autoPlay={false} css={css`width:${isMobile?'100%':'60%'};`}>
+						<img css={css`width:100%;height:${isMobile?'500px':'600px'};`} src="images/drone1.png" alt="drone1" />
+						<img css={css`width:100%;height:${isMobile?'500px':'600px'};`} src="images/drone2.png" alt="drone2" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'500px':'600px'};`} src="images/drone3.png" alt="drone3" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'500px':'600px'};`} src="images/drone4.png" alt="drone4" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'500px':'600px'};`} src="images/drone5.png" alt="drone5" loading="lazy" />
+					</Carousel>
 				</Grid>
 				
 				<Grid container mt={4} direction="column" alignItems="left">
@@ -115,6 +150,13 @@ const Beyless = () => {
 					<Typography variant="h6" pl={4}>➢ QR코드로 접속 가능한 모바일 웹 구매 서비스 웹앱 구현</Typography>
 					<Typography variant="h6" pl={2}>► 주요 성과</Typography>
 					<Typography variant="h6" pl={4}>➢ 모바일 결제 연동(카카오페이, 페이코)</Typography>
+					<Carousel autoPlay={false} css={css`width:100%;`}>
+						<img css={css`width:100%;height:${isMobile?'250px':'400px'};`} src="images/baive1.png" alt="baive1" />
+						<img css={css`width:100%;height:${isMobile?'250px':'400px'};`} src="images/baive2.png" alt="baive2" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'250px':'400px'};`} src="images/baive3.png" alt="baive3" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'250px':'400px'};`} src="images/baive4.png" alt="baive4" loading="lazy" />
+						<img css={css`width:100%;height:${isMobile?'250px':'400px'};`} src="images/baive5.png" alt="baive5" loading="lazy" />
+					</Carousel>
 				</Grid>
 			</Grid>
 		</Grid>
