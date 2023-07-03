@@ -28,7 +28,7 @@ const Beyless = () => {
 					<Typography variant="h6" pl={2}>► 연계 업체 : (주)USEN</Typography>
 					<Typography variant="h6" pl={2}>► 담당 역할 : 웹 프론트엔드 개발 전체(기여도 80%)</Typography>
 					<Typography variant="h6" pl={2}>► 업무 기간 : 2021.12 ~ 2023 현재</Typography>
-					<Typography variant="h6" pl={2}>► 기술 스택 : Vue.js, Vuex, Vuetify, SCSS, Video.js</Typography>
+					<Typography variant="h6" pl={2}>► 기술 스택 : Vue 2, Vuex, Vuetify, SCSS, Video.js</Typography>
 					<Typography variant="h6" pl={isMobile?2:10}>Canvas, Chart.js, AWS kinesis Video Streams, AWS Amplify</Typography>
 					<Typography variant="h6" pl={2}>► 업무 내용</Typography>
 					<Typography variant="h6" pl={4}>➢ AWS 기반 CCTV 실시간 영상 스트리밍 웹 서비스 개발</Typography>
@@ -37,9 +37,10 @@ const Beyless = () => {
 					<Typography variant="h6" pl={4}>➢ Canvas로 개발한 비디오 타임라인에 북마크, 클립, 썸네일 캡쳐, 다운로드 등 다양한 동영상 이벤트 기능을 개발</Typography>
 					<Typography variant="h6" pl={4}>➢ Chart.js로 매장 방문자 통계 데이터 시각화</Typography>
 					<Typography variant="h6" pl={4}>➢ 모바일 비디오 플레이어 웹페이지 구현</Typography>
+					<Typography variant="h6" pl={4}>➢ 웹팩 설정, 코드 스플리팅을 이용한 프론트엔드 성능 최적화(크롬 lighthouse 성능측정 - First Contentful Paint 17.4s, ToTal Blocking Time 280s, Speed Index 15s 감소)</Typography>
 					<Typography variant="h6" pl={4}>➢ AWS Amplify를 이용해 배포 자동화</Typography>
 					<Typography variant="h6" pl={2}>► 주요 성과</Typography>
-					<Typography variant="h6" pl={4}>➢ 상용서비스 시작 3개월 카메라 약 1300대 온라인</Typography>
+					<Typography variant="h6" pl={4}>➢ 23.03 상용서비스 시작, 현재 카메라 약 1300대 온라인</Typography>
 					<Typography variant="h6" pl={4}>➢ 동영상 타임라인 에디터를 포함한 비디오 플레이어 컴포넌트를 개발하여 이벤트 생성 및 세밀한 동영상 재생/편집 기능을 제공</Typography>
 					<Typography variant="h6" pl={4}>➢ 동영상 4개, 9개, 16개 화면 동시재생</Typography>
 					<Typography variant="h6" pl={4}>➢ 동영상의 메타데이터 획득이 안 되는 문제, 타임라인 생성 및 조작이 안 되는 문제 등 크로스 브라우징 이슈를 해결</Typography>
@@ -80,7 +81,7 @@ const Beyless = () => {
 					<Typography variant="h4">⭐️ Beflyer 2.0</Typography>
 					<Typography variant="h6" pl={2}>► 담당 역할 : 웹 프론트엔드 개발 전체(기여도 100%)</Typography>
 					<Typography variant="h6" pl={2}>► 업무 기간 : 2021.01 ~ 2021.04(약 4개월)</Typography>
-					<Typography variant="h6" pl={2}>► 기술 스택 : Vue.js, Vuex, Vuetify, Typescript, SCSS, OpenLayers, Turf.js</Typography>
+					<Typography variant="h6" pl={2}>► 기술 스택 : Vue 2, Vuex, Vuetify, Typescript, SCSS, OpenLayers, Turf.js</Typography>
 					<Typography variant="h6" pl={2}>► 업무 내용</Typography>
 					<Typography variant="h6" pl={4}>➢ 자사 솔루션 드론관제시스템 Beflyer 리뉴얼(커피스크립트 → Vue.js)</Typography>
 					<Typography variant="h6" pl={4}>➢ 인증된 회원에게 등록된 드론을 실시간으로 지도로 관제할 수 있는 서비스 개발</Typography>
@@ -142,7 +143,7 @@ const Beyless = () => {
 					<Typography variant="h4">⭐️ AI 무인 매대</Typography>
 					<Typography variant="h6" pl={2}>► 담당 역할 : 웹 프론트엔드 개발 전체(기여도 100%), 하이브리드 앱 개발 및 유지보수(기여도 100%)</Typography>
 					<Typography variant="h6" pl={2}>► 업무 기간 : 2019.10 ~ 2022.05</Typography>
-					<Typography variant="h6" pl={2}>► 기술 스택 : Vue.js, Vuex, Typescript, SCSS, Flutter, Dart</Typography>
+					<Typography variant="h6" pl={2}>► 기술 스택 : Vue 2, Vuex, Typescript, SCSS, Flutter, Dart</Typography>
 					<Typography variant="h6" pl={2}>► 업무 내용</Typography>
 					<Typography variant="h6" pl={4}>➢ 자사 솔루션 AI 무인 매대 시스템 개발 및 유지보수 업무</Typography>
 					<Typography variant="h6" pl={4}>➢ 웹 소켓 통신으로 실시간 무인매대 관리 기능 구현</Typography>
