@@ -26,7 +26,7 @@ const Shopping = () => {
 	return (
 		<Grid container p={isMobile?2:3} mb={4} css={item} direction="column" alignItems="center">
 			<Typography variant="h4" css={css`color:black;`}>쇼핑몰</Typography>
-			<Typography variant="h6" css={css`color:gray;`}>2023.02 (진행중)</Typography>
+			<Typography variant="h6" css={css`color:gray;`}>2023.02</Typography>
 			<Grid mt={2} container direction="row" alignItems="start">
 				<Grid item container xs={isMobile?12:6} pr={isMobile?0:1}>
 					<Carousel autoPlay={false} css={css`width:100%;`}>
@@ -82,6 +82,7 @@ const Shopping = () => {
 						</Grid>
 					</Grid>
 					<Grid container css={css`border-bottom:1px solid gray;`} mb={1}></Grid>
+					<Typography variant="h6">Admin 계정 ID : test@test.com / PW : 123123</Typography>
 					<Typography variant="h6">Next.js기반 React로 개발한 쇼핑몰 웹사이트 입니다.</Typography>
 					<Typography variant="h6">Next.js와 React 학습을 위해 개발하였으며, 서버사이드 렌더링 기능과 검색어 최적화를 학습 하였습니다. 상태관리는 Recoil을 적용하였으며, 레이아웃은 Material UI로 구성하고, js로 css스타일을 작성할 수 있도록 Emotion을 사용하였습니다.</Typography>
 				</Grid>

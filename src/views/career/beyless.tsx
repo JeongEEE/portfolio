@@ -24,6 +24,27 @@ const Beyless = () => {
 			<Grid item container xs={isMobile?12:9} p={2} direction="column" alignItems="center"
 				css={css`border-left:1px solid #c4c3c3;`}>
 				<Grid container direction="column" alignItems="left">
+					<Typography variant="h4">⭐️ Drone Management</Typography>
+					<Typography variant="h6" pl={2}>► 담당 역할 : 웹 개발 전체(기여도 100%)</Typography>
+					<Typography variant="h6" pl={2}>► 업무 기간 : 2023.07 ~ 현재</Typography>
+					<Typography variant="h6" pl={2}>► 기술 스택 : React 18, Next.js 13, Typescript, Recoil, Material UI, Emotion, Firebase</Typography>
+					<Typography variant="h6" pl={2}>► 업무 내용</Typography>
+					<Typography variant="h6" pl={4}>➢ 사내 드론팀 장비, 드론비행일지 등 드론관리 웹 서비스 개발</Typography>
+					<Typography variant="h6" pl={4}>➢ 장비 수정내역 History 열람 기능 개발</Typography>
+					<Typography variant="h6" pl={4}>➢ 세분화된 비행일지, 체크리스트 개발</Typography>
+				</Grid>
+
+				<Grid container mt={4} direction="column" alignItems="left">
+					<Typography variant="h4">⭐️ 엣지기반 위험환경 데이터 분석 기술 개발 및 자율주행 협업 플랫폼 실증</Typography>
+					<Typography variant="h6" pl={2}>► 담당 역할 : 웹 프론트엔드 개발 전체(기여도 100%)</Typography>
+					<Typography variant="h6" pl={2}>► 업무 기간 : 2023.07 ~ 현재</Typography>
+					<Typography variant="h6" pl={2}>► 기술 스택 : Vue 3, Vite, Typescript, Pinia, Vuetify, SCSS, OpenLayers, Turf.js</Typography>
+					<Typography variant="h6" pl={2}>► 업무 내용</Typography>
+					<Typography variant="h6" pl={4}>➢ 특장차량 작업현장 자율주행 관제 웹 서비스 개발</Typography>
+					<Typography variant="h6" pl={4}>➢ OpenLayers로 지도 컴포넌트 개발. Turf.js로 위치정보 데이터 가공.</Typography>
+				</Grid>
+
+				<Grid container mt={4} direction="column" alignItems="left">
 					<Typography variant="h4">⭐️ USEN Camera</Typography>
 					<Typography variant="h6" pl={2}>► 연계 업체 : (주)USEN</Typography>
 					<Typography variant="h6" pl={2}>► 담당 역할 : 웹 프론트엔드 개발 전체(기여도 80%)</Typography>
@@ -40,7 +61,7 @@ const Beyless = () => {
 					<Typography variant="h6" pl={4}>➢ 웹팩 설정, 코드 스플리팅을 이용한 프론트엔드 성능 최적화(크롬 lighthouse 성능측정 - First Contentful Paint 17.4s, ToTal Blocking Time 280s, Speed Index 15s 감소)</Typography>
 					<Typography variant="h6" pl={4}>➢ AWS Amplify를 이용해 배포 자동화</Typography>
 					<Typography variant="h6" pl={2}>► 주요 성과</Typography>
-					<Typography variant="h6" pl={4}>➢ 23.03 상용서비스 시작, 현재 카메라 약 1300대 온라인</Typography>
+					<Typography variant="h6" pl={4}>➢ 23.03 상용서비스 시작, 현재 카메라 약 1500대 온라인</Typography>
 					<Typography variant="h6" pl={4}>➢ 동영상 타임라인 에디터를 포함한 비디오 플레이어 컴포넌트를 개발하여 이벤트 생성 및 세밀한 동영상 재생/편집 기능을 제공</Typography>
 					<Typography variant="h6" pl={4}>➢ 동영상 4개, 9개, 16개 화면 동시재생</Typography>
 					<Typography variant="h6" pl={4}>➢ 동영상의 메타데이터 획득이 안 되는 문제, 타임라인 생성 및 조작이 안 되는 문제 등 크로스 브라우징 이슈를 해결</Typography>
@@ -81,7 +102,7 @@ const Beyless = () => {
 					<Typography variant="h4">⭐️ Beflyer 2.0</Typography>
 					<Typography variant="h6" pl={2}>► 담당 역할 : 웹 프론트엔드 개발 전체(기여도 100%)</Typography>
 					<Typography variant="h6" pl={2}>► 업무 기간 : 2021.01 ~ 2021.04(약 4개월)</Typography>
-					<Typography variant="h6" pl={2}>► 기술 스택 : Vue 2, Vuex, Vuetify, Typescript, SCSS, OpenLayers, Turf.js</Typography>
+					<Typography variant="h6" pl={2}>► 기술 스택 : Vue 2, Vuex, Vuetify, Typescript, SCSS, Canvas, OpenLayers, Turf.js, Jenkins</Typography>
 					<Typography variant="h6" pl={2}>► 업무 내용</Typography>
 					<Typography variant="h6" pl={4}>➢ 자사 솔루션 드론관제시스템 Beflyer 리뉴얼(커피스크립트 → Vue.js)</Typography>
 					<Typography variant="h6" pl={4}>➢ 인증된 회원에게 등록된 드론을 실시간으로 지도로 관제할 수 있는 서비스 개발</Typography>
@@ -143,7 +164,7 @@ const Beyless = () => {
 					<Typography variant="h4">⭐️ AI 무인 매대</Typography>
 					<Typography variant="h6" pl={2}>► 담당 역할 : 웹 프론트엔드 개발 전체(기여도 100%), 하이브리드 앱 개발 및 유지보수(기여도 100%)</Typography>
 					<Typography variant="h6" pl={2}>► 업무 기간 : 2019.10 ~ 2022.05</Typography>
-					<Typography variant="h6" pl={2}>► 기술 스택 : Vue 2, Vuex, Typescript, SCSS, Flutter, Dart</Typography>
+					<Typography variant="h6" pl={2}>► 기술 스택 : Vue 2, Vuex, Typescript, SCSS, Flutter, Dart, Jenkins</Typography>
 					<Typography variant="h6" pl={2}>► 업무 내용</Typography>
 					<Typography variant="h6" pl={4}>➢ 자사 솔루션 AI 무인 매대 시스템 개발 및 유지보수 업무</Typography>
 					<Typography variant="h6" pl={4}>➢ 웹 소켓 통신으로 실시간 무인매대 관리 기능 구현</Typography>

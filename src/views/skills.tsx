@@ -86,7 +86,7 @@ const Skills = () => {
 								: <HtmlTooltip title={
 											<React.Fragment>
 												<Typography variant="h6">AWS Certified Cloud Practitioner</Typography>
-												<Typography variant="h7">Validation Number: J60QQBM1RBRE1HSD</Typography>
+												<Typography variant="body1">Validation Number: J60QQBM1RBRE1HSD</Typography>
 											</React.Fragment>
 										}
 									>
