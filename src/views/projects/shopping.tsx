@@ -46,7 +46,7 @@ const Shopping = () => {
 						</Grid>
 						<Grid item container xs={isMobile?12:9}
 							onClick={() => window.open('https://github.com/JeongEEE/shopping-react-nextjs', '_blank')}>
-							<Typography variant="h7" css={css`color:blue;${url};`}>
+							<Typography variant="body1" css={css`color:blue;${url};`}>
 								{'https://github.com/JeongEEE/shopping-react-nextjs'}
 							</Typography>
 						</Grid>
@@ -58,7 +58,7 @@ const Shopping = () => {
 						</Grid>
 						<Grid item container xs={isMobile?12:9}
 							onClick={() => window.open('https://shopping-react-ece42.firebaseapp.com', '_blank')}>
-							<Typography variant="h7" css={css`color:blue;${url};`}>
+							<Typography variant="body1" css={css`color:blue;${url};`}>
 								{'https://shopping-react-ece42.firebaseapp.com'}
 							</Typography>
 						</Grid>
@@ -84,7 +84,7 @@ const Shopping = () => {
 					<Grid container css={css`border-bottom:1px solid gray;`} mb={1}></Grid>
 					<Typography variant="h6">Admin 계정 ID : test@test.com / PW : 123123</Typography>
 					<Typography variant="h6">Next.js기반 React로 개발한 쇼핑몰 웹사이트 입니다.</Typography>
-					<Typography variant="h6">Next.js와 React 학습을 위해 개발하였으며, 서버사이드 렌더링 기능과 검색어 최적화를 학습 하였습니다. 상태관리는 Recoil을 적용하였으며, 레이아웃은 Material UI로 구성하고, js로 css스타일을 작성할 수 있도록 Emotion을 사용하였습니다.</Typography>
+					<Typography variant="h6">Next.js와 React 학습을 위해 개발하였으며, 서버사이드 렌더링 기능을 학습 하였습니다. 상태관리는 Recoil을 적용하였으며, 레이아웃은 Material UI로 구성하고, js로 css스타일을 작성할 수 있도록 Emotion을 사용하였습니다.</Typography>
 				</Grid>
 			</Grid>
 		</Grid>

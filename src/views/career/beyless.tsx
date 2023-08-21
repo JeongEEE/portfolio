@@ -61,7 +61,7 @@ const Beyless = () => {
 					<Typography variant="h6" pl={4}>➢ 웹팩 설정, 코드 스플리팅을 이용한 프론트엔드 성능 최적화(크롬 lighthouse 성능측정 - First Contentful Paint 17.4s, ToTal Blocking Time 280s, Speed Index 15s 감소)</Typography>
 					<Typography variant="h6" pl={4}>➢ AWS Amplify를 이용해 배포 자동화</Typography>
 					<Typography variant="h6" pl={2}>► 주요 성과</Typography>
-					<Typography variant="h6" pl={4}>➢ 23.03 상용서비스 시작, 현재 카메라 약 1500대 온라인</Typography>
+					<Typography variant="h6" pl={4}>➢ 23.03 상용서비스 시작, 현재 카메라 약 1730대 온라인</Typography>
 					<Typography variant="h6" pl={4}>➢ 동영상 타임라인 에디터를 포함한 비디오 플레이어 컴포넌트를 개발하여 이벤트 생성 및 세밀한 동영상 재생/편집 기능을 제공</Typography>
 					<Typography variant="h6" pl={4}>➢ 동영상 4개, 9개, 16개 화면 동시재생</Typography>
 					<Typography variant="h6" pl={4}>➢ 동영상의 메타데이터 획득이 안 되는 문제, 타임라인 생성 및 조작이 안 되는 문제 등 크로스 브라우징 이슈를 해결</Typography>
