@@ -4,7 +4,7 @@ import Button from '@mui/material/Button';
 import Grid from '@mui/material/Grid';
 import { Link } from 'react-scroll';
 import { useRecoilState } from 'recoil';
-import { isMobileState } from '/src/states/atoms'
+import {isMobileState, isTabletState} from '/src/states/atoms'
 import { useTheme } from '@mui/material/styles';
 import useMediaQuery from '@mui/material/useMediaQuery';
 import Box from '@mui/material/Box';
@@ -47,8 +47,10 @@ const Navigation = ({show}) => {
 	const theme = useTheme();
 	// const isMobile = useMediaQuery('(max-width:600px)');
 	const isMobile = useMediaQuery(theme.breakpoints.down('sm'));
+	const isTablet = useMediaQuery(theme.breakpoints.down('md'));
 	// xs: 0px, sm: 600px, md: 900px, lg: 1200px, xl: 1536px
 	const [localIsMobile, setLocalIsMobile] = useRecoilState(isMobileState);
+	const [localIsTablet, setLocalIsTablet] = useRecoilState(isTabletState);
 
 	const scrollToTop = () => {
     window.scroll({ top: 0, behavior: 'smooth' });
@@ -62,16 +64,17 @@ const Navigation = ({show}) => {
 
 	useEffect(() => {
 		setLocalIsMobile(isMobile);
-		return () => {
-			
-		}
-	}, [isMobile])
+	}, [isMobile]);
+
+	useEffect(() => {
+		setLocalIsTablet(isTablet);
+	}, [isTablet]);
 	
 
 	return (
 		<header css={header({show})}>
 			<Grid container direction="row" css={content} justifyContent="space-between" alignItems="center">
-				<Grid item container xs={2} pl={isMobile ? 2 : 0} css={css`${nav};font-size:1.5rem;`}
+				<Grid item container xs={2} pl={isTablet ? 2 : 0} css={css`${nav};font-size:1.5rem;`}
 					onClick={scrollToTop}>
 					김규정 Portfolio
 				</Grid>

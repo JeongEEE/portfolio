@@ -3,7 +3,7 @@ import { css } from '@emotion/react'
 import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { useRecoilState } from 'recoil';
-import { isMobileState } from '/src/states/atoms'
+import {isMobileState, isTabletState} from '/src/states/atoms'
 import { styled } from '@mui/material/styles';
 import Tooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip';
 import ClickAwayListener from '@mui/material/ClickAwayListener';
@@ -35,6 +35,7 @@ const HtmlTooltip = styled(({ className, ...props }: TooltipProps) => (
 
 const Skills = () => {
 	const [isMobile, setIsMobile] = useRecoilState(isMobileState);
+	const [isTablet, setIsTablet] = useRecoilState(isTabletState);
 	const [open, setOpen] = useState(false);
   const handleTooltipClose = () => {
     setOpen(false);
@@ -45,7 +46,8 @@ const Skills = () => {
 
 	return (
 		<Grid container>
-			<Grid container direction="column" alignItems="center" pt={10} pb={15}
+			<Grid container direction="column" alignItems="center"
+						p={isTablet ? isMobile ? 0 : 2 : 0} pt={10} pb={15}
 				css={css`color:white;`}>
 				<Typography variant="h3">SKILLS</Typography>
 				<Grid container css={css`border-bottom:5px solid white;width:70px;`} pt={2} mb={4}></Grid>
@@ -53,26 +55,28 @@ const Skills = () => {
 					<Grid container p={3} css={skillItem} direction="column">
 						<Typography variant="h4">Frontend</Typography>
 						<Grid container css={css`border-bottom:1px solid black;width:150px;`} pt={1} mb={1}></Grid>
-						{isMobile
-							? <img alt="frontend" src="images/frontend_mobile.png" css={css`width:82vw;`} loading="lazy" />
+						{isTablet
+							? isMobile
+								? <img alt="frontend" src="images/frontend_mobile.png" css={css`width:82vw;`} loading="lazy" />
+								: <img alt="frontend" src="images/frontend.png" css={css`width:90vw;`} loading="lazy" />
 							: <img alt="frontend" src="images/frontend.png" css={css`width:800px;`} loading="lazy" />
 						}
 					</Grid>
 					<Grid container p={3} mt={2} css={skillItem} direction="row">
-						<Grid item container xs={isMobile?12:4} direction="column">
+						<Grid item container xs={isTablet? isMobile ?12 :5 :4} direction="column">
 							<Typography variant="h4">Backend</Typography>
 							<Grid container css={css`border-bottom:1px solid black;width:140px;`} pt={1} mb={1}></Grid>
 							<img alt="backend" src="images/backend.png" css={css`width:${isMobile?'200px':'240px'};`} loading="lazy" />
 						</Grid>
-						<Grid item container xs={isMobile?12:5} direction="column">
+						<Grid item container xs={isTablet? isMobile ?12 :7:5} direction="column">
 							<Typography variant="h4">Deployment</Typography>
 							<Grid container css={css`border-bottom:1px solid black;width:190px;`} pt={1} mb={1}></Grid>
 							<img alt="deploy" src="images/deploy.png" css={css`width:${isMobile?'80vw':'420px'};`} loading="lazy" />
 						</Grid>
-						<Grid item container xs={isMobile?12:3} direction="column">
+						<Grid item container xs={isTablet? isMobile ?12 :6:3} direction="column">
 							<Typography variant="h4">Certificate</Typography>
 							<Grid container css={css`border-bottom:1px solid black;width:160px;`} pt={1} mb={1}></Grid>
-							{isMobile
+							{isTablet
 								? <ClickAwayListener onClickAway={handleTooltipClose}>
 										<div>
 											<Tooltip PopperProps={{ disablePortal: true, }}
@@ -98,8 +102,10 @@ const Skills = () => {
 					<Grid container p={3} mt={2} css={skillItem} direction="column">
 						<Typography variant="h4">Etc</Typography>
 						<Grid container css={css`border-bottom:1px solid black;width:60px;`} pt={1} mb={1}></Grid>
-						{isMobile
-							? <img alt="frontend" src="images/etc_mobile.png" css={css`width:82vw;`} loading="lazy" />
+						{isTablet
+							? isMobile
+								? <img alt="frontend" src="images/etc_mobile.png" css={css`width:82vw;`} loading="lazy" />
+								: <img alt="frontend" src="images/etc.png" css={css`width:90vw;`} loading="lazy" />
 							: <img alt="frontend" src="images/etc.png" css={css`width:800px;`} loading="lazy" />
 						}
 					</Grid>

@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Carousel from 'react-material-ui-carousel'
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
 import { useRecoilState } from 'recoil';
-import { isMobileState } from '/src/states/atoms'
+import {isMobileState, isTabletState} from '/src/states/atoms'
 
 const item = css`
 	border-radius: 10px;
@@ -22,23 +22,25 @@ const url = css`
 
 const Shopping = () => {
 	const [isMobile, setIsMobile] = useRecoilState(isMobileState);
+	const [isTablet, setIsTablet] = useRecoilState(isTabletState);
 
 	return (
-		<Grid container p={isMobile?2:3} mb={4} css={item} direction="column" alignItems="center">
+		<Grid container p={isTablet?2:3} mb={4} css={item} direction="column" alignItems="center">
 			<Typography variant="h4" css={css`color:black;`}>쇼핑몰</Typography>
 			<Typography variant="h6" css={css`color:gray;`}>2023.02</Typography>
 			<Grid mt={2} container direction="row" alignItems="start">
-				<Grid item container xs={isMobile?12:6} pr={isMobile?0:1}>
-					<Carousel autoPlay={false} css={css`width:100%;`}>
-						<img css={css`width:100%;height:${isMobile?'250px':'350px'};`} src="images/shopping1.png" alt="shopping1" />
-						<img css={css`width:100%;height:${isMobile?'250px':'350px'};`} src="images/shopping2.png" alt="shopping2" loading="lazy" />
-						<img css={css`width:100%;height:${isMobile?'250px':'350px'};`} src="images/shopping3.png" alt="shopping3" loading="lazy" />
-						<img css={css`width:100%;height:${isMobile?'250px':'350px'};`} src="images/shopping4.png" alt="shopping4" loading="lazy" />
-						<img css={css`width:100%;height:${isMobile?'250px':'350px'};`} src="images/shopping5.png" alt="shopping5" loading="lazy" />
-						<img css={css`width:100%;height:${isMobile?'250px':'350px'};`} src="images/shopping6.png" alt="shopping6" loading="lazy" />
+				<Grid item container xs={isTablet?12:6} pr={isTablet?0:1}>
+					<Carousel autoPlay={false} css={css`width:100%;height:${isTablet?isMobile?'250px':'430px':'350px'};`}>
+						<img css={css`width:100%;height:${isTablet?isMobile?'250px':'400px':'350px'};`} src="images/shopping1.png" alt="shopping1" />
+						<img css={css`width:100%;height:${isTablet?isMobile?'250px':'400px':'350px'};`} src="images/shopping2.png" alt="shopping2" loading="lazy" />
+						<img css={css`width:100%;height:${isTablet?isMobile?'250px':'400px':'350px'};`} src="images/shopping3.png" alt="shopping3" loading="lazy" />
+						<img css={css`width:100%;height:${isTablet?isMobile?'250px':'400px':'350px'};`} src="images/shopping4.png" alt="shopping4" loading="lazy" />
+						<img css={css`width:100%;height:${isTablet?isMobile?'250px':'400px':'350px'};`} src="images/shopping5.png" alt="shopping5" loading="lazy" />
+						<img css={css`width:100%;height:${isTablet?isMobile?'250px':'400px':'350px'};`} src="images/shopping6.png" alt="shopping6" loading="lazy" />
 					</Carousel>
 				</Grid>
-				<Grid item container xs={isMobile?12:6} pl={isMobile?0:1} direction="column" css={css`color:black;`}>
+				<Grid item container xs={isTablet?12:6} pt={isTablet?1:0} pl={isTablet?0:1}
+							direction="column" css={css`color:black;`}>
 					<Grid container pb={1} direction="row" alignItems="center">
 						<Grid item container xs={isMobile?12:3} alignItems="center">
 							<TaskAltIcon fontSize="large" sx={{ color: 'black' }} />

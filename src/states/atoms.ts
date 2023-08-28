@@ -9,6 +9,11 @@ export const isMobileState = atom({
 	default: false,
 });
 
+export const isTabletState = atom({
+  key: 'isTabletState',
+  default: false,
+});
+
 // ########################################## sample
 export const sample = atom({
   key: 'sample',

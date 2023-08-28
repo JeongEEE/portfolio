@@ -5,7 +5,7 @@ import Typography from '@mui/material/Typography';
 import Carousel from 'react-material-ui-carousel'
 import TaskAltIcon from '@mui/icons-material/TaskAlt';
 import { useRecoilState } from 'recoil';
-import { isMobileState } from '/src/states/atoms'
+import {isMobileState, isTabletState} from '/src/states/atoms'
 
 const item = css`
 	border-radius: 10px;
@@ -22,21 +22,23 @@ const url = css`
 
 const Portfolio = () => {
 	const [isMobile, setIsMobile] = useRecoilState(isMobileState);
+	const [isTablet, setIsTablet] = useRecoilState(isTabletState);
 
 	return (
-		<Grid container p={isMobile?2:3} mb={4} css={item} direction="column" alignItems="center">
+		<Grid container p={isTablet?2:3} mb={4} css={item} direction="column" alignItems="center">
 			<Typography variant="h4" css={css`color:black;`}>웹 포트폴리오</Typography>
 			<Typography variant="h6" css={css`color:gray;`}>2023.04</Typography>
 			<Grid mt={2} container direction="row" alignItems="start">
-				<Grid item container xs={isMobile?12:6} pr={isMobile?0:1}>
-					<Carousel autoPlay={false} css={css`width:100%;`}>
-						<img css={css`width:100%;height:${isMobile?'250px':'350px'};`} src="images/port1.png" alt="port1" />
-						<img css={css`width:100%;height:${isMobile?'250px':'350px'};`} src="images/port2.png" alt="port2" loading="lazy" />
-						<img css={css`width:100%;height:${isMobile?'250px':'350px'};`} src="images/port3.png" alt="port3" loading="lazy" />
-						<img css={css`width:100%;height:${isMobile?'250px':'350px'};`} src="images/port4.png" alt="port4" loading="lazy" />
+				<Grid item container xs={isTablet?12:6} pr={isTablet?0:1}>
+					<Carousel autoPlay={false} css={css`width:100%;height:${isTablet?isMobile?'250px':'430px':'350px'};`}>
+						<img css={css`width:100%;height:${isTablet?isMobile?'250px':'400px':'350px'};`} src="images/port1.png" alt="port1" />
+						<img css={css`width:100%;height:${isTablet?isMobile?'250px':'400px':'350px'};`} src="images/port2.png" alt="port2" loading="lazy" />
+						<img css={css`width:100%;height:${isTablet?isMobile?'250px':'400px':'350px'};`} src="images/port3.png" alt="port3" loading="lazy" />
+						<img css={css`width:100%;height:${isTablet?isMobile?'250px':'400px':'350px'};`} src="images/port4.png" alt="port4" loading="lazy" />
 					</Carousel>
 				</Grid>
-				<Grid item container xs={isMobile?12:6} pl={isMobile?0:1} direction="column" css={css`color:black;`}>
+				<Grid item container xs={isTablet?12:6} pt={isTablet?1:0} pl={isTablet?0:1}
+							direction="column" css={css`color:black;`}>
 					<Grid container pb={1} direction="row" alignItems="center">
 						<Grid item container xs={isMobile?12:3} alignItems="center">
 							<TaskAltIcon fontSize="large" sx={{ color: 'black' }} />
@@ -44,7 +46,7 @@ const Portfolio = () => {
 						</Grid>
 						<Grid item container xs={isMobile?12:9}
 							onClick={() => window.open('https://github.com/JeongEEE/portfolio', '_blank')}>
-							<Typography variant="h7" css={css`color:blue;${url};`}>
+							<Typography variant="body1" css={css`color:blue;${url};`}>
 								{'https://github.com/JeongEEE/portfolio'}
 							</Typography>
 						</Grid>
@@ -56,7 +58,7 @@ const Portfolio = () => {
 						</Grid>
 						<Grid item container xs={isMobile?12:9}
 							onClick={() => window.open('https://portfolio-198db.firebaseapp.com', '_blank')}>
-							<Typography variant="h7" css={css`color:blue;${url};`}>
+							<Typography variant="body1" css={css`color:blue;${url};`}>
 								{'https://portfolio-198db.firebaseapp.com'}
 							</Typography>
 						</Grid>

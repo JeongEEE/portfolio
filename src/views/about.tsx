@@ -9,10 +9,11 @@ import EmailIcon from '@mui/icons-material/Email';
 import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import { useRecoilState } from 'recoil';
-import { isMobileState } from '/src/states/atoms'
+import {isMobileState, isTabletState} from '/src/states/atoms'
 
 const About = () => {
 	const [isMobile, setIsMobile] = useRecoilState(isMobileState);
+	const [isTablet, setIsTablet] = useRecoilState(isTabletState);
 
 	return (
 		<Grid container>
