@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 // import Resume from '/src/views/projects/resume'
 import Shopping from '/src/views/projects/shopping'
 import Portfolio from '/src/views/projects/portfolio'
+import Diary from '/src/views/projects/diary'
 import { useRecoilState } from 'recoil';
 import {isMobileState, isTabletState} from '/src/states/atoms'
 
@@ -22,6 +23,7 @@ const Projects = () => {
 				<Grid container direction="column" alignItems="left" p={isMobile?1:0}>
 					<Portfolio />
 					<Shopping />
+					<Diary />
 				</Grid>
 			</Grid>
 		</Grid>
