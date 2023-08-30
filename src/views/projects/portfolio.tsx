@@ -57,9 +57,9 @@ const Portfolio = () => {
 							<Typography variant="h6">URL</Typography>
 						</Grid>
 						<Grid item container xs={isMobile?12:9}
-							onClick={() => window.open('https://portfolio-198db.firebaseapp.com', '_blank')}>
+							onClick={() => window.open('https://portfolio.purplediary.kr', '_blank')}>
 							<Typography variant="body1" css={css`color:blue;${url};`}>
-								{'https://portfolio-198db.firebaseapp.com'}
+								{'https://portfolio.purplediary.kr'}
 							</Typography>
 						</Grid>
 					</Grid>
@@ -69,7 +69,7 @@ const Portfolio = () => {
 							<Typography variant="h6">기술스택</Typography>
 						</Grid>
 						<Grid item container xs={isMobile?12:9}>
-							<Typography variant="h6">React, Typescript, Vite, Recoil, Material UI, Emotion, Firebase</Typography>
+							<Typography variant="h6">React, Typescript, Vite, Recoil, Material UI, Emotion, Firebase, Three.js</Typography>
 						</Grid>
 					</Grid>
 					<Grid container pb={1} direction="row" alignItems="start">
