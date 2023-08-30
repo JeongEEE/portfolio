@@ -30,7 +30,7 @@ const Shopping = () => {
 			<Typography variant="h6" css={css`color:gray;`}>2023.02</Typography>
 			<Grid mt={2} container direction="row" alignItems="start">
 				<Grid item container xs={isTablet?12:6} pr={isTablet?0:1}>
-					<Carousel autoPlay={false} css={css`width:100%;height:${isTablet?isMobile?'250px':'430px':'350px'};`}>
+					<Carousel autoPlay={false} css={css`width:100%;height:${isTablet?isMobile?'280px':'460px':'380px'};`}>
 						<img css={css`width:100%;height:${isTablet?isMobile?'250px':'400px':'350px'};`} src="images/shopping1.png" alt="shopping1" />
 						<img css={css`width:100%;height:${isTablet?isMobile?'250px':'400px':'350px'};`} src="images/shopping2.png" alt="shopping2" loading="lazy" />
 						<img css={css`width:100%;height:${isTablet?isMobile?'250px':'400px':'350px'};`} src="images/shopping3.png" alt="shopping3" loading="lazy" />
