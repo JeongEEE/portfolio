@@ -11,18 +11,15 @@ import Box from '@mui/material/Box';
 import Drawer from '@mui/material/Drawer';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
-import ListItemButton from '@mui/material/ListItemButton';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import ListItemText from '@mui/material/ListItemText';
 import MenuIcon from '@mui/icons-material/Menu';
 
-const header = (props) => css`
+const header = (props: {show: boolean}) => css`                                                                                                                         
 	position: fixed;
 	left: 0;
 	top: 0;
 	width: 100%;
 	height: 70px;
-	display: flex;
+	display: flex; 
 	align-items: center;
 	z-index: 5;
 	box-shadow: ${props.show ? '2px 2px 2px 0px grey' : 'none'};
@@ -42,7 +39,7 @@ const nav = css`
 	}
 `
 
-const Navigation = ({show}) => {
+const Navigation = ({show}: {show:boolean}) => {
 	const [open, setOpen] = useState(false);
 	const theme = useTheme();
 	// const isMobile = useMediaQuery('(max-width:600px)');
@@ -55,7 +52,7 @@ const Navigation = ({show}) => {
 	const scrollToTop = () => {
     window.scroll({ top: 0, behavior: 'smooth' });
   }
-	const scrollToBottom = (bottom) => {
+	const scrollToBottom = (bottom: number) => {
     window.scrollTo({ top: bottom, behavior: 'smooth' });
   }
 	const toggleDrawer = (status: boolean) => {

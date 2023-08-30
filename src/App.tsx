@@ -11,6 +11,10 @@ import Grid from '@mui/material/Grid';
 import TopButton from '/src/components/topButton';
 import { useRecoilState } from 'recoil';
 import {isMobileState, isTabletState} from '/src/states/atoms'
+import Background from "/src/components/background";
+import StarField from "/src/components/StarField";
+import ComputerCanvas from "/src/components/computer";
+import {blackGradient} from "/src/styles/global";
 
 const wrap = css`
 	width: 100vw;
@@ -23,12 +27,15 @@ const content = (props: { isMobile: boolean, isTablet: boolean }) => css`
 	z-index: 2;
 `
 const info = css`
-	background: url("images/bg2.png");
-	background-size:     cover;
-  background-repeat:   no-repeat;
-  background-position: center center;
-	height: 600px;
+	//background: url("images/bg2.png");
+	//background-size:     cover;
+  //background-repeat:   no-repeat;
+  //background-position: center center;
+	height: 100vh;
 	width: 100%;
+`
+const computerBox = css`
+	height: calc(100vh - 600px);
 `
 
 function App() {
@@ -38,25 +45,30 @@ function App() {
   return (
     <div css={wrap}>
 			<Grid container direction="column">
-				<Grid container css={css`${info};`}>
-					<Grid container css={css`${content({isMobile, isTablet})};`}>
+				<Grid container id="info" css={css`${info};${blackGradient};`}>
+					<Grid container css={css`${content({isMobile, isTablet})};height: 600px;`}>
 						<Info />
 					</Grid>
+					<Grid container id="computerBox" css={computerBox}>
+						<ComputerCanvas />
+					</Grid>
 				</Grid>
-				<Grid container css={css`width:100%;`}>
+				<Grid container id="about" css={css`width:100%;position: relative;`}>
 					<Grid container css={content({isMobile, isTablet})} id="about">
 						<About />
 					</Grid>
+					<Background />
 				</Grid>
 				<Grid container css={css`width:100%;background-color:#5870f3;`}>
 					<Grid container css={content({isMobile, isTablet})} id="skills">
 						<Skills />
 					</Grid>
 				</Grid>
-				<Grid container css={css`width:100%;background-color:#222;`}>
+				<Grid container css={css`width:100%;position: relative;`}>
 					<Grid container css={content({isMobile, isTablet})} id="link">
 						<Link />
 					</Grid>
+					<StarField />
 				</Grid>
 				<Grid container css={css`width:100%;background-color:#54acf9;`}>
 					<Grid container css={content({isMobile, isTablet})} id="projects">

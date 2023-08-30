@@ -2,7 +2,7 @@
 Node v.18.13.0, React 18, Vite, Typescript, Recoil, Material UI, Emotion, Firebase, 모바일 지원
 
 ----
-https://portfolio-198db.firebaseapp.com
+https://portfolio.purplediary.kr
 
 ----
 ## Getting Started
