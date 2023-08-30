@@ -62,8 +62,6 @@ const ComputerCanvas = () => {
       model.scale.set(1.5, 1.5, 1.5);
       model.rotation.y = -1.57;
 
-      model.rotation.y += 0.010;
-
       scene.add(model);
     });
   }
