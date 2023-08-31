@@ -12,13 +12,13 @@ const Info = () => {
 	return (
 		<Grid container>
 			<Grid container direction="column" alignItems="center"
-				css={css`padding-top:${isMobile?'100px':'170px'};color:white;`}>
+						css={css`padding-top:${isMobile?'100px':'170px'};color:white;`}>
 				<Typography variant={isMobile ? 'h5' : 'h3'}>웹 프론트엔드 개발자</Typography>
 				<Typography variant={isMobile ? 'h5' : 'h3'}>김규정 포트폴리오</Typography>
 				<Grid container css={css`border-bottom:5px solid blue;width:70px;`} pt={3} mb={4}></Grid>
 
 				<Grid container direction="column" alignItems={isMobile?'start':'center'}
-					css={css`color:#fff;`} p={isTablet?3:0}>
+							css={css`color:#fff;`} p={isTablet?3:0}>
 					<Typography variant={isTablet ? 'body1' : 'h6'}>안녕하세요! 저는 4년차 웹 프론트엔드 개발자로, Vue와 React를 중점적으로 다루고 있습니다.</Typography>
 					<Typography variant={isTablet ? 'body1' : 'h6'}>저는 프론트엔드 개발에 열정을 가지고 있으며,  새로운 기술과 트렌드를 항상 주시하고 적용하는 것에 관심이 많습니다.</Typography>
 					<Typography variant={isTablet ? 'body1' : 'h6'}>또한 팀 프로젝트에서 원활한 커뮤니케이션과 협업을 통해 공동 목표를 달성하는 것을 중요시합니다.</Typography>

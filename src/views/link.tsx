@@ -5,6 +5,7 @@ import Typography from '@mui/material/Typography';
 import LinkIcon from '@mui/icons-material/Link';
 import { useRecoilState } from 'recoil';
 import {isMobileState, isTabletState} from '/src/states/atoms'
+import { motion } from 'framer-motion';
 
 const item = css`
 	border-radius: 10px;
@@ -38,13 +39,16 @@ const LinkPage = () => {
 				<Typography variant="h3" css={css`color:white;`}>LINK</Typography>
 				<Grid container css={css`border-bottom:5px solid white;width:70px;`} pt={2} mb={4}></Grid>
 				<Grid container direction="column" alignItems="left" p={isMobile?1:0}>
-					<Grid container p={2} pt={1} pb={1} css={item} direction="row" alignItems="center"
-						onClick={() => window.open('https://github.com/JeongEEE', '_blank')}>
-						<img alt="github" src="images/github.png" css={css`width:150px;`} />
-						<Typography variant="h6" css={css`color:blue;padding-top:7px;${url};`}>
-							{'https://github.com/JeongEEE'}
-						</Typography>
-					</Grid>
+					<motion.div animate={{ scale: [1, 0.9, 0.9, 0.9, 1], rotate: [0, -2, 0, 2, 0] }}
+											transition={{ duration: 2, repeat: Infinity, repeatDelay: 0 }}>
+						<Grid container p={2} pt={1} pb={1} css={item} direction="row" alignItems="center"
+							onClick={() => window.open('https://github.com/JeongEEE', '_blank')}>
+							<img alt="github" src="images/github.png" css={css`width:150px;`} />
+							<Typography variant="h6" css={css`color:blue;padding-top:7px;${url};`}>
+								{'https://github.com/JeongEEE'}
+							</Typography>
+						</Grid>
+					</motion.div>
 					{/* <Grid container p={2} mt={2} css={item} direction="row" alignItems="center"
 						onClick={() => window.open('https://jeongeee.github.io/resume', '_blank')}>
 						<Grid item container xs={'auto'} pl={1} pr={2} direction="row" alignItems="center">

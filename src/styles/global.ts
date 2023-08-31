@@ -63,3 +63,17 @@ export const orangeTextGradient = css`
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 `
+
+export const skillItem = css`
+	border-radius: 10px;
+	background-color:white;
+	box-shadow: 4px 4px 5px 4px rgba(70,70,70,0.2);
+	color: #837df6;
+	&:hover {
+		transform: scale(1.025);
+		transition-duration: 0.3s;
+		z-index: 3;
+		box-shadow: 1px 1px 1px 1px rgba(70,70,70,0.2);
+		color: blue;
+	}
+`

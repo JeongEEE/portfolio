@@ -4,20 +4,24 @@ import * as THREE from 'three';
 import { GLTFLoader } from 'three/addons/loaders/GLTFLoader.js';
 import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 import $ from 'jquery';
+import CircularProgress from '@mui/material/CircularProgress';
 
 const background = css`
   z-index: 4;
+  position: relative;
+`
+const loadingArea = css`
+  position: absolute;
+  bottom: 10vh;
+  left: 49vw;
 `
 
 const ComputerCanvas = () => {
-  const conf = {
-    fov: 45,
-    cameraZ: 5,
-    el: 'computer'
-  };
+  const conf = { fov: 45, cameraZ: 5, el: 'computer' };
   let targetHeight = 600;
   let renderer, scene, camera, model, controls;
   let width, height, cx, cy, wWidth, wHeight;
+  const [modelLoading, setModelLoading] = useState(false)
 
   const init = () => {
     const infoWidth = $( "#computerBox" ).innerWidth();
@@ -54,6 +58,7 @@ const ComputerCanvas = () => {
   }
 
   const loadModel = () => {
+    setModelLoading(true);
     const loader = new GLTFLoader();
     loader.load('/model/computer.gltf', (gltf) => {
       model = gltf.scene;
@@ -63,6 +68,12 @@ const ComputerCanvas = () => {
       model.rotation.y = -1.57;
 
       scene.add(model);
+    },function (xhr) {
+      // inside the onProgress callback (Optional)
+      let progress = (xhr.loaded / xhr.total) * 100;
+      if(progress >= 100) setModelLoading(false);
+    }, function (error) {
+      setModelLoading(false);
     });
   }
 
@@ -101,6 +112,10 @@ const ComputerCanvas = () => {
   return (
     <div css={background}>
       <canvas id="computer"></canvas>
+      {modelLoading
+        ? <div css={loadingArea}><CircularProgress /></div>
+        : null
+      }
     </div>
   )
 }
