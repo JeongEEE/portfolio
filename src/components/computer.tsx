@@ -14,6 +14,7 @@ const loadingArea = css`
   position: absolute;
   bottom: 10vh;
   left: 49vw;
+  z-index: 5;
 `
 
 const ComputerCanvas = () => {
@@ -21,7 +22,7 @@ const ComputerCanvas = () => {
   let targetHeight = 600;
   let renderer, scene, camera, model, controls;
   let width, height, cx, cy, wWidth, wHeight;
-  const [modelLoading, setModelLoading] = useState(false)
+  const [modelLoading, setModelLoading] = useState(true)
 
   const init = () => {
     const infoWidth = $( "#computerBox" ).innerWidth();
@@ -68,10 +69,10 @@ const ComputerCanvas = () => {
       model.rotation.y = -1.57;
 
       scene.add(model);
+      setModelLoading(false);
     },function (xhr) {
       // inside the onProgress callback (Optional)
       let progress = (xhr.loaded / xhr.total) * 100;
-      if(progress >= 100) setModelLoading(false);
     }, function (error) {
       setModelLoading(false);
     });
