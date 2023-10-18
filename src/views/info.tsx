@@ -19,7 +19,7 @@ const Info = () => {
 
 				<Grid container direction="column" alignItems={isMobile?'start':'center'}
 							css={css`color:#fff;`} p={isTablet?3:0}>
-					<Typography variant={isTablet ? 'body1' : 'h6'}>안녕하세요! 저는 4년차 웹 프론트엔드 개발자로, Vue와 React를 중점적으로 다루고 있습니다.</Typography>
+					<Typography variant={isTablet ? 'body1' : 'h6'}>안녕하세요! 저는 5년차 웹 프론트엔드 개발자로, Vue와 React를 중점적으로 다루고 있습니다.</Typography>
 					<Typography variant={isTablet ? 'body1' : 'h6'}>저는 프론트엔드 개발에 열정을 가지고 있으며,  새로운 기술과 트렌드를 항상 주시하고 적용하는 것에 관심이 많습니다.</Typography>
 					<Typography variant={isTablet ? 'body1' : 'h6'}>또한 팀 프로젝트에서 원활한 커뮤니케이션과 협업을 통해 공동 목표를 달성하는 것을 중요시합니다.</Typography>
 					<Typography variant={isTablet ? 'body1' : 'h6'}>문제 해결 능력과 창의성을 발휘하여 유연하고 효율적인 코드를 작성하며</Typography>
