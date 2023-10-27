@@ -35,16 +35,6 @@ const Beyless = () => {
 				</Grid>
 
 				<Grid container mt={4} direction="column" alignItems="left">
-					<Typography variant="h4">⭐️ 엣지기반 위험환경 데이터 분석 기술 개발 및 자율주행 협업 플랫폼 실증</Typography>
-					<Typography variant="h6" pl={2}>► 담당 역할 : 웹 프론트엔드 개발 전체(기여도 100%)</Typography>
-					<Typography variant="h6" pl={2}>► 업무 기간 : 2023.07 ~ 현재</Typography>
-					<Typography variant="h6" pl={2}>► 기술 스택 : Vue 3, Vite, Typescript, Pinia, Vuetify, SCSS, OpenLayers, Turf.js</Typography>
-					<Typography variant="h6" pl={2}>► 업무 내용</Typography>
-					<Typography variant="h6" pl={4}>➢ 특장차량 작업현장 자율주행 관제 웹 서비스 개발</Typography>
-					<Typography variant="h6" pl={4}>➢ OpenLayers로 지도 컴포넌트 개발. Turf.js로 위치정보 데이터 가공.</Typography>
-				</Grid>
-
-				<Grid container mt={4} direction="column" alignItems="left">
 					<Typography variant="h4">⭐️ USEN Camera</Typography>
 					<Typography variant="h6" pl={2}>► 연계 업체 : (주)USEN</Typography>
 					<Typography variant="h6" pl={2}>► 담당 역할 : 웹 프론트엔드 개발 전체(기여도 80%)</Typography>
