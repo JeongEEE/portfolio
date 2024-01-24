@@ -17,7 +17,7 @@ const Beyless = () => {
 					<img src="images/beyless_logo4.png" css={css`width:150px;`} alt="beyless" loading="lazy" />
 				</Grid>
 				<Typography variant="h4" css={css`color:black;`}>(주)베이리스</Typography>
-				<Typography variant="h6" css={css`color:gray;`}>2019.09 ~ 현재</Typography>
+				<Typography variant="h6" css={css`color:gray;`}>2019.09 ~ 2023.11</Typography>
 				<Typography variant="h6" css={css`color:gray;`}>플랫폼 팀</Typography>
 			</Grid>
 			
@@ -26,7 +26,7 @@ const Beyless = () => {
 				<Grid container direction="column" alignItems="left">
 					<Typography variant="h4">⭐️ Drone Management</Typography>
 					<Typography variant="h6" pl={2}>► 담당 역할 : 웹 개발 전체(기여도 100%)</Typography>
-					<Typography variant="h6" pl={2}>► 업무 기간 : 2023.07 ~ 현재</Typography>
+					<Typography variant="h6" pl={2}>► 업무 기간 : 2023.07 ~ 2023.11</Typography>
 					<Typography variant="h6" pl={2}>► 기술 스택 : React 18, Next.js 13, Typescript, Recoil, Material UI, Emotion, Firebase</Typography>
 					<Typography variant="h6" pl={2}>► 업무 내용</Typography>
 					<Typography variant="h6" pl={4}>➢ 사내 드론팀 장비, 드론비행일지 등 드론관리 웹 서비스 개발</Typography>
@@ -38,7 +38,7 @@ const Beyless = () => {
 					<Typography variant="h4">⭐️ USEN Camera</Typography>
 					<Typography variant="h6" pl={2}>► 연계 업체 : (주)USEN</Typography>
 					<Typography variant="h6" pl={2}>► 담당 역할 : 웹 프론트엔드 개발 전체(기여도 80%)</Typography>
-					<Typography variant="h6" pl={2}>► 업무 기간 : 2021.12 ~ 2023 현재</Typography>
+					<Typography variant="h6" pl={2}>► 업무 기간 : 2021.12 ~ 2023.11</Typography>
 					<Typography variant="h6" pl={2}>► 기술 스택 : Vue 2, Vuex, Vuetify, SCSS, Video.js</Typography>
 					<Typography variant="h6" pl={isMobile?2:10}>Canvas, Chart.js, AWS kinesis Video Streams, AWS Amplify</Typography>
 					<Typography variant="h6" pl={2}>► 업무 내용</Typography>
