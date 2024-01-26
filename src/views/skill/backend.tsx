@@ -42,12 +42,23 @@ const Backend = () => {
         <Grid item container xs={isTablet? isMobile ?12 :5 :4} direction="column">
           <Typography variant="h4">Backend</Typography>
           <Grid container css={css`border-bottom:1px solid black;width:140px;`} pt={1} mb={1}></Grid>
-          <img alt="backend" src="images/backend.png" css={css`width:${isMobile?'200px':'240px'};`} loading="lazy" />
+          <Grid container mb={1} gap={1} direction="row" alignContent="center">
+            <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
+            <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
+            <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
+          </Grid>
+          {/*<img alt="backend" src="images/backend.png" css={css`width:${isMobile?'200px':'240px'};`} loading="lazy" />*/}
         </Grid>
         <Grid item container xs={isTablet? isMobile ?12 :7:5} direction="column">
           <Typography variant="h4">Deployment</Typography>
           <Grid container css={css`border-bottom:1px solid black;width:190px;`} pt={1} mb={1}></Grid>
-          <img alt="deploy" src="images/deploy.png" css={css`width:${isMobile?'80vw':'420px'};`} loading="lazy" />
+          <Grid container mb={1} gap={1} direction="row" alignContent="center">
+            <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
+            <img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
+            <img src="https://img.shields.io/badge/Amazon AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
+            <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
+          </Grid>
+          {/*<img alt="deploy" src="images/deploy.png" css={css`width:${isMobile?'80vw':'420px'};`} loading="lazy" />*/}
         </Grid>
         <Grid item container xs={isTablet? isMobile ?12 :6:3} direction="column">
           <Typography variant="h4">Certificate</Typography>

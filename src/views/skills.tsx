@@ -4,11 +4,6 @@ import Grid from '@mui/material/Grid';
 import Typography from '@mui/material/Typography';
 import { useRecoilState } from 'recoil';
 import {isMobileState, isTabletState} from '/src/states/atoms'
-import { styled } from '@mui/material/styles';
-import Tooltip, { TooltipProps, tooltipClasses } from '@mui/material/Tooltip';
-import ClickAwayListener from '@mui/material/ClickAwayListener';
-import {opacityVariants} from "/src/utils/animate";
-import { motion } from 'framer-motion';
 import Frontend from "/src/views/skill/frontend";
 import Backend from "/src/views/skill/backend";
 import Etc from "/src/views/skill/etc";
@@ -16,13 +11,6 @@ import Etc from "/src/views/skill/etc";
 const Skills = () => {
 	const [isMobile, setIsMobile] = useRecoilState(isMobileState);
 	const [isTablet, setIsTablet] = useRecoilState(isTabletState);
-	const [open, setOpen] = useState(false);
-  const handleTooltipClose = () => {
-    setOpen(false);
-  };
-  const handleTooltipOpen = () => {
-    setOpen(true);
-  };
 
 	return (
 		<Grid container>
