@@ -32,6 +32,13 @@ const Beyless = () => {
 					<Typography variant="h6" pl={4}>➢ 사내 드론팀 장비, 드론비행일지 등 드론관리 웹 서비스 개발</Typography>
 					<Typography variant="h6" pl={4}>➢ 장비 수정내역 History 열람 기능 개발</Typography>
 					<Typography variant="h6" pl={4}>➢ 세분화된 비행일지, 체크리스트 개발</Typography>
+					<Carousel autoPlay={false} css={css`width: 100%;height: ${isMobile ? '250px' : '430px'};`}>
+						<img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/beylessdrone1.png" alt="drone1"/>
+						<img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/beylessdrone2.png" alt="drone2"/>
+						<img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/beylessdrone3.png" alt="drone3"/>
+						<img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/beylessdrone4.png" alt="drone4"/>
+						<img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/beylessdrone5.png" alt="drone5"/>
+					</Carousel>
 				</Grid>
 
 				<Grid container mt={4} direction="column" alignItems="left">
