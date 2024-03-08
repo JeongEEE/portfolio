@@ -51,6 +51,7 @@ const Aloys = () => {
             <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/hoverlight1.png" alt="hoverlight1"/>
             <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/hoverlight2.png" alt="hoverlight2"/>
             <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/hoverlight3.png" alt="hoverlight3"/>
+            <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/hoverlight4.png" alt="hoverlight4"/>
           </Carousel>
         </Grid>
 
