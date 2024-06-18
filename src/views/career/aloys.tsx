@@ -30,12 +30,17 @@ const Aloys = () => {
           <Typography variant="h6" pl={2}>► 기술 스택 : React 18, Next.js 14, Typescript, React-query, Recoil, Material UI, Emotion, Lottie, Node.js, Express, Mysql, Websocket, Swagger, AWS Amplify, AWS EC2</Typography>
           <Typography variant="h6" pl={2}>► 업무 내용</Typography>
           <Typography variant="h6" pl={4}>➢ 라이브 방송 스트리머를 위한 실시간 모션 그래픽 플랫폼 개발</Typography>
-          <Typography variant="h6" pl={4}>➢ 미리 생성된 Lottie 오버레이 템플릿을 사용자가 추가, 편집 및 실시간 방송에 오버레이로 송출할 수 있도록 개발</Typography>
+          <Typography variant="h6" pl={4}>➢ 미리 생성된 Lottie 모션, 디자인 템플릿을 사용자가 추가, 편집 및 실시간 방송에 오버레이로 송출할 수 있도록 개발</Typography>
           <Typography variant="h6" pl={4}>➢ 메가라이브 방송기기와 웹소켓으로 실시간 통신</Typography>
           <Carousel autoPlay={false} css={css`width: 100%;height: ${isMobile ? '250px' : '430px'};`}>
-            <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/imledit1.png" alt="imledit1"/>
-            <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/imledit2.png" alt="imledit2"/>
-            <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/imledit3.png" alt="imledit3"/>
+            <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/megalive1.png" alt="megalive1"/>
+            <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/megalive2.png" alt="megalive2"/>
+            <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/megalive3.png" alt="megalive3"/>
+            <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/megalive4.png" alt="megalive4"/>
+            <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/megalive5.png" alt="megalive5"/>
+            <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/megalive6.png" alt="megalive6"/>
+            <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/megalive7.png" alt="megalive7"/>
+            <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/megalive8.png" alt="megalive8"/>
           </Carousel>
         </Grid>
 
