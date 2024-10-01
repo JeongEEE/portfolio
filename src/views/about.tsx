@@ -10,6 +10,7 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import { useRecoilState } from 'recoil';
 import {isMobileState, isTabletState} from '/src/states/atoms'
+import {CAREER} from '/src/constants';
 
 const About = () => {
 	const [isMobile, setIsMobile] = useRecoilState(isMobileState);
@@ -41,7 +42,7 @@ const About = () => {
 						<BusinessCenterIcon fontSize="large" sx={{ color: 'black' }} />
 						<Grid item container xs={'auto'} pl={1} direction="column" alignItems="start">
 							<Typography variant="h5">경력</Typography>
-							<Typography variant="h6">6년차</Typography>
+							<Typography variant="h6">{CAREER}년차</Typography>
 						</Grid>
 					</Grid>
 
