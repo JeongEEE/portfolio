@@ -41,7 +41,7 @@ const About = () => {
 						<BusinessCenterIcon fontSize="large" sx={{ color: 'black' }} />
 						<Grid item container xs={'auto'} pl={1} direction="column" alignItems="start">
 							<Typography variant="h5">경력</Typography>
-							<Typography variant="h6">5년차</Typography>
+							<Typography variant="h6">6년차</Typography>
 						</Grid>
 					</Grid>
 

@@ -27,7 +27,7 @@ const Aloys = () => {
           <Typography variant="h4">⭐️ Mega Live Studio</Typography>
           <Typography variant="h6" pl={2}>► 담당 역할 : 풀스택 개발 전체</Typography>
           <Typography variant="h6" pl={2}>► 업무 기간 : 2024.02 ~ 현재</Typography>
-          <Typography variant="h6" pl={2}>► 기술 스택 : React 18, Next.js 14, Typescript, React-query, Recoil, Material UI, Emotion, Lottie, Node.js, Express, Mysql, Websocket, Swagger, AWS Amplify, AWS EC2</Typography>
+          <Typography variant="h6" pl={2}>► 기술 스택 : React 18, Next.js 14, Typescript, React-query, Recoil, Material UI, Emotion, Lottie, fabric, i18n, Node.js, Express, Mysql, Redis, Websocket, Swagger, AWS Amplify, AWS EC2</Typography>
           <Typography variant="h6" pl={2}>► 업무 내용</Typography>
           <Typography variant="h6" pl={4}>➢ 라이브 방송 스트리머를 위한 실시간 모션 그래픽 플랫폼 개발</Typography>
           <Typography variant="h6" pl={4}>➢ 미리 생성된 Lottie 모션, 디자인 템플릿을 사용자가 추가, 편집 및 실시간 방송에 오버레이로 송출할 수 있도록 개발</Typography>
@@ -41,6 +41,9 @@ const Aloys = () => {
             <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/megalive6.png" alt="megalive6"/>
             <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/megalive7.png" alt="megalive7"/>
             <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/megalive8.png" alt="megalive8"/>
+            <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/megalive9.png" alt="megalive9"/>
+            <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/megalive10.png" alt="megalive10"/>
+            <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/megalive11.png" alt="megalive11"/>
           </Carousel>
         </Grid>
 
