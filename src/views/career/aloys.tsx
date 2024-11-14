@@ -30,7 +30,9 @@ const Aloys = () => {
           <Typography variant="h6" pl={2}>► 기술 스택 : React 18, Next.js 14, Typescript, React-query, Recoil, Material UI, Emotion, Lottie, fabric, i18n, Node.js, Express, Mysql, Redis, Websocket, Swagger, AWS Amplify, AWS EC2</Typography>
           <Typography variant="h6" pl={2}>► 업무 내용</Typography>
           <Typography variant="h6" pl={4}>➢ 라이브 방송 스트리머를 위한 실시간 모션 그래픽 플랫폼 개발</Typography>
-          <Typography variant="h6" pl={4}>➢ 미리 생성된 Lottie 모션, 디자인 템플릿을 사용자가 추가, 편집 및 실시간 방송에 오버레이로 송출할 수 있도록 개발</Typography>
+          <Typography variant="h6" pl={4}>➢ 미리 생성된 Lottie 모션, Image 디자인 템플릿을 사용자가 추가, 편집 및 실시간 방송에 오버레이로 송출할 수 있도록 개발</Typography>
+          <Typography variant="h6" pl={4}>➢ Lottie 모션 오버레이를 편집하고 실시간 제어하며 방송기기에 송출하는 기능 개발</Typography>
+          <Typography variant="h6" pl={4}>➢ 방송 큐시트를 직접 또는 AI로 작성하고 큐시트에 오버레이를 추가하여 큐시트 내용에 맞게 편집, 제어, 송출하는 기능 개발</Typography>
           <Typography variant="h6" pl={4}>➢ 메가라이브 방송기기와 웹소켓으로 실시간 통신</Typography>
           <Carousel autoPlay={false} css={css`width: 100%;height: ${isMobile ? '250px' : '430px'};`}>
             <img css={css`width:100%;height:${isMobile ? '250px' : '400px'};`} src="images/megalive1.png" alt="megalive1"/>

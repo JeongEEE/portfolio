@@ -53,7 +53,7 @@ function App() {
 						<ComputerCanvas />
 					</Grid>
 				</Grid>
-				<Grid container id="about" css={css`width:100%;position: relative;`}>
+				<Grid container id="about" css={css`width: 100%;position: relative;background-color: #000;`}>
 					<Grid container css={content({isMobile, isTablet})} id="about">
 						<About />
 					</Grid>
