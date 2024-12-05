@@ -22,10 +22,10 @@ const Projects = () => {
 				<Typography variant="h3" css={css`color:white;`}>PROJECTS</Typography>
 				<Grid container css={css`border-bottom:5px solid white;width:70px;`} pt={2} mb={4}></Grid>
 				<Grid container direction="column" alignItems="left" p={isMobile?1:0}>
+					<Diary />
 					<DiaryBackend />
 					<Portfolio />
 					<Shopping />
-					<Diary />
 				</Grid>
 			</Grid>
 		</Grid>
