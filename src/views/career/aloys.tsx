@@ -17,7 +17,7 @@ const Aloys = () => {
           <img src="images/aloys_logo.png" css={css`width:150px;`} alt="Aloys" loading="lazy" />
         </Grid>
         <Typography variant="h4" css={css`color:black;`}>(주)알로이스</Typography>
-        <Typography variant="h6" css={css`color:gray;`}>2023.12 ~ 현재</Typography>
+        <Typography variant="h6" css={css`color:gray;`}>2023.12 ~ 2024.12</Typography>
         <Typography variant="h6" css={css`color:gray;`}>앱개발 팀</Typography>
       </Grid>
 
@@ -26,7 +26,7 @@ const Aloys = () => {
         <Grid container direction="column" alignItems="left">
           <Typography variant="h4">⭐️ Mega Live Studio</Typography>
           <Typography variant="h6" pl={2}>► 담당 역할 : 풀스택 개발 전체</Typography>
-          <Typography variant="h6" pl={2}>► 업무 기간 : 2024.02 ~ 현재</Typography>
+          <Typography variant="h6" pl={2}>► 업무 기간 : 2024.02 ~ 2024.12</Typography>
           <Typography variant="h6" pl={2}>► 기술 스택 : React 18, Next.js 14, Typescript, React-query, Recoil, Material UI, Emotion, Lottie, fabric, i18n, Node.js, Express, Mysql, Redis, Websocket, AWS Amplify, AWS EC2</Typography>
           <Typography variant="h6" pl={2}>► 업무 내용</Typography>
           <Typography variant="h6" pl={4}>➢ 라이브 방송 스트리머를 위한 실시간 모션 그래픽 플랫폼 개발</Typography>
