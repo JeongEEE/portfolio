@@ -45,7 +45,7 @@ function App() {
   return (
     <div css={wrap}>
 			<Grid container direction="column">
-				<Grid container id="info" css={css`${info};${blackGradient};`}>
+				<Grid container id="info" css={css`${info};${blackGradient}`}>
 					<Grid container css={css`${content({isMobile, isTablet})};height: 600px;`}>
 						<Info />
 					</Grid>
@@ -53,13 +53,13 @@ function App() {
 						<ComputerCanvas />
 					</Grid>
 				</Grid>
-				<Grid container id="about" css={css`width: 100%;position: relative;background-color: #000;`}>
+				<Grid container id="about" css={css`width: 100%;position: relative;background-color: #323232;`}>
 					<Grid container css={content({isMobile, isTablet})} id="about">
 						<About />
 					</Grid>
 					<Background />
 				</Grid>
-				<Grid container css={css`width:100%;background-color:#5870f3;`}>
+				<Grid container css={css`width:100%;background-color:#000000;`}>
 					<Grid container css={content({isMobile, isTablet})} id="skills">
 						<Skills />
 					</Grid>
@@ -70,17 +70,17 @@ function App() {
 					</Grid>
 					<StarField />
 				</Grid>
-				<Grid container css={css`width:100%;background-color:#54acf9;`}>
+				<Grid container css={css`width:100%;background-color:#000000;`}>
 					<Grid container css={content({isMobile, isTablet})} id="projects">
 						<Projects />
 					</Grid>
 				</Grid>
-				<Grid container css={css`width:100%;background-color:#efefef;`}>
+				<Grid container css={css`width:100%;background-color:#323232;`}>
 					<Grid container css={content({isMobile, isTablet})} id="career">
 						<Career />
 					</Grid>
 				</Grid>
-				<Grid container css={css`width:100%;background-color:#222;`}>
+				<Grid container css={css`width:100%;background-color:#000000;`}>
 					<Grid container css={content({isMobile, isTablet})}>
 						<Footer />
 					</Grid>

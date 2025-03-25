@@ -13,12 +13,12 @@ const Beyless = () => {
 		<Grid container direction="row" alignItems="start">
 			<Grid item container xs={isMobile?12:3} p={2} direction="column" alignItems="center">
 				<Grid container p={2} mb={1} justifyContent="center"
-					css={css`border:1px solid #989898;border-radius:10px;`}>
+					css={css`border:1px solid #989898;border-radius:10px;background-color:#ffffff;`}>
 					<img src="images/beyless_logo4.png" css={css`width:150px;`} alt="beyless" loading="lazy" />
 				</Grid>
-				<Typography variant="h4" css={css`color:black;`}>(주)베이리스</Typography>
-				<Typography variant="h6" css={css`color:gray;`}>2019.09 ~ 2023.11</Typography>
-				<Typography variant="h6" css={css`color:gray;`}>플랫폼 팀</Typography>
+				<Typography variant="h4">(주)베이리스</Typography>
+				<Typography variant="h6">2019.09 ~ 2023.11</Typography>
+				<Typography variant="h6">플랫폼 팀</Typography>
 			</Grid>
 			
 			<Grid item container xs={isMobile?12:9} p={2} direction="column" alignItems="center"

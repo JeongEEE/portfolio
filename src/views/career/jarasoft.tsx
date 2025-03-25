@@ -13,12 +13,12 @@ const Jarasoft = () => {
     <Grid container direction="row" alignItems="start" css={css`border-bottom:1px solid #c4c3c3;`}>
       <Grid item container xs={isMobile?12:3} p={2} direction="column" alignItems="center">
         <Grid container p={2} mb={1} justifyContent="center"
-              css={css`border:1px solid #989898;border-radius:10px;`}>
+              css={css`border:1px solid #989898;border-radius:10px;background-color:#ffffff;`}>
           <img src="images/jarasoft_logo_black_ver.svg" css={css`width:150px;`} alt="Aloys" loading="lazy" />
         </Grid>
-        <Typography variant="h4" css={css`color:black;`}>(주)자라소프트</Typography>
-        <Typography variant="h6" css={css`color:gray;`}>2025.02 ~ 현재</Typography>
-        <Typography variant="h6" css={css`color:gray;`}>개발팀</Typography>
+        <Typography variant="h4">(주)자라소프트</Typography>
+        <Typography variant="h6">2025.02 ~ 현재</Typography>
+        <Typography variant="h6">개발팀</Typography>
       </Grid>
 
       <Grid item container xs={isMobile?12:9} p={2} pb={6} direction="column" alignItems="center"

@@ -12,10 +12,10 @@ const StarField = () => {
   const conf = {
     fov: 45,
     cameraZ: 5,
-    el: 'star'
+    el: 'star',
   };
-  let camera, scene, renderer, star, stars=[];
-  let width, height, cx, cy, wWidth, wHeight;
+  let camera: THREE.PerspectiveCamera, scene: THREE.Scene, renderer: THREE.WebGLRenderer, star: THREE.Mesh, stars: THREE.Mesh[] = [];
+  let width: number, height: number, cx: number, cy: number, wWidth: number, wHeight: number;
 
   function init(){
 
@@ -26,9 +26,10 @@ const StarField = () => {
 
     //scene
     scene = new THREE.Scene();
+    scene.background = new THREE.Color(0x323232);
 
     //renderer
-    renderer = new THREE.WebGLRenderer({ canvas: document.getElementById(conf.el) });
+    renderer = new THREE.WebGLRenderer({ canvas: document.getElementById(conf.el)! });
 
     updateSize();
     window.addEventListener('resize', updateSize, false);

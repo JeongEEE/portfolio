@@ -13,12 +13,12 @@ const Aloys = () => {
     <Grid container direction="row" alignItems="start" css={css`border-bottom:1px solid #c4c3c3;`}>
       <Grid item container xs={isMobile?12:3} p={2} direction="column" alignItems="center">
         <Grid container p={2} mb={1} justifyContent="center"
-              css={css`border:1px solid #989898;border-radius:10px;`}>
+              css={css`border:1px solid #989898;border-radius:10px;background-color:#ffffff;`}>
           <img src="images/aloys_logo.png" css={css`width:150px;`} alt="Aloys" loading="lazy" />
         </Grid>
-        <Typography variant="h4" css={css`color:black;`}>(주)알로이스</Typography>
-        <Typography variant="h6" css={css`color:gray;`}>2023.12 ~ 2024.12</Typography>
-        <Typography variant="h6" css={css`color:gray;`}>앱개발 팀</Typography>
+        <Typography variant="h4">(주)알로이스</Typography>
+        <Typography variant="h6">2023.12 ~ 2024.12</Typography>
+        <Typography variant="h6">앱개발 팀</Typography>
       </Grid>
 
       <Grid item container xs={isMobile?12:9} p={2} pb={6} direction="column" alignItems="center"

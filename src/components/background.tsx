@@ -25,13 +25,16 @@ const Background = () => {
     el: 'background',
   };
 
-  let targetHeight = 500;
-  let renderer, scene, camera, cameraCtrl, gArray;
-  let width, height, cx, cy, wWidth, wHeight;
-  let light1, light2, light3, light4;
-  const TMath = THREE.Math;
+  let targetHeight: number = 500;
+  let renderer: THREE.WebGLRenderer, 
+      scene: THREE.Scene, 
+      camera: THREE.PerspectiveCamera, 
+      cameraCtrl: any, 
+      gArray: Float32Array;
+  let width: number, height: number, cx: number, cy: number, wWidth: number, wHeight: number;
+  let light1: THREE.PointLight, light2: THREE.PointLight, light3: THREE.PointLight, light4: THREE.PointLight;
 
-  let plane;
+  let plane: any;
   const simplex = new SimplexNoise();
 
   const mouse = new THREE.Vector2();
@@ -44,8 +47,8 @@ const Background = () => {
   }, []);
 
   function init() {
-    targetHeight = $( "#about" ).innerHeight();
-    renderer = new THREE.WebGLRenderer({ canvas: document.getElementById(conf.el), antialias: true, alpha: true });
+    targetHeight = $( "#about" ).innerHeight()!;
+    renderer = new THREE.WebGLRenderer({ canvas: document.getElementById(conf.el)!, antialias: true, alpha: true });
     camera = new THREE.PerspectiveCamera(conf.fov);
     camera.position.z = conf.cameraZ;
 
@@ -137,21 +140,11 @@ const Background = () => {
     light4.position.z = Math.cos(time * 0.8) * d;
   }
 
-  function updateLightsColors() {
-    conf.light1Color = chroma.random().hex();
-    conf.light2Color = chroma.random().hex();
-    conf.light3Color = chroma.random().hex();
-    conf.light4Color = chroma.random().hex();
-    light1.color = new THREE.Color(conf.light1Color);
-    light2.color = new THREE.Color(conf.light2Color);
-    light3.color = new THREE.Color(conf.light3Color);
-    light4.color = new THREE.Color(conf.light4Color);
-    // console.log(conf);
-  }
-
   function updateSize() {
-    width = window.innerWidth; cx = width / 2;
-    height = targetHeight; cy = height / 2;
+    width = window.innerWidth; 
+    cx = width / 2;
+    height = targetHeight; 
+    cy = height / 2;
     if (renderer && camera) {
       renderer.setSize(width, height);
       camera.aspect = width / height;

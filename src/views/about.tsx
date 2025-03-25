@@ -21,7 +21,7 @@ const About = () => {
 			<Grid container direction="column" alignItems="center" pt={10} pb={15}
 				css={css`color:#fff;`}>
 				<Typography variant="h3">ABOUT ME</Typography>
-				<Grid container css={css`border-bottom:5px solid blue;width:70px;`} pt={2} mb={4}></Grid>
+				<Grid container css={css`border-bottom:5px solid #fff;width:70px;`} pt={2} mb={4}></Grid>
 
 				<Grid container direction="row" justifyContent="center" alignItems="start">
 					<Grid item container xs={isMobile?5:4} pl={2} direction="row" alignItems="start">

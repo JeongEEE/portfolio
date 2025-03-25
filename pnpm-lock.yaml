@@ -60,12 +60,18 @@ importers:
         specifier: 0.145.0
         version: 0.145.0
     devDependencies:
+      '@types/jquery':
+        specifier: ^3.5.32
+        version: 3.5.32
       '@types/react':
         specifier: ^18.0.28
         version: 18.3.20
       '@types/react-dom':
         specifier: ^18.0.11
         version: 18.3.5(@types/react@18.3.20)
+      '@types/three':
+        specifier: ^0.174.0
+        version: 0.174.0
       '@vitejs/plugin-react':
         specifier: ^3.1.0
         version: 3.1.0(vite@4.5.10(@types/node@22.13.13))
@@ -791,11 +797,17 @@ packages:
     resolution: {integrity: sha512-RbzJvlNzmRq5c3O09UipeuXno4tA1FE6ikOjxZK0tuxVv3412l64l5t1W5pj4+rJq9vpkm/kwiR07aZXnsKPxw==}
     engines: {node: '>= 6'}
 
+  '@tweenjs/tween.js@23.1.3':
+    resolution: {integrity: sha512-vJmvvwFxYuGnF2axRtPYocag6Clbb5YS7kLL+SO/TeVFzHqDIWrNKYtcsPMibjDx9O+bu+psAy9NKfWklassUA==}
+
   '@types/duplexify@3.6.4':
     resolution: {integrity: sha512-2eahVPsd+dy3CL6FugAzJcxoraWhUghZGEQJns1kTKfCXWKJ5iG/VkaB05wRVrDKHfOFKqb0X0kXh91eE99RZg==}
 
   '@types/glob@8.1.0':
     resolution: {integrity: sha512-IO+MJPVhoqz+28h1qLAcBEH2+xHMK6MTyHJc7MTnnYb6wsoLR29POVGJ7LycmVXIqyy/4/2ShP5sUwTXuOwb/w==}
+
+  '@types/jquery@3.5.32':
+    resolution: {integrity: sha512-b9Xbf4CkMqS02YH8zACqN1xzdxc3cO735Qe5AbSUFmyOiaWAbcpqh9Wna+Uk0vgACvoQHpWDg2rGdHkYPLmCiQ==}
 
   '@types/json-schema@7.0.15':
     resolution: {integrity: sha512-5+fP8P8MFNC+AyZCDxrB2pkZFPGzqQWUzpSeuuVLvm8VMcorNYavBqoFcxK8bQz4Qsbn4oUEEem4wDLfcysGHA==}
@@ -840,14 +852,29 @@ packages:
   '@types/rimraf@3.0.2':
     resolution: {integrity: sha512-F3OznnSLAUxFrCEu/L5PY8+ny8DtcFRjx7fZZ9bycvXRi3KPTRS9HOitGZwvPg0juRhXFWIeKX58cnX5YqLohQ==}
 
+  '@types/sizzle@2.3.9':
+    resolution: {integrity: sha512-xzLEyKB50yqCUPUJkIsrVvoWNfFUbIZI+RspLWt8u+tIW/BetMBZtgV2LY/2o+tYH8dRvQ+eoPf3NdhQCcLE2w==}
+
+  '@types/stats.js@0.17.3':
+    resolution: {integrity: sha512-pXNfAD3KHOdif9EQXZ9deK82HVNaXP5ZIF5RP2QG6OQFNTaY2YIetfrE9t528vEreGQvEPRDDc8muaoYeK0SxQ==}
+
+  '@types/three@0.174.0':
+    resolution: {integrity: sha512-De/+vZnfg2aVWNiuy1Ldu+n2ydgw1osinmiZTAn0necE++eOfsygL8JpZgFjR2uHmAPo89MkxBj3JJ+2BMe+Uw==}
+
   '@types/triple-beam@1.3.5':
     resolution: {integrity: sha512-6WaYesThRMCl19iryMYP7/x2OVgCtbIVflDGFpWnb9irXI3UjYE4AzmYuiUKY1AJstGijoY+MgUszMgRxIYTYw==}
+
+  '@types/webxr@0.5.21':
+    resolution: {integrity: sha512-geZIAtLzjGmgY2JUi6VxXdCrTb99A7yP49lxLr2Nm/uIK0PkkxcEi4OGhoGDO4pxCf3JwGz2GiJL2Ej4K2bKaA==}
 
   '@vitejs/plugin-react@3.1.0':
     resolution: {integrity: sha512-AfgcRL8ZBhAlc3BFdigClmTUMISmmzHn7sB2h9U1odvc5U/MjWXsAaz18b/WoppUTDBzxOJwo2VdClfUcItu9g==}
     engines: {node: ^14.18.0 || >=16.0.0}
     peerDependencies:
       vite: ^4.1.0-beta.0
+
+  '@webgpu/types@0.1.59':
+    resolution: {integrity: sha512-jZJ6ipNli+rn++/GAPqsZXfsgjx951wlCW7vNAg+oGdp0ZYidTOkbVTVeK2frzowuD5ch7MRz7leOEX1PMv43A==}
 
   abbrev@2.0.0:
     resolution: {integrity: sha512-6/mh1E2u2YgEsCHdY0Yx5oW+61gZU+1vXaoiHHrpKeuRNNgFvS+/jrwHiQhB5apAf5oB7UB7E19ol2R2LKH8hQ==}
@@ -1588,6 +1615,9 @@ packages:
   fecha@4.2.3:
     resolution: {integrity: sha512-OP2IUU6HeYKJi3i0z4A19kHMQoLVs4Hc+DPqqxI2h/DPZHTm/vjsfC6P0b4jCMy14XizLBqvndQ+UilD7707Jw==}
 
+  fflate@0.8.2:
+    resolution: {integrity: sha512-cPJU47OaAoCbg0pBvzsgpTPhmhqI5eJjh/JIu8tPj5q+T7iLvW/JAYUqmE7KOB4R1ZyEhzBaIQpQpardBF5z8A==}
+
   figures@3.2.0:
     resolution: {integrity: sha512-yaduQFRKLXYOGgEn6AZau90j3ggSOyiqXU0F9JZfeXYhNa+Jk4X+s45A2zg5jns87GAFa34BBm2kXw4XpNcbdg==}
     engines: {node: '>=8'}
@@ -2322,6 +2352,9 @@ packages:
 
   merge-descriptors@1.0.3:
     resolution: {integrity: sha512-gaNvAS7TZ897/rVaZ0nMtAyxNyi/pdbjbAwUpFQpN70GqnVfOiXpeUUMKRBmzXaSQ8DdTX4/0ms62r2K+hE6mQ==}
+
+  meshoptimizer@0.18.1:
+    resolution: {integrity: sha512-ZhoIoL7TNV4s5B6+rx5mC//fw8/POGyNxS/DZyCJeiZ12ScLfVwRE/GfsxwiTkMYYD5DmK2/JXnEVXqL4rF+Sw==}
 
   methods@1.1.2:
     resolution: {integrity: sha512-iclAHeNqNm68zFtnZ0e+1L2yUIdvzNoauKU4WBA3VvH/vPFieF7qfRlwUZU+DA9P9bPXIS90ulxoUoCH23sV2w==}
@@ -4333,6 +4366,8 @@ snapshots:
 
   '@tootallnate/once@1.1.2': {}
 
+  '@tweenjs/tween.js@23.1.3': {}
+
   '@types/duplexify@3.6.4':
     dependencies:
       '@types/node': 22.13.13
@@ -4341,6 +4376,10 @@ snapshots:
     dependencies:
       '@types/minimatch': 5.1.2
       '@types/node': 22.13.13
+
+  '@types/jquery@3.5.32':
+    dependencies:
+      '@types/sizzle': 2.3.9
 
   '@types/json-schema@7.0.15': {}
 
@@ -4383,7 +4422,22 @@ snapshots:
       '@types/glob': 8.1.0
       '@types/node': 22.13.13
 
+  '@types/sizzle@2.3.9': {}
+
+  '@types/stats.js@0.17.3': {}
+
+  '@types/three@0.174.0':
+    dependencies:
+      '@tweenjs/tween.js': 23.1.3
+      '@types/stats.js': 0.17.3
+      '@types/webxr': 0.5.21
+      '@webgpu/types': 0.1.59
+      fflate: 0.8.2
+      meshoptimizer: 0.18.1
+
   '@types/triple-beam@1.3.5': {}
+
+  '@types/webxr@0.5.21': {}
 
   '@vitejs/plugin-react@3.1.0(vite@4.5.10(@types/node@22.13.13))':
     dependencies:
@@ -4395,6 +4449,8 @@ snapshots:
       vite: 4.5.10(@types/node@22.13.13)
     transitivePeerDependencies:
       - supports-color
+
+  '@webgpu/types@0.1.59': {}
 
   abbrev@2.0.0:
     optional: true
@@ -5207,6 +5263,8 @@ snapshots:
       websocket-driver: 0.7.4
 
   fecha@4.2.3: {}
+
+  fflate@0.8.2: {}
 
   figures@3.2.0:
     dependencies:
@@ -6157,6 +6215,8 @@ snapshots:
   media-typer@0.3.0: {}
 
   merge-descriptors@1.0.3: {}
+
+  meshoptimizer@0.18.1: {}
 
   methods@1.1.2: {}
 

@@ -18,7 +18,8 @@ const top = css`
   outline: none;
   cursor: pointer;
 	&:hover {
-		background-color: #415df9;
+		background-color: #323232;
+    border: 1px solid #fff;
 		color :#fff;
 	}
 `
@@ -47,10 +48,12 @@ const TopButton = () => {
     }
   }, [])
 
-  return showButton && (
-    <div css={scrollContainer}>
-      <button css={top} onClick={scrollToTop} type="button" > Top</button>
-    </div>
+  return (
+    showButton 
+    ? <div css={scrollContainer}>
+        <button css={top} onClick={scrollToTop} type="button" > Top</button>
+      </div>
+    : <></>
   )
 }
 
