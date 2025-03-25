@@ -1,0 +1,32 @@
+<svg width="110" height="32" viewBox="0 0 110 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g clip-path="url(#clip0_317_27862)">
+<g clip-path="url(#clip1_317_27862)">
+<mask id="mask0_317_27862" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="2" width="110" height="25">
+<path d="M110 2.5H0V26.5H110V2.5Z" fill="white"/>
+</mask>
+<g mask="url(#mask0_317_27862)">
+<mask id="mask1_317_27862" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="2" width="110" height="25">
+<path d="M110 2.5H0V26.5H110V2.5Z" fill="white"/>
+</mask>
+<g mask="url(#mask1_317_27862)">
+<path d="M50.5 26.5H45.5V8.5H50.5V26.5Z" fill="white"/>
+<path d="M24.5 26.5H19.5V2.5H24.5V26.5Z" fill="white"/>
+<path d="M58.5 8.5H53.5V13.5H58.5V8.5Z" fill="white"/>
+<path d="M63.5 21.5H58.5V26.5H63.5V21.5Z" fill="#7256FF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M41.5 26.5H42.5V8.5H37.5V21.5H33.5C33.0076 21.3769 32.6231 20.9924 32.5 20.5V8.5H27.5V21.5C27.5 24.2614 29.7386 26.5 32.5 26.5H37.5H41.5Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M0 26.5H0.5H5H11.5C14.2614 26.5 16.5 24.2614 16.5 21.5V13.5C16.5 10.7386 14.2614 8.5 11.5 8.5H5V2.5H0V26.5ZM11.5 20.5V13.5C11.3769 13.0076 10.9924 12.6231 10.5 12.5H5V21.5H10.5C10.9924 21.3769 11.3769 20.9924 11.5 20.5Z" fill="white"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M96.5 8.5C94.2909 8.5 92.5 10.2909 92.5 12.5V22.5C92.5 24.7091 94.2909 26.5 96.5 26.5H107.5C108.605 26.5 109.5 25.6046 109.5 24.5V22.5H98.5C98.0076 22.3769 97.6231 21.9924 97.5 21.5V18.5H104.5H105.5H109.5V12.5C109.5 10.2909 107.709 8.5 105.5 8.5H96.5ZM97.5 15.5V13.5C97.6231 13.0076 98.0076 12.6231 98.5 12.5H103.5C103.992 12.6231 104.377 13.0076 104.5 13.5V15.5H97.5Z" fill="#7256FF"/>
+<path fill-rule="evenodd" clip-rule="evenodd" d="M70.5 8.5C68.2909 8.5 66.5 10.2909 66.5 12.5V26.5H71.5V14C71.5 13.1716 72.1716 12.5 73 12.5H74C74.8284 12.5 75.5 13.1716 75.5 14V26.5H78H80.5V14C80.5 13.1716 81.1716 12.5 82 12.5H83C83.8284 12.5 84.5 13.1716 84.5 14V26.5H89.5V12.5C89.5 10.2909 87.7091 8.5 85.5 8.5H81C79.3431 8.5 78 9.84315 78 11.5C78 9.84315 76.6569 8.5 75 8.5H70.5Z" fill="#7256FF"/>
+</g>
+</g>
+</g>
+</g>
+<defs>
+<clipPath id="clip0_317_27862">
+<rect width="110" height="24" fill="white" transform="translate(0 2.5)"/>
+</clipPath>
+<clipPath id="clip1_317_27862">
+<rect width="110" height="24" fill="white" transform="translate(0 2.5)"/>
+</clipPath>
+</defs>
+</svg>

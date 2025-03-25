@@ -10,7 +10,7 @@ import LocalPhoneIcon from '@mui/icons-material/LocalPhone';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import { useRecoilState } from 'recoil';
 import {isMobileState, isTabletState} from '/src/states/atoms'
-import {CAREER} from '/src/constants';
+import {CAREER, EMAIL, PHONE, BIRTH} from '/src/constants';
 
 const About = () => {
 	const [isMobile, setIsMobile] = useRecoilState(isMobileState);
@@ -35,7 +35,7 @@ const About = () => {
 						<CalendarMonthIcon fontSize="large" sx={{ color: 'white' }} />
 						<Grid item container xs={'auto'} pl={1} direction="column" alignItems="start">
 							<Typography variant="h5">생년월일</Typography>
-							<Typography variant="h6">1991년생</Typography>
+							<Typography variant="h6">{BIRTH}년생</Typography>
 						</Grid>
 					</Grid>
 					<Grid item container xs={isMobile?5:4} pl={2} direction="row" alignItems="start">
@@ -50,14 +50,14 @@ const About = () => {
 						<LocalPhoneIcon fontSize="large" sx={{ color: 'white' }} />
 						<Grid item container xs={'auto'} pl={1} direction="column" alignItems="start">
 							<Typography variant="h5">연락처</Typography>
-							<Typography variant="h6">010-2869-2734</Typography>
+							<Typography variant="h6">{PHONE}</Typography>
 						</Grid>
 					</Grid>
 					<Grid item container xs={isMobile?12:4} pl={2} direction="row" alignItems="start">
 						<EmailIcon fontSize="large" sx={{ color: 'white' }} />
 						<Grid item container xs={'auto'} pl={1} direction="column" alignItems="start">
 							<Typography variant="h5">EMAIL</Typography>
-							<Typography variant="h6">tbtbtb156@naver.com</Typography>
+							<Typography variant="h6">{EMAIL}</Typography>
 						</Grid>
 					</Grid>
 					<Grid item container xs={isMobile?12:4} pl={2} direction="row" alignItems="start"></Grid>
