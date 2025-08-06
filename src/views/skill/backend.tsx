@@ -46,6 +46,10 @@ const Backend = () => {
             <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
             <img src="https://img.shields.io/badge/Express-000000?style=for-the-badge&logo=express&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
             <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
+            <img src="https://img.shields.io/badge/Mysql-4479A1?style=for-the-badge&logo=mysql&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
+            <img src="https://img.shields.io/badge/Mongo db-47A248?style=for-the-badge&logo=mongodb&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
+            <img src="https://img.shields.io/badge/Redis-FF4438?style=for-the-badge&logo=redis&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
+            <img src="https://img.shields.io/badge/Swagger-85EA2D?style=for-the-badge&logo=swagger&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
           </Grid>
           {/*<img alt="backend" src="images/backend.png" css={css`width:${isMobile?'200px':'240px'};`} loading="lazy" />*/}
         </Grid>
@@ -56,6 +60,7 @@ const Backend = () => {
             <img src="https://img.shields.io/badge/Docker-2496ED?style=for-the-badge&logo=docker&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
             <img src="https://img.shields.io/badge/Jenkins-D24939?style=for-the-badge&logo=jenkins&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
             <img src="https://img.shields.io/badge/Amazon AWS-232F3E?style=for-the-badge&logo=amazonaws&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
+            <img src="https://img.shields.io/badge/google cloud-4285F4?style=for-the-badge&logo=googlecloud&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
             <img src="https://img.shields.io/badge/Firebase-FFCA28?style=for-the-badge&logo=firebase&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
           </Grid>
           {/*<img alt="deploy" src="images/deploy.png" css={css`width:${isMobile?'80vw':'420px'};`} loading="lazy" />*/}

@@ -26,6 +26,8 @@ const Etc = () => {
           <img src="https://img.shields.io/badge/Synology-B5B5B6?style=for-the-badge&logo=synology&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
           <img src="https://img.shields.io/badge/Notion-000000?style=for-the-badge&logo=notion&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
           <img src="https://img.shields.io/badge/Redmine-B32024?style=for-the-badge&logo=redmine&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
+          <img src="https://img.shields.io/badge/Jira-0052CC?style=for-the-badge&logo=jira&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
+          <img src="https://img.shields.io/badge/Confluence-172B4D?style=for-the-badge&logo=confluence&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
         </Grid>
         {/*{isTablet*/}
         {/*  ? isMobile*/}

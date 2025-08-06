@@ -27,15 +27,22 @@ const Frontend = () => {
         <Grid container mb={1} gap={1} direction="row" alignContent="center">
           <img src="https://img.shields.io/badge/Vue.js-35495E?style=for-the-badge&logo=vue.js&logoColor=4FC08D" css={css`width: auto;height: 30px;`} loading="lazy" />
           <img src="https://img.shields.io/badge/Vuetify-1867C0?style=for-the-badge&logo=vuetify&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
+          <img src="https://img.shields.io/badge/Electron-47848F?style=for-the-badge&logo=electron&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
         </Grid>
         <Grid container mb={1} gap={1} direction="row" alignContent="center">
-          <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" css={css`width: auto;height: 30px;`} loading="lazy" />
-          <img src="https://img.shields.io/badge/Next.js-ffffff?style=for-the-badge&logo=next.js&logoColor=black" css={css`width: auto;height: 30px;`} loading="lazy" />
+          <img src="https://img.shields.io/badge/React-61DAFB?style=for-the-badge&logo=react&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
+          <img src="https://img.shields.io/badge/Next.js-000000?style=for-the-badge&logo=next.js&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
           <img src="https://img.shields.io/badge/Recoil-3578E5?style=for-the-badge&logo=recoil&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
           <img src="https://img.shields.io/badge/React Query-FF4154?style=for-the-badge&logo=reactquery&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
           <img src="https://img.shields.io/badge/Material UI-007FFF?style=for-the-badge&logo=mui&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
+          <img src="https://img.shields.io/badge/Tailwind css-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
+        </Grid>
+        <Grid container mb={1} gap={1} direction="row" alignContent="center">
+          <img src="https://img.shields.io/badge/Figma-F24E1E?style=for-the-badge&logo=figma&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
+          <img src="https://img.shields.io/badge/Storybook-FF4785?style=for-the-badge&logo=storybook&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
         </Grid>
         <Grid container gap={1} direction="row" alignContent="center">
+          <img src="https://img.shields.io/badge/Dart-0175C2?style=for-the-badge&logo=dart&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
           <img src="https://img.shields.io/badge/Flutter-02569B?style=for-the-badge&logo=flutter&logoColor=white" css={css`width: auto;height: 30px;`} loading="lazy" />
         </Grid>
         {/*{isTablet*/}
