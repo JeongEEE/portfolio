@@ -44,11 +44,9 @@ const ComputerCanvas = () => {
 
     controls = new OrbitControls(camera, renderer.domElement);
     controls.enableZoom = false;
+    controls.enableRotate = false;
+    controls.enablePan = false;
     controls.target.set(0, 0, 0);
-    controls.rotateSpeed = 1.0;
-    controls.panSpeed = 0.8;
-    controls.maxPolarAngle = Math.PI / 2.1;
-    controls.minPolarAngle = Math.PI / 10;
 
     updateSize();
     window.addEventListener('resize', updateSize, false);
@@ -130,7 +128,7 @@ const ComputerCanvas = () => {
   }, []);
 
   return (
-    <div className="absolute inset-0">
+    <div className="absolute inset-0 pointer-events-none">
       <canvas id="computer"></canvas>
       {modelLoading
         ? <div className="absolute bottom-[10vh] left-[49vw] z-[5]">
