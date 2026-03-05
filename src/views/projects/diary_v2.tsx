@@ -8,13 +8,10 @@ import { CheckCircle2 } from "lucide-react";
 import ImageViewDialog from "../../components/ImageViewDialog";
 
 const diaryImages = [
-  "images/diary_screenshot1.png", "images/diary_screenshot2.png", "images/diary_screenshot3.png",
-  "images/diary_screenshot4.png", "images/diary_screenshot5.png", "images/diary_screenshot6.png",
-  "images/diary_screenshot7.png", "images/diary_screenshot8.png", "images/diary_screenshot9.png",
-  "images/diary_screenshot10.png",
+  "images/diary_v2-1.png"
 ];
 
-const Diary = () => {
+const DiaryV2 = () => {
   const [dialogIndex, setDialogIndex] = useState(0);
   const [dialogOpen, setDialogOpen] = useState(false);
 
@@ -27,8 +24,8 @@ const Diary = () => {
     <div className="bg-[#111] border border-[#222] rounded-xl overflow-hidden mb-6">
       {/* 헤더 */}
       <div className="p-6 border-b border-[#222]">
-        <h3 className="text-xl font-semibold text-white">다이어리</h3>
-        <p className="text-zinc-500 text-sm mt-1">2021.03 ~ 현재 서비스중</p>
+        <h3 className="text-xl font-semibold text-white">다이어리 v2</h3>
+        <p className="text-zinc-500 text-sm mt-1">2025.12 ~ 진행중</p>
       </div>
       {/* 본문: 좌측 이미지 슬라이더 + 우측 텍스트 */}
       <div className="flex flex-col md:flex-row">
@@ -56,8 +53,8 @@ const Diary = () => {
         </div>
         {/* 텍스트 정보 */}
         <div className="w-full md:w-1/2 p-6 flex flex-col gap-3">
-          <div className="flex gap-3 items-start">
-            <CheckCircle2 className="text-white w-5 h-5 mt-0.5 flex-shrink-0" />
+          {/* <div className="flex gap-3 items-start">
+            <CheckCircle2 className="text-white w-5 h-5 mt-0.5 shrink-0" />
             <div>
               <span className="text-white text-sm font-medium">URL</span>
               <p className="text-zinc-400 text-sm">
@@ -71,12 +68,12 @@ const Diary = () => {
                 </a>
               </p>
             </div>
-          </div>
+          </div> */}
           <div className="flex gap-3 items-start">
             <CheckCircle2 className="text-white w-5 h-5 mt-0.5 shrink-0" />
             <div>
               <span className="text-white text-sm font-medium">기술스택</span>
-              <p className="text-zinc-400 text-sm">Vue 2.7, Vuetify 2.x, Vuex 3, Vue Router 3, JavaScript, Socket.io-client 4.x, Chart.js 3.x, PixiJS 8.x, matter-js 0.20, CKEditor4, axios 1.x, PWA(Workbox), SimpleWebAuthn, crypto-js, Playwright</p>
+              <p className="text-zinc-400 text-sm">Vue 3.5, Quasar 2.x, TypeScript 5.x, Pinia 3.x, Vue Router 4, Vite 7.x, Tiptap 3.x, Chart.js 4.x, PixiJS 8.x, Socket.io-client 4.x, axios 1.x, VueUse, PWA(Workbox 7), Playwright</p>
             </div>
           </div>
           <div className="flex gap-3 items-start">
@@ -87,18 +84,13 @@ const Diary = () => {
             </div>
           </div>
           <div className="border-b border-[#333] my-1"></div>
-          <p className="text-zinc-400 text-sm">PC, Tablet, Mobile 어느환경에서나 사용할 수 있는 다이어리</p>
-          <p className="text-zinc-400 text-sm">메모·게시판·달력·가계부·차계부·코드북 등 10여 개 도메인을 아우르는 개인용 올인원 다이어리 웹 애플리케이션 설계 및 개발</p>
-          <p className="text-zinc-400 text-sm">글꼴, 글자크기 커스터마이징을 사용해 나만의 이쁜 다이어리를 만들 수 있습니다.</p>
-          <p className="text-zinc-400 text-sm">Chart.js를 활용한 가계부 지출 통계 및 시각화 대시보드 구현</p>
-          <p className="text-zinc-400 text-sm">SimpleWebAuthn을 이용한 WebAuthn(패스키/생체인증) 로그인 흐름 프론트엔드 구현</p>
-          <p className="text-zinc-400 text-sm">Socket.io 기반 실시간 데이터 동기화 및 Web Push 알림 연동</p>
-          <p className="text-zinc-400 text-sm">PixiJS + matter-js 물리 엔진 기반 미니게임 9종(pinball, candy crush, tetris, snake, brick breaker 등) 구현</p>
-          <p className="text-zinc-400 text-sm">Vue CLI PWA 플러그인 + Workbox를 활용한 오프라인 지원 및 서비스워커 설정</p>
-          <p className="text-zinc-400 text-sm">서버 모니터링·사용자 관리·SSH 터미널을 포함한 관리자 페이지 구현</p>
-          <p className="text-zinc-400 text-sm">Playwright E2E 테스트 작성 및 자동화 스크립트 구성</p>
-          <p className="text-zinc-400 text-sm"></p>
-          <p className="text-zinc-400 text-sm">Guest계정- ID: guest@test.com / PW: 123123</p>
+          <p className="text-zinc-400 text-sm">Vue 2 + Vuetify 기반 기존 서비스를 Vue 3 + Quasar + TypeScript로 전면 마이그레이션 (Composition API + script setup 적용)</p>
+          <p className="text-zinc-400 text-sm">빌드 시스템을 webpack(Vue CLI) → Vite로 전환하여 개발 서버 구동 속도 및 빌드 성능 개선, rollup-plugin-visualizer로 번들 분석 환경 구축</p>
+          <p className="text-zinc-400 text-sm">상태 관리를 Vuex → Pinia로 교체, 도메인별 스토어 분리 및 타입 안전성 확보</p>
+          <p className="text-zinc-400 text-sm">텍스트 에디터를 CKEditor4 → Tiptap 3.x로 교체, 코드 블록·테이블·이미지·색상 등 커스텀 확장 기능 구성</p>
+          <p className="text-zinc-400 text-sm">VueUse 컴포저블을 활용한 공통 상호작용 로직 추상화 및 코드 재사용성 향상</p>
+          <p className="text-zinc-400 text-sm">Workbox 7 기반 PWA 서비스워커 전략 재설계(캐시 만료·라우팅·프리캐싱 정책 세분화)</p>
+          <p className="text-zinc-400 text-sm">Playwright E2E 테스트 및 코드젠(codegen) 기반 자동화 테스트</p>
         </div>
       </div>
 
@@ -112,4 +104,4 @@ const Diary = () => {
   );
 };
 
-export default Diary;
+export default DiaryV2;

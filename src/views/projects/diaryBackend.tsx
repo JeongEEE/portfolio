@@ -54,24 +54,29 @@ const DiaryBackend = () => {
         {/* 텍스트 정보 */}
         <div className="w-full md:w-1/2 p-6 flex flex-col gap-3">
           <div className="flex gap-3 items-start">
-            <CheckCircle2 className="text-white w-5 h-5 mt-0.5 flex-shrink-0" />
+            <CheckCircle2 className="text-white w-5 h-5 mt-0.5 shrink-0" />
             <div>
               <span className="text-white text-sm font-medium">기술스택</span>
-              <p className="text-zinc-400 text-sm">Nodejs 18, Express, Typescript, Joi, Minio, Mysql, Sequelize, Redis</p>
+              <p className="text-zinc-400 text-sm">Express.js 5, TypeScript 5.x, Prisma 7.x (MariaDB), Redis (ioredis), MinIO, JWT, Socket.io 4.x, web-push, nodemailer, sharp, winston, ssh2, Mocha / Chai / Supertest, Google GenAI</p>
             </div>
           </div>
           <div className="flex gap-3 items-start">
-            <CheckCircle2 className="text-white w-5 h-5 mt-0.5 flex-shrink-0" />
+            <CheckCircle2 className="text-white w-5 h-5 mt-0.5 shrink-0" />
             <div>
               <span className="text-white text-sm font-medium">주요기능</span>
               <p className="text-zinc-400 text-sm">다이어리 서버, DB 관리, 외부 API 호출</p>
             </div>
           </div>
           <div className="border-b border-[#333] my-1"></div>
-          <p className="text-zinc-400 text-sm">Firebase로 구현한 다이어리 서비스에서 Firebase 로직을 제거하고 백엔드를 직접 구축하였습니다.</p>
-          <p className="text-zinc-400 text-sm">NodeJS Express로 서버를 구현하였으며 Typescript로 작성하여 유지보수가 수월하도록 코드를 작성하였습니다.</p>
-          <p className="text-zinc-400 text-sm">Nosql 기반의 firestore DB에서 관계형 데이터베이스인 Mysql로 마이그레이션 작업을 성공적으로 진행하였습니다.</p>
-          <p className="text-zinc-400 text-sm">정적인 Assets은 캐시정책을 설계하고, Redis를 활용하여 빠르게 캐시 데이터를 활용하도록 구축하였습니다.</p>
+          <p className="text-zinc-400 text-sm">Express.js 5 + TypeScript 기반 RESTful API 서버 설계 및 개발(메모, 가계부, 달력, 차계부, 게시판, 지도, 게임 등 전 도메인 API 구현)</p>
+          <p className="text-zinc-400 text-sm">JWT 기반 일반 인증과 SimpleWebAuthn 서버 라이브러리를 활용한 WebAuthn(패스키) 인증 흐름 설계 및 구현</p>
+          <p className="text-zinc-400 text-sm">API Key 발급·권한 체크·사용량 쿼터 미들웨어 설계로 외부 연동용 인증 레이어 구축</p>
+          <p className="text-zinc-400 text-sm">Prisma ORM을 통한 DB 스키마 관리 및 트랜잭션 처리, MariaDB + Redis 이중 저장소 아키텍처 운영</p>
+          <p className="text-zinc-400 text-sm">MinIO 오브젝트 스토리지 연동으로 메모 첨부파일·이미지 업로드/다운로드 처리, sharp를 이용한 서버사이드 이미지 리사이징</p>
+          <p className="text-zinc-400 text-sm">Web Push(web-push) 및 nodemailer를 이용한 푸시 알림·이메일 발송 기능 구현</p>
+          <p className="text-zinc-400 text-sm">Google GenAI SDK 연동 AI 서비스 API 개발</p>
+          <p className="text-zinc-400 text-sm">express-rate-limit 기반 요청 제한, winston + winston-daily-rotate-file을 이용한 구조화 로깅 시스템 구축</p>
+          <p className="text-zinc-400 text-sm">Mocha / Chai / Supertest 기반 단위·E2E 테스트 작성</p>
         </div>
       </div>
 

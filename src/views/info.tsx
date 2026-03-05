@@ -11,7 +11,7 @@ const Info = () => {
       {/* 이름 */}
       <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">김규정 포트폴리오</h1>
       {/* 구분선 */}
-      <div className="h-[2px] w-16 bg-white mb-8"></div>
+      <div className="h-0.5 w-16 bg-white mb-8"></div>
       {/* 자기소개 6줄 */}
       <div className="space-y-1 text-sm md:text-base leading-7 text-zinc-400">
         <p>안녕하세요! 저는 {CAREER}년차 웹 프론트엔드 개발자로, Vue와 React를 중점적으로 다루고 있습니다.</p>

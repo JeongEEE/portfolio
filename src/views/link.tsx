@@ -5,7 +5,7 @@ const LinkPage = () => {
   return (
     <div className="py-24 md:py-32">
       <h2 className="text-2xl md:text-3xl font-semibold text-white mb-4">LINK</h2>
-      <div className="h-[2px] w-16 bg-white mb-12"></div>
+      <div className="h-0.5 w-16 bg-white mb-12"></div>
       <div
         className="flex items-center gap-4 bg-[#111] border border-[#222] rounded-xl p-6 cursor-pointer hover:border-[#444] hover:bg-[#1a1a1a] transition-all duration-200 max-w-md"
         onClick={() => window.open("https://github.com/JeongEEE", "_blank")}
