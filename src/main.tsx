@@ -1,17 +1,11 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App'
-import '/src/styles/globals.css'
-import '/src/styles/reset.css'
-import Layout from '/src/components/layout/layout'
-import { RecoilRoot } from 'recoil';
+import React from "react";
+import App from "./App";
+import "/src/styles/index.css";
+import Layout from "/src/components/layout/layout";
+import { ViteReactSSG } from "vite-react-ssg/single-page";
 
-ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
-  <React.StrictMode>
-		<RecoilRoot>
-			<Layout>
-				<App />
-			</Layout>
-		</RecoilRoot>
-  </React.StrictMode>,
-)
+export const createRoot = ViteReactSSG(
+  <Layout>
+    <App />
+  </Layout>
+);

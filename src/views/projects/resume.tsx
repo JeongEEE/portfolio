@@ -1,76 +1,54 @@
-import React, { Fragment, useState, useEffect } from 'react'
-import { css } from '@emotion/react'
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
-import Carousel from 'react-material-ui-carousel'
-import TaskAltIcon from '@mui/icons-material/TaskAlt';
-
-const item = css`
-	border-radius: 10px;
-	background-color:white;
-	box-shadow: 4px 4px 5px 4px rgba(70,70,70,0.2);
-	color: #837df6;
-`
-const url = css`
-	&:hover {
-		text-decoration: underline;
-	}
-`
+import { useState } from "react"
 
 const Resume = () => {
-	return (
-		<Grid container p={3} css={item} direction="column" alignItems="center">
-			<Typography variant="h4" css={css`color:black;`}>웹 이력서</Typography>
-			<Typography variant="h6" css={css`color:gray;`}>2022.06</Typography>
-			<Grid mt={2} container direction="row" alignItems="start">
-				<Grid item container xs={7} pr={1}>
-					<Carousel autoPlay={false} css={css`width:100%;`}>
-						<img css={css`width:100%;height:350px;`} src="images/bg1.png" alt="bg1" />
-						<img css={css`width:100%;height:350px;`} src="images/bg2.png" alt="bg2" loading="lazy" />
-					</Carousel>
-				</Grid>
-				<Grid item container xs={5} direction="column">
-					<Grid container pb={1} direction="row" alignItems="center">
-						<Grid item container xs={4} alignItems="center">
-							<TaskAltIcon fontSize="large" sx={{ color: 'black' }} />
-							<Typography variant="h6" css={css`color:black;`}>GitHub</Typography>
-						</Grid>
-						<Grid item container xs={8}>
+  const [activeSlide, setActiveSlide] = useState(0)
+  const slides = [
+    { src: "images/bg1.png", alt: "bg1" },
+    { src: "images/bg2.png", alt: "bg2" },
+  ]
 
-						</Grid>
-					</Grid>
-					<Grid container pb={1} direction="row" alignItems="center">
-						<Grid item container xs={4} alignItems="center">
-							<TaskAltIcon fontSize="large" sx={{ color: 'black' }} />
-							<Typography variant="h6" css={css`color:black;`}>URL</Typography>
-						</Grid>
-						<Grid item container xs={8}>
+  return (
+    <div className="rounded-xl bg-white border border-zinc-200 shadow-sm p-6 flex flex-col items-center">
+      <h2 className="text-2xl font-bold text-black mb-1">웹 이력서</h2>
+      <p className="text-sm text-zinc-500 mb-6">2022.06</p>
 
-						</Grid>
-					</Grid>
-					<Grid container pb={1} direction="row" alignItems="center">
-						<Grid item container xs={4} alignItems="center">
-							<TaskAltIcon fontSize="large" sx={{ color: 'black' }} />
-							<Typography variant="h6" css={css`color:black;`}>기술스택</Typography>
-						</Grid>
-						<Grid item container xs={8}>
-							
-						</Grid>
-					</Grid>
-					<Grid container pb={1} direction="row" alignItems="center">
-						<Grid item container xs={4} alignItems="center">
-							<TaskAltIcon fontSize="large" sx={{ color: 'black' }} />
-							<Typography variant="h6" css={css`color:black;`}>주요기능</Typography>
-						</Grid>
-						<Grid item container xs={8}>
-							
-						</Grid>
-					</Grid>
-					<Grid container css={css`border-bottom:1px solid gray;`} mb={1}></Grid>
-				</Grid>
-			</Grid>
-		</Grid>
-	)
+      <div className="flex flex-col md:flex-row gap-6 w-full">
+        <div className="md:w-7/12 relative">
+          <img
+            className="w-full h-72 object-cover rounded-lg"
+            src={slides[activeSlide].src}
+            alt={slides[activeSlide].alt}
+            loading="lazy"
+          />
+          <div className="flex justify-center gap-2 mt-3">
+            {slides.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => setActiveSlide(i)}
+                className={`w-2 h-2 rounded-full transition-colors ${
+                  i === activeSlide ? "bg-black" : "bg-zinc-300"
+                }`}
+              />
+            ))}
+          </div>
+        </div>
+
+        <div className="md:w-5/12 flex flex-col gap-4">
+          {[
+            { label: "GitHub", value: "" },
+            { label: "URL", value: "" },
+            { label: "기술스택", value: "" },
+            { label: "주요기능", value: "" },
+          ].map(({ label, value }) => (
+            <div key={label} className="flex items-start gap-3 pb-3 border-b border-zinc-100">
+              <span className="text-xs font-semibold text-zinc-500 w-16 shrink-0 pt-0.5">{label}</span>
+              <span className="text-sm text-zinc-800">{value}</span>
+            </div>
+          ))}
+        </div>
+      </div>
+    </div>
+  )
 }
 
 export default Resume

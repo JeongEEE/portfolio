@@ -1,12 +1,6 @@
 import React, { useState, useEffect } from 'react'
-import { css } from '@emotion/react'
 import * as THREE from 'three';
 
-const background = css`
-	position: absolute;
-	top: 0;
-	z-index: -1;
-`
 
 const StarField = () => {
   const conf = {
@@ -120,7 +114,7 @@ const StarField = () => {
   }, []);
 
   return (
-    <div css={background}>
+    <div className="absolute top-0 -z-[1]">
       <canvas id="star"></canvas>
     </div>
   )

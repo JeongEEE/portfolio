@@ -1,15 +1,8 @@
-import React, { Fragment, useState, useEffect } from 'react'
-import Navigation from './navigation'
-import { css } from '@emotion/react'
-import Grid from '@mui/material/Grid';
-
-const layout = css`
-	/* padding-top: 70px; */
-`
+import { Fragment, useState, useEffect } from "react"
+import Navigation from "./navigation"
 
 const Layout = (props: any) => {
-	const [show, setShow] = useState(false);
-
+  const [show, setShow] = useState(false);
   useEffect(() => {
     const handleShow = () => {
       if (window.scrollY > 70) {
@@ -24,14 +17,14 @@ const Layout = (props: any) => {
     }
   }, [])
 
-	return (
-		<Fragment>
-			<Grid container css={layout}>
-				<Navigation show={show} />
-				<main>{props.children}</main>
-			</Grid>
+  return (
+    <Fragment>
+      <div>
+        <Navigation show={show} />
+        <main>{props.children}</main>
+      </div>
     </Fragment>
-	)
+  )
 }
 
 export default Layout

@@ -1,60 +1,42 @@
-import React, { useState, useEffect } from 'react';
-import { css } from '@emotion/react'
-
-const scrollContainer = css`
-	position: fixed;
-  right: 5%;
-  bottom: 5%;
-  z-index: 7;
-`
-const top = css`
-	font-weight: bold;
-  font-size: 15px;
-  padding :15px 10px;
-  background-color: #fff;
-  color: black;
-  border: 1px solid rgb(210, 204, 193);
-  border-radius: 50%;
-  outline: none;
-  cursor: pointer;
-	&:hover {
-		background-color: #323232;
-    border: 1px solid #fff;
-		color :#fff;
-	}
-`
+import React, { useState, useEffect } from "react";
 
 const TopButton = () => {
-	const [showButton, setShowButton] = useState(false);
+  const [showButton, setShowButton] = useState(false);
 
   const scrollToTop = () => {
     window.scroll({
       top: 0,
-      behavior: 'smooth'
-    })
-  }
+      behavior: "smooth",
+    });
+  };
 
   useEffect(() => {
     const handleShowButton = () => {
       if (window.scrollY > 500) {
-        setShowButton(true)
+        setShowButton(true);
       } else {
-        setShowButton(false)
+        setShowButton(false);
       }
-    }
-    window.addEventListener("scroll", handleShowButton)
+    };
+    window.addEventListener("scroll", handleShowButton);
     return () => {
-      window.removeEventListener("scroll", handleShowButton)
-    }
-  }, [])
+      window.removeEventListener("scroll", handleShowButton);
+    };
+  }, []);
+
+  if (!showButton) return null;
 
   return (
-    showButton 
-    ? <div css={scrollContainer}>
-        <button css={top} onClick={scrollToTop} type="button" > Top</button>
-      </div>
-    : <></>
-  )
-}
+    <div className="fixed right-[5%] bottom-[5%] z-[100]">
+      <button
+        className="font-bold text-sm px-[10px] py-[15px] bg-white text-black border border-[#d2ccc1] rounded-full outline-none cursor-pointer hover:bg-[#323232] hover:border-white hover:text-white transition-colors"
+        onClick={scrollToTop}
+        type="button"
+      >
+        Top
+      </button>
+    </div>
+  );
+};
 
-export default TopButton
+export default TopButton;

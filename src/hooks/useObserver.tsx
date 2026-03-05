@@ -1,21 +1,19 @@
-import React, { useState, useEffect } from 'react'
-import { css } from '@emotion/react'
-import { useAnimation } from "framer-motion";
-import { useInView } from "react-intersection-observer";
+import { useRef, useState, useEffect } from "react"
 
 const UseObserver = () => {
-  const animation = useAnimation();
-  const { ref, inView } = useInView();
+  const ref = useRef<HTMLDivElement>(null)
+  const [inView, setInView] = useState(false)
 
   useEffect(() => {
-    if (inView) {
-      animation.start("visible");
-    } else {
-      animation.start("hidden");
-    }
-  }, [animation, inView]);
+    const observer = new IntersectionObserver(
+      ([entry]) => { setInView(entry.isIntersecting) },
+      { threshold: 0.1 }
+    )
+    if (ref.current) observer.observe(ref.current)
+    return () => observer.disconnect()
+  }, [])
 
-  return { ref, animation };
+  return { ref, inView }
 }
 
 export default UseObserver

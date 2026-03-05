@@ -1,93 +1,118 @@
-import React, { Fragment, useState, useEffect } from 'react'
-import { css } from '@emotion/react'
-import Grid from '@mui/material/Grid';
-import Typography from '@mui/material/Typography';
-import Carousel from 'react-material-ui-carousel'
-import TaskAltIcon from '@mui/icons-material/TaskAlt';
-import { useRecoilState } from 'recoil';
-import {isMobileState, isTabletState} from '/src/states/atoms'
+import React, { useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import { Navigation, Pagination } from "swiper/modules";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import { CheckCircle2 } from "lucide-react";
+import ImageViewDialog from "../../components/ImageViewDialog";
 
-const item = css`
-	border-radius: 10px;
-	background-color:white;
-	box-shadow: 4px 4px 5px 4px rgba(70,70,70,0.2);
-	color: #837df6;
-`
-const url = css`
-  cursor: pointer;
-	&:hover {
-		text-decoration: underline;
-	}
-`
+const portImages = [
+  "images/port1.png", "images/port2.png", "images/port3.png", "images/port4.png",
+];
 
 const Portfolio = () => {
-	const [isMobile, setIsMobile] = useRecoilState(isMobileState);
-	const [isTablet, setIsTablet] = useRecoilState(isTabletState);
+  const [dialogIndex, setDialogIndex] = useState(0);
+  const [dialogOpen, setDialogOpen] = useState(false);
 
-	return (
-		<Grid container p={isTablet?2:3} mb={4} css={item} direction="column" alignItems="center">
-			<Typography variant="h4" css={css`color:black;`}>웹 포트폴리오</Typography>
-			<Typography variant="h6" css={css`color:gray;`}>2023.04</Typography>
-			<Grid mt={2} container direction="row" alignItems="start">
-				<Grid item container xs={isTablet?12:6} pr={isTablet?0:1}>
-					<Carousel autoPlay={false} css={css`width:100%;height:${isTablet?isMobile?'280px':'460px':'380px'};`}>
-						<img css={css`width:100%;height:${isTablet?isMobile?'250px':'400px':'350px'};`} src="images/port1.png" alt="port1" />
-						<img css={css`width:100%;height:${isTablet?isMobile?'250px':'400px':'350px'};`} src="images/port2.png" alt="port2" loading="lazy" />
-						<img css={css`width:100%;height:${isTablet?isMobile?'250px':'400px':'350px'};`} src="images/port3.png" alt="port3" loading="lazy" />
-						<img css={css`width:100%;height:${isTablet?isMobile?'250px':'400px':'350px'};`} src="images/port4.png" alt="port4" loading="lazy" />
-					</Carousel>
-				</Grid>
-				<Grid item container xs={isTablet?12:6} pt={isTablet?1:0} pl={isTablet?0:1}
-							direction="column" css={css`color:black;`}>
-					<Grid container pb={1} direction="row" alignItems="center">
-						<Grid item container xs={isMobile?12:3} alignItems="center">
-							<TaskAltIcon fontSize="large" sx={{ color: 'black' }} />
-							<Typography variant="h6">GitHub</Typography>
-						</Grid>
-						<Grid item container xs={isMobile?12:9}
-									onClick={() => window.open('https://github.com/JeongEEE/portfolio', '_blank')}>
-							<Typography variant="body1" css={css`color:blue;${url};`}>
-								{'https://github.com/JeongEEE/portfolio'}
-							</Typography>
-						</Grid>
-					</Grid>
-					<Grid container pb={1} direction="row" alignItems="center">
-						<Grid item container xs={isMobile?12:3} alignItems="center">
-							<TaskAltIcon fontSize="large" sx={{ color: 'black' }} />
-							<Typography variant="h6">URL</Typography>
-						</Grid>
-						<Grid item container xs={isMobile?12:9}
-									onClick={() => window.open('https://portfolio.purplediary.kr', '_blank')}>
-							<Typography variant="body1" css={css`color:blue;${url};`}>
-								{'https://portfolio.purplediary.kr'}
-							</Typography>
-						</Grid>
-					</Grid>
-					<Grid container pb={1} direction="row" alignItems="start">
-						<Grid item container xs={isMobile?12:3} alignItems="center">
-							<TaskAltIcon fontSize="large" sx={{ color: 'black' }} />
-							<Typography variant="h6">기술스택</Typography>
-						</Grid>
-						<Grid item container xs={isMobile?12:9}>
-							<Typography variant="h6">React, Typescript, Vite, Recoil, Material UI, Emotion, Firebase, Three.js</Typography>
-						</Grid>
-					</Grid>
-					<Grid container pb={1} direction="row" alignItems="start">
-						<Grid item container xs={isMobile?12:3} alignItems="center">
-							<TaskAltIcon fontSize="large" sx={{ color: 'black' }} />
-							<Typography variant="h6">주요기능</Typography>
-						</Grid>
-						<Grid item container xs={isMobile?12:9}>
-							<Typography variant="h6">자기소개, 인적사항, 기술 스택, 프로젝트 경험, 업무 경력, 모바일 지원</Typography>
-						</Grid>
-					</Grid>
-					<Grid container css={css`border-bottom:1px solid gray;`} mb={1}></Grid>
-					<Typography variant="h6">제출과 열람이 편리하도록 개발한 포트폴리오 웹사이트 입니다.</Typography>
-					<Typography variant="h6">Vite를 사용하여 React로 개발하였습니다.</Typography>
-				</Grid>
-			</Grid>
-		</Grid>
-	)
-}
+  const openDialog = (index: number) => {
+    setDialogIndex(index);
+    setDialogOpen(true);
+  };
 
-export default Portfolio
+  return (
+    <div className="bg-[#111] border border-[#222] rounded-xl overflow-hidden mb-6">
+      {/* 헤더 */}
+      <div className="p-6 border-b border-[#222]">
+        <h3 className="text-xl font-semibold text-white">웹 포트폴리오</h3>
+        <p className="text-zinc-500 text-sm mt-1">2023.04</p>
+      </div>
+      {/* 본문: 좌측 이미지 슬라이더 + 우측 텍스트 */}
+      <div className="flex flex-col md:flex-row">
+        {/* 이미지 슬라이더 */}
+        <div className="w-full md:w-1/2">
+          <Swiper
+            modules={[Navigation, Pagination]}
+            navigation
+            pagination={{ clickable: true }}
+            className="w-full"
+            style={{ "--swiper-theme-color": "#ffffff" } as React.CSSProperties}
+          >
+            {portImages.map((src, i) => (
+              <SwiperSlide key={src}>
+                <img
+                  src={src}
+                  className="w-full object-contain cursor-zoom-in"
+                  alt={`port${i + 1}`}
+                  loading={i === 0 ? undefined : "lazy"}
+                  onClick={() => openDialog(i)}
+                />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+        </div>
+        {/* 텍스트 정보 */}
+        <div className="w-full md:w-1/2 p-6 flex flex-col gap-3">
+          <div className="flex gap-3 items-start">
+            <CheckCircle2 className="text-white w-5 h-5 mt-0.5 flex-shrink-0" />
+            <div>
+              <span className="text-white text-sm font-medium">GitHub</span>
+              <p className="text-zinc-400 text-sm">
+                <a
+                  href="https://github.com/JeongEEE/portfolio"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-400 hover:text-white hover:underline cursor-pointer"
+                >
+                  https://github.com/JeongEEE/portfolio
+                </a>
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-3 items-start">
+            <CheckCircle2 className="text-white w-5 h-5 mt-0.5 flex-shrink-0" />
+            <div>
+              <span className="text-white text-sm font-medium">URL</span>
+              <p className="text-zinc-400 text-sm">
+                <a
+                  href="https://portfolio.purplediary.kr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-zinc-400 hover:text-white hover:underline cursor-pointer"
+                >
+                  https://portfolio.purplediary.kr
+                </a>
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-3 items-start">
+            <CheckCircle2 className="text-white w-5 h-5 mt-0.5 flex-shrink-0" />
+            <div>
+              <span className="text-white text-sm font-medium">기술스택</span>
+              <p className="text-zinc-400 text-sm">React, Typescript, Vite, Recoil, Material UI, Emotion, Firebase, Three.js</p>
+            </div>
+          </div>
+          <div className="flex gap-3 items-start">
+            <CheckCircle2 className="text-white w-5 h-5 mt-0.5 flex-shrink-0" />
+            <div>
+              <span className="text-white text-sm font-medium">주요기능</span>
+              <p className="text-zinc-400 text-sm">자기소개, 인적사항, 기술 스택, 프로젝트 경험, 업무 경력, 모바일 지원</p>
+            </div>
+          </div>
+          <div className="border-b border-[#333] my-1"></div>
+          <p className="text-zinc-400 text-sm">제출과 열람이 편리하도록 개발한 포트폴리오 웹사이트 입니다.</p>
+          <p className="text-zinc-400 text-sm">Vite를 사용하여 React로 개발하였습니다.</p>
+        </div>
+      </div>
+
+      <ImageViewDialog
+        images={portImages}
+        initialIndex={dialogIndex}
+        open={dialogOpen}
+        onClose={() => setDialogOpen(false)}
+      />
+    </div>
+  );
+};
+
+export default Portfolio;

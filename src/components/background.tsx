@@ -1,27 +1,19 @@
 import React, { useEffect } from 'react'
-import { css } from '@emotion/react'
 import * as THREE from 'three';
 import SimplexNoise from 'simplex-noise';
 import $ from 'jquery';
-
-const background = css`
-	position: absolute;
-	top: 0;
-	z-index: 1;
-`
-
 const Background = () => {
   const conf = {
     fov: 75,
     cameraZ: 75,
     xyCoef: 50,
     zCoef: 15,
-    lightIntensity: 0.9,
+    lightIntensity: 1.2,
     ambientColor: 0x000000,
-    light1Color: 0x0E09DC,
-    light2Color: 0x1CD1E1,
-    light3Color: 0x18C02C,
-    light4Color: 0xee3bcf,
+    light1Color: 0x555555,
+    light2Color: 0x888888,
+    light3Color: 0xaaaaaa,
+    light4Color: 0x333333,
     el: 'background',
   };
 
@@ -164,7 +156,7 @@ const Background = () => {
   }
 
   return (
-    <div css={background}>
+    <div className="absolute inset-0 z-[1]">
       <canvas id="background"></canvas>
     </div>
   )

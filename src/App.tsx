@@ -1,94 +1,88 @@
-import React, { Fragment, useState, useEffect } from 'react'
-import { css } from '@emotion/react'
-import Info from '/src/views/info'
-import About from '/src/views/about'
-import Skills from '/src/views/skills'
-import Link from '/src/views/link'
-import Projects from '/src/views/projects/index'
-import Career from '/src/views/career/index'
-import Footer from '/src/views/footer'
-import Grid from '@mui/material/Grid';
-import TopButton from '/src/components/topButton';
-import { useRecoilState } from 'recoil';
-import {isMobileState, isTabletState} from '/src/states/atoms'
-import Background from "/src/components/background";
-import StarField from "/src/components/StarField";
-import ComputerCanvas from "/src/components/computer";
-import {blackGradient} from "/src/styles/global";
+import React, { lazy, Suspense } from "react";
+import Info from "/src/views/info";
+import About from "/src/views/about";
+import Skills from "/src/views/skills";
+import Link from "/src/views/link";
+import Projects from "/src/views/projects/index";
+import Career from "/src/views/career/index";
+import Footer from "/src/views/footer";
+import TopButton from "/src/components/topButton";
 
-const wrap = css`
-	width: 100vw;
-`
-const content = (props: { isMobile: boolean, isTablet: boolean }) => css`
-	min-width: ${props.isTablet ? '0px' : '1100px'};
-	max-width: ${props.isTablet ? '100vw' : '1100px'};
-	margin-left: ${props.isTablet ? '0' : 'auto'};
-	margin-right: ${props.isTablet ? '0' : 'auto'};
-	z-index: 2;
-`
-const info = css`
-	//background: url("images/bg2.png");
-	//background-size:     cover;
-  //background-repeat:   no-repeat;
-  //background-position: center center;
-	height: 100vh;
-	width: 100%;
-`
-const computerBox = css`
-	height: calc(100vh - 600px);
-`
+const Background = lazy(() => import("/src/components/background"));
+const StarField = lazy(() => import("/src/components/StarField"));
+const ComputerCanvas = lazy(() => import("/src/components/computer"));
 
 function App() {
-	const [isMobile, setIsMobile] = useRecoilState(isMobileState);
-	const [isTablet, setIsTablet] = useRecoilState(isTabletState);
-
   return (
-    <div css={wrap}>
-			<Grid container direction="column">
-				<Grid container id="info" css={css`${info};${blackGradient}`}>
-					<Grid container css={css`${content({isMobile, isTablet})};height: 600px;`}>
-						<Info />
-					</Grid>
-					<Grid container id="computerBox" css={computerBox}>
-						<ComputerCanvas />
-					</Grid>
-				</Grid>
-				<Grid container id="about" css={css`width: 100%;position: relative;background-color: #323232;`}>
-					<Grid container css={content({isMobile, isTablet})} id="about">
-						<About />
-					</Grid>
-					<Background />
-				</Grid>
-				<Grid container css={css`width:100%;background-color:#000000;`}>
-					<Grid container css={content({isMobile, isTablet})} id="skills">
-						<Skills />
-					</Grid>
-				</Grid>
-				<Grid container css={css`width:100%;position: relative;`}>
-					<Grid container css={content({isMobile, isTablet})} id="link">
-						<Link />
-					</Grid>
-					<StarField />
-				</Grid>
-				<Grid container css={css`width:100%;background-color:#000000;`}>
-					<Grid container css={content({isMobile, isTablet})} id="projects">
-						<Projects />
-					</Grid>
-				</Grid>
-				<Grid container css={css`width:100%;background-color:#323232;`}>
-					<Grid container css={content({isMobile, isTablet})} id="career">
-						<Career />
-					</Grid>
-				</Grid>
-				<Grid container css={css`width:100%;background-color:#000000;`}>
-					<Grid container css={content({isMobile, isTablet})}>
-						<Footer />
-					</Grid>
-				</Grid>
-			</Grid>
-			<TopButton />
+    <div className="w-full overflow-x-hidden">
+      {/* 1. #info Section */}
+      <section id="info" className="relative min-h-screen w-full bg-black flex flex-col">
+        <div className="relative z-10 max-w-5xl mx-auto w-full px-6 md:px-8 h-[600px] flex-shrink-0">
+          <Info />
+        </div>
+        {/* ComputerCanvas: 섹션 전체 배경으로 absolute 배치 */}
+        <div id="computerBox" className="absolute inset-0 z-[1]">
+          <Suspense fallback={
+            <div className="absolute bottom-[10vh] left-[49vw] z-[5]">
+              <div className="w-8 h-8 border-2 border-zinc-400 border-t-transparent rounded-full animate-spin" />
+            </div>
+          }>
+            <ComputerCanvas />
+          </Suspense>
+        </div>
+      </section>
+
+      {/* 2. #about Section */}
+      <section id="about" className="relative w-full bg-[#0a0a0a]">
+        <div className="relative z-10 max-w-5xl mx-auto w-full px-6 md:px-8">
+          <About />
+        </div>
+        <Suspense fallback={null}>
+          <Background />
+        </Suspense>
+      </section>
+
+      {/* 3. #skills Section */}
+      <section id="skills" className="relative w-full bg-black">
+        <div className="relative z-10 max-w-5xl mx-auto w-full px-4 md:px-8">
+          <Skills />
+        </div>
+      </section>
+
+      {/* 4. #link Section */}
+      <section id="link" className="relative w-full">
+        <div className="relative z-10 max-w-5xl mx-auto w-full px-6 md:px-8">
+          <Link />
+        </div>
+        <Suspense fallback={null}>
+          <StarField />
+        </Suspense>
+      </section>
+
+      {/* 5. #projects Section */}
+      <section id="projects" className="relative w-full bg-[#0a0a0a]">
+        <div className="relative z-10 max-w-5xl mx-auto w-full px-4 md:px-8">
+          <Projects />
+        </div>
+      </section>
+
+      {/* 6. #career Section */}
+      <section id="career" className="relative w-full bg-black">
+        <div className="relative z-10 max-w-5xl mx-auto w-full px-4 md:px-8">
+          <Career />
+        </div>
+      </section>
+
+      {/* 7. Footer Section */}
+      <footer className="relative w-full bg-black">
+        <div className="relative z-10 max-w-5xl mx-auto w-full px-6 md:px-8">
+          <Footer />
+        </div>
+      </footer>
+
+      <TopButton />
     </div>
-  )
+  );
 }
 
-export default App
+export default App;
