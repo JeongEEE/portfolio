@@ -45,7 +45,7 @@ const ImageViewDialog = ({ images, initialIndex = 0, open, onClose }: Props) => 
     >
       {/* 닫기 버튼 */}
       <button
-        className="fixed top-4 right-4 z-[201] flex items-center justify-center w-14 h-14 rounded-full bg-black/70 text-white hover:bg-black/95 transition-colors shadow-lg"
+        className="fixed top-4 right-4 z-[201] flex items-center justify-center w-14 h-14 rounded-full bg-black/70 text-white hover:bg-black/95 transition-colors shadow-lg cursor-pointer"
         onClick={(e) => { e.stopPropagation(); onClose(); }}
         aria-label="닫기"
       >
@@ -62,7 +62,7 @@ const ImageViewDialog = ({ images, initialIndex = 0, open, onClose }: Props) => 
       {/* 이전 버튼 */}
       {images.length > 1 && (
         <button
-          className="fixed left-3 md:left-6 z-[201] flex items-center justify-center w-14 h-14 rounded-full bg-black/70 text-white hover:bg-black/95 transition-colors shadow-lg"
+          className="fixed left-3 md:left-6 z-[201] flex items-center justify-center w-14 h-14 rounded-full bg-black/70 text-white hover:bg-black/95 transition-colors shadow-lg cursor-pointer"
           onClick={(e) => { e.stopPropagation(); handlePrev(); }}
           aria-label="이전 이미지"
         >
@@ -89,7 +89,7 @@ const ImageViewDialog = ({ images, initialIndex = 0, open, onClose }: Props) => 
       {/* 다음 버튼 */}
       {images.length > 1 && (
         <button
-          className="fixed right-3 md:right-6 z-[201] flex items-center justify-center w-14 h-14 rounded-full bg-black/70 text-white hover:bg-black/95 transition-colors shadow-lg"
+          className="fixed right-3 md:right-6 z-[201] flex items-center justify-center w-14 h-14 rounded-full bg-black/70 text-white hover:bg-black/95 transition-colors shadow-lg cursor-pointer"
           onClick={(e) => { e.stopPropagation(); handleNext(); }}
           aria-label="다음 이미지"
         >

@@ -42,3 +42,24 @@
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
+/* Swiper pagination 점 색상 - 어두운 배경에서 가시성 개선 */
+.swiper-pagination-bullet {
+  background: #888888 !important;
+  opacity: 1 !important;
+}
+
+.swiper-pagination-bullet-active {
+  background: #e5e5e5 !important;
+}
+
+/* Swiper navigation 버튼 색상 - 회색 계열 */
+.swiper-button-prev,
+.swiper-button-next {
+  color: #888888 !important;
+}
+
+.swiper-button-prev:hover,
+.swiper-button-next:hover {
+  color: #e5e5e5 !important;
+}
