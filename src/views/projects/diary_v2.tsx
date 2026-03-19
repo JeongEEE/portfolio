@@ -25,7 +25,7 @@ const DiaryV2 = () => {
       {/* 헤더 */}
       <div className="p-6 border-b border-[#222]">
         <h3 className="text-xl font-semibold text-white">다이어리 v2</h3>
-        <p className="text-zinc-500 text-sm mt-1">2025.12 ~ 진행중</p>
+        <p className="text-zinc-500 text-sm mt-1">2025.12 ~ 서비스 중</p>
       </div>
       {/* 본문: 좌측 이미지 슬라이더 + 우측 텍스트 */}
       <div className="flex flex-col md:flex-row">
@@ -85,12 +85,14 @@ const DiaryV2 = () => {
           </div>
           <div className="border-b border-[#333] my-1"></div>
           <p className="text-zinc-400 text-sm">Vue 2 + Vuetify 기반 기존 서비스를 Vue 3 + Quasar + TypeScript로 전면 마이그레이션 (Composition API + script setup 적용)</p>
+          <p className="text-zinc-400 text-sm">2025.12 ~ 2026.03 마이그레이션 완료</p>
           <p className="text-zinc-400 text-sm">빌드 시스템을 webpack(Vue CLI) → Vite로 전환하여 개발 서버 구동 속도 및 빌드 성능 개선, rollup-plugin-visualizer로 번들 분석 환경 구축</p>
           <p className="text-zinc-400 text-sm">상태 관리를 Vuex → Pinia로 교체, 도메인별 스토어 분리 및 타입 안전성 확보</p>
           <p className="text-zinc-400 text-sm">텍스트 에디터를 CKEditor4 → Tiptap 3.x로 교체, 코드 블록·테이블·이미지·색상 등 커스텀 확장 기능 구성</p>
           <p className="text-zinc-400 text-sm">VueUse 컴포저블을 활용한 공통 상호작용 로직 추상화 및 코드 재사용성 향상</p>
           <p className="text-zinc-400 text-sm">Workbox 7 기반 PWA 서비스워커 전략 재설계(캐시 만료·라우팅·프리캐싱 정책 세분화)</p>
           <p className="text-zinc-400 text-sm">Playwright E2E 테스트 및 코드젠(codegen) 기반 자동화 테스트</p>
+          <p className="text-zinc-400 text-sm">PostHug를 활용한 에러 추적 및 분석</p>
         </div>
       </div>
 

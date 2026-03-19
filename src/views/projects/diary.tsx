@@ -28,7 +28,7 @@ const Diary = () => {
       {/* 헤더 */}
       <div className="p-6 border-b border-[#222]">
         <h3 className="text-xl font-semibold text-white">다이어리</h3>
-        <p className="text-zinc-500 text-sm mt-1">2021.03 ~ 현재 서비스중</p>
+        <p className="text-zinc-500 text-sm mt-1">2021.03 ~ 2026.03</p>
       </div>
       {/* 본문: 좌측 이미지 슬라이더 + 우측 텍스트 */}
       <div className="flex flex-col md:flex-row">
