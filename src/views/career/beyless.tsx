@@ -111,7 +111,7 @@ const Beyless = () => {
               <p className="pl-4">➢ 웹팩 설정, 코드 스플리팅을 이용한 프론트엔드 성능 최적화(크롬 lighthouse 성능측정 - First Contentful Paint 17.4s, ToTal Blocking Time 280s, Speed Index 15s 감소)</p>
               <p className="pl-4">➢ AWS Amplify를 이용해 배포 자동화</p>
               <p>► 주요 성과</p>
-              <p className="pl-4">➢ 23.03 상용서비스 시작, 현재 카메라 약 2070대 온라인</p>
+              <p className="pl-4">➢ 23.03 상용서비스 시작, 재직 당시 카메라 약 2,000대 이상 온라인</p>
               <p className="pl-4">➢ 동영상 타임라인 에디터를 포함한 비디오 플레이어 컴포넌트를 개발하여 이벤트 생성 및 세밀한 동영상 재생/편집 기능을 제공</p>
               <p className="pl-4">➢ 동영상 4개, 9개, 16개 화면 동시재생</p>
               <p className="pl-4">➢ 동영상의 메타데이터 획득이 안 되는 문제, 타임라인 생성 및 조작이 안 되는 문제 등 크로스 브라우징 이슈를 해결</p>
@@ -141,12 +141,12 @@ const Beyless = () => {
           <div>
             <h3 className="text-lg font-semibold text-white mb-2">⭐️ 페이스박스(FACE BOX)</h3>
             <div className="space-y-1 text-sm text-zinc-400 mb-4 pl-2">
-              <p>► 연계 업체 : (주)파워풀엑스</p>
+              <p>► 담당 형태 : 외부 납품용</p>
               <p>► 담당 역할 : 태블릿 앱 개발 및 유지보수(기여도 100%)</p>
               <p>► 업무 기간 : 2021.06 ~ 2022.02(약 8개월)</p>
               <p>► 기술 스택 : Flutter, Dart, AWS Rekognition, Google ML Kit</p>
               <p>► 업무 내용</p>
-              <p className="pl-4">➢ 자사 솔루션 AI 무인 매대 시스템에 태블릿을 붙여서 파워풀엑스에 납품</p>
+              <p className="pl-4">➢ 자사 솔루션 AI 무인 매대 시스템에 연동되는 태블릿 앱 외부 납품</p>
               <p className="pl-4">➢ AI 무인 매대와 연동되는 태블릿 앱(FACE BOX) 개발</p>
               <p className="pl-4">➢ AWS Rekognition 기반 얼굴인식 데이터를 사용하여 회원가입 및 인증을 구현</p>
               <p className="pl-4">➢ 상시 전면 카메라 활성상태에 얼굴인식 기능으로 조작이 필요없는 구매 프로세스 개발</p>
