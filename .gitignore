@@ -28,3 +28,5 @@ dist-ssr
 .omc/
 .sisyphus/
 .firebase/
+# CodeGraph local index
+.codegraph/
