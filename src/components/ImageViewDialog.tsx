@@ -45,7 +45,7 @@ const ImageViewDialog = ({ images, initialIndex = 0, open, onClose }: Props) => 
     >
       {/* 닫기 버튼 */}
       <button
-        className="fixed top-4 right-4 z-[201] flex items-center justify-center w-14 h-14 rounded-full bg-black/70 text-white hover:bg-black/95 transition-colors shadow-lg cursor-pointer"
+        className="fixed top-4 right-4 z-[201] flex items-center justify-center w-14 h-14 rounded-full bg-canvas/70 text-ink hover:bg-canvas/95 transition-colors shadow-lg cursor-pointer"
         onClick={(e) => { e.stopPropagation(); onClose(); }}
         aria-label="닫기"
       >
@@ -54,7 +54,7 @@ const ImageViewDialog = ({ images, initialIndex = 0, open, onClose }: Props) => 
 
       {/* 이미지 카운터 */}
       {images.length > 1 && (
-        <div className="fixed top-5 left-1/2 -translate-x-1/2 z-[201] text-white text-base font-bold select-none bg-black/60 px-5 py-2 rounded-full shadow-lg tracking-widest">
+        <div className="fixed top-5 left-1/2 -translate-x-1/2 z-[201] text-ink text-base font-bold select-none bg-canvas/60 px-5 py-2 rounded-full shadow-lg tracking-widest">
           {currentIndex + 1} / {images.length}
         </div>
       )}
@@ -62,7 +62,7 @@ const ImageViewDialog = ({ images, initialIndex = 0, open, onClose }: Props) => 
       {/* 이전 버튼 */}
       {images.length > 1 && (
         <button
-          className="fixed left-3 md:left-6 z-[201] flex items-center justify-center w-14 h-14 rounded-full bg-black/70 text-white hover:bg-black/95 transition-colors shadow-lg cursor-pointer"
+          className="fixed left-3 md:left-6 z-[201] flex items-center justify-center w-14 h-14 rounded-full bg-canvas/70 text-ink hover:bg-canvas/95 transition-colors shadow-lg cursor-pointer"
           onClick={(e) => { e.stopPropagation(); handlePrev(); }}
           aria-label="이전 이미지"
         >
@@ -80,7 +80,10 @@ const ImageViewDialog = ({ images, initialIndex = 0, open, onClose }: Props) => 
           key={currentIndex}
           src={images[currentIndex]}
           alt={`이미지 ${currentIndex + 1}`}
-          style={{ maxWidth: "90dvw", maxHeight: "90dvh", minWidth: "min(60dvw, 60dvh)", minHeight: "min(40dvw, 40dvh)" }}
+          /* min 을 걸면 안 된다. 작은 캡처(537x189)가 60dvw 까지 늘어나
+             글자가 뭉갠다. 확대 뷰의 목적은 크게 보는 게 아니라 또렷하게
+             보는 것이므로 원본보다 키우지 않는다. */
+          style={{ maxWidth: "90dvw", maxHeight: "90dvh" }}
           className="object-contain rounded-lg shadow-2xl"
           draggable={false}
         />
@@ -89,7 +92,7 @@ const ImageViewDialog = ({ images, initialIndex = 0, open, onClose }: Props) => 
       {/* 다음 버튼 */}
       {images.length > 1 && (
         <button
-          className="fixed right-3 md:right-6 z-[201] flex items-center justify-center w-14 h-14 rounded-full bg-black/70 text-white hover:bg-black/95 transition-colors shadow-lg cursor-pointer"
+          className="fixed right-3 md:right-6 z-[201] flex items-center justify-center w-14 h-14 rounded-full bg-canvas/70 text-ink hover:bg-canvas/95 transition-colors shadow-lg cursor-pointer"
           onClick={(e) => { e.stopPropagation(); handleNext(); }}
           aria-label="다음 이미지"
         >

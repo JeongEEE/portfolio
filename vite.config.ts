@@ -14,9 +14,8 @@ export default defineConfig(({ isSsrBuild }) => ({
         ? {}
         : {
             manualChunks: {
-              "vendor-three": ["three"],
               "vendor-swiper": ["swiper"],
-              "vendor-misc": ["axios", "simplex-noise", "react-scroll", "react-intersection-observer"],
+              "vendor-misc": ["react-scroll", "react-intersection-observer"],
             },
           },
     },

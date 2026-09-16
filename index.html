@@ -5,7 +5,52 @@
     <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>김규정 Portfolio</title>
+    <meta name="description" content="Vue·React·Next 를 쓰는 웹 프론트엔드 개발자 김규정의 포트폴리오." />
 
+    <!-- 모바일 브라우저 주소창 색을 테마에 맞춘다 -->
+    <meta name="theme-color" content="#f4f4f5" media="(prefers-color-scheme: light)" />
+    <meta name="theme-color" content="#0a0a0b" media="(prefers-color-scheme: dark)" />
+
+    <!--
+      공유 카드. 이 태그들은 원래 public/index.html 에 있었는데, SSG 가
+      dist/index.html 을 새로 써서 덮어버리는 바람에 실제로는 나가지 않았다.
+      (카카오톡·슬랙에 링크를 걸면 제목만 뜨고 썸네일·설명은 비어 있었다)
+      빌드 템플릿인 이 파일에 둬야 산출물에 살아남는다.
+    -->
+    <meta property="og:type" content="website" />
+    <meta property="og:title" content="김규정 Portfolio" />
+    <meta property="og:description" content="김규정의 웹 포트폴리오 입니다!" />
+    <meta property="og:url" content="https://portfolio.purplediary.kr/" />
+    <meta property="og:image" content="https://purplediary.kr/api/images/diary_purple_thumbnail2.png" />
+    <meta property="og:image:width" content="1200" />
+    <meta property="og:image:height" content="627" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!--
+      테마 초기화. CSS 보다 먼저, 동기로 실행돼야 첫 페인트가 깜빡이지 않는다.
+      번들에 넣으면 실행이 늦어 흰 화면이 한 번 스쳐 지나가므로 인라인으로 둔다.
+      data-theme 을 항상 설정하는 게 중요하다 - 토큰의 light-dark() 와
+      Tailwind 의 dark: 유틸이 같은 기준을 보게 만드는 장치다.
+    -->
+    <script>
+      (function () {
+        var theme = null;
+        try {
+          theme = localStorage.getItem("theme");
+        } catch (e) {
+          /* 프라이빗 모드 등에서 접근이 막힐 수 있다. 시스템 설정으로 넘어간다. */
+        }
+        if (theme !== "light" && theme !== "dark") {
+          theme = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        }
+        document.documentElement.dataset.theme = theme;
+
+        /* 등장 연출의 '숨김' 상태는 이 클래스 아래에만 걸려 있다.
+           여기서 붙여야 첫 페인트부터 숨은 상태로 시작한다. 번들에서 붙이면
+           내용이 한 번 보였다가 사라지는 깜빡임이 생긴다. */
+        document.documentElement.classList.add("js");
+      })();
+    </script>
   </head>
   <body>
     <div id="root"></div>

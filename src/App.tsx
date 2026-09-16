@@ -1,81 +1,51 @@
-import React, { lazy, Suspense } from "react";
+import React from "react";
 import Info from "/src/views/info";
 import About from "/src/views/about";
-import Skills from "/src/views/skills";
-import Link from "/src/views/link";
 import Projects from "/src/views/projects/index";
 import Career from "/src/views/career/index";
 import Footer from "/src/views/footer";
 import TopButton from "/src/components/topButton";
 
-const Background = lazy(() => import("/src/components/background"));
-const StarField = lazy(() => import("/src/components/StarField"));
-const ComputerCanvas = lazy(() => import("/src/components/computer"));
-
+/*
+ * 섹션 배경은 globals.css 의 body 가 --bg 로 깔아준다.
+ * 루트가 overflow-x-hidden 이 아니라 clip 인 이유: hidden 은 스크롤 컨테이너를
+ * 만들어 버려서 안쪽 position:sticky 가 페이지가 아니라 이 div 를 기준으로
+ * 삼는다. 그러면 프로젝트 섹션 왼쪽 단이 따라오지 않고 그냥 굳는다.
+ * clip 은 잘라내기만 하고 컨테이너를 만들지 않는다.
+ *
+ * 섹션마다 bg 를 다시 칠하지 않는 이유: 라이트/다크 어느 쪽이든 배경 명도차가
+ * 1.1:1 수준이라 눈에 안 잡힌다. 섹션 구분은 여백과 경계선이 맡는다.
+ */
 function App() {
   return (
-    <div className="w-full overflow-x-hidden">
-      {/* 1. #info Section */}
-      <section id="info" className="relative min-h-screen w-full bg-black flex flex-col">
-        <div className="relative z-10 max-w-5xl mx-auto w-full px-6 md:px-8 h-[600px] flex-shrink-0">
+    <div className="relative w-full overflow-x-clip">
+      {/* min-h-screen 대신 100dvh: 모바일 주소창이 접힐 때 레이아웃이 튀지 않는다 */}
+      <section id="info" className="min-h-[100dvh] flex items-center">
+        <div className="max-w-5xl mx-auto w-full px-6 md:px-8">
           <Info />
         </div>
-        {/* ComputerCanvas: 섹션 전체 배경으로 absolute 배치 */}
-        <div id="computerBox" className="absolute inset-0 z-[1]">
-          <Suspense fallback={
-            <div className="absolute bottom-[10vh] left-[49vw] z-[5]">
-              <div className="w-8 h-8 border-2 border-zinc-400 border-t-transparent rounded-full animate-spin" />
-            </div>
-          }>
-            <ComputerCanvas />
-          </Suspense>
-        </div>
       </section>
 
-      {/* 2. #about Section */}
-      <section id="about" className="relative w-full bg-[#0a0a0a]">
-        <div className="relative z-10 max-w-5xl mx-auto w-full px-6 md:px-8">
+      <section id="about">
+        <div className="max-w-5xl mx-auto w-full px-6 md:px-8">
           <About />
         </div>
-        <Suspense fallback={null}>
-          <Background />
-        </Suspense>
       </section>
 
-      {/* 3. #skills Section */}
-      <section id="skills" className="relative w-full bg-black">
-        <div className="relative z-10 max-w-5xl mx-auto w-full px-4 md:px-8">
-          <Skills />
-        </div>
-      </section>
-
-      {/* 4. #link Section */}
-      <section id="link" className="relative w-full">
-        <div className="relative z-10 max-w-5xl mx-auto w-full px-6 md:px-8">
-          <Link />
-        </div>
-        <Suspense fallback={null}>
-          <StarField />
-        </Suspense>
-      </section>
-
-      {/* 5. #projects Section */}
-      <section id="projects" className="relative w-full bg-[#0a0a0a]">
-        <div className="relative z-10 max-w-5xl mx-auto w-full px-4 md:px-8">
+      <section id="projects">
+        <div className="max-w-5xl mx-auto w-full px-6 md:px-8">
           <Projects />
         </div>
       </section>
 
-      {/* 6. #career Section */}
-      <section id="career" className="relative w-full bg-black">
-        <div className="relative z-10 max-w-5xl mx-auto w-full px-4 md:px-8">
+      <section id="career">
+        <div className="max-w-5xl mx-auto w-full px-6 md:px-8">
           <Career />
         </div>
       </section>
 
-      {/* 7. Footer Section */}
-      <footer className="relative w-full bg-black">
-        <div className="relative z-10 max-w-5xl mx-auto w-full px-6 md:px-8">
+      <footer>
+        <div className="max-w-5xl mx-auto w-full px-6 md:px-8">
           <Footer />
         </div>
       </footer>

@@ -1,30 +1,17 @@
-import { Fragment, useState, useEffect } from "react"
-import Navigation from "./navigation"
+import React from "react";
+import Navigation from "./navigation";
+import { useScrolledPast } from "/src/hooks/useScrolledPast";
 
-const Layout = (props: any) => {
-  const [show, setShow] = useState(false);
-  useEffect(() => {
-    const handleShow = () => {
-      if (window.scrollY > 70) {
-        setShow(true)
-      } else {
-        setShow(false)
-      }
-    }
-    window.addEventListener("scroll", handleShow)
-    return () => {
-      window.removeEventListener("scroll", handleShow)
-    }
-  }, [])
+const Layout = ({ children }: { children: React.ReactNode }) => {
+  const [scrolled, sentinel] = useScrolledPast(70);
 
   return (
-    <Fragment>
-      <div>
-        <Navigation show={show} />
-        <main>{props.children}</main>
-      </div>
-    </Fragment>
-  )
-}
+    <div className="relative">
+      {sentinel}
+      <Navigation show={scrolled} />
+      <main>{children}</main>
+    </div>
+  );
+};
 
-export default Layout
+export default Layout;

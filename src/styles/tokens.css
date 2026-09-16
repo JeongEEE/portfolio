@@ -1,12 +1,47 @@
+/*
+ * 디자인 토큰 — 라이트/다크 단일 정의
+ *
+ * light-dark() 로 두 모드 값을 한 줄에 둔다. 어느 쪽이 적용될지는
+ * color-scheme 이 정하므로, 테마 토글은 :root 의 color-scheme 만 바꾸면 된다.
+ * (값을 두 벌 복사하지 않으므로 한쪽만 고치는 실수가 구조적으로 안 생긴다)
+ *
+ * 대비비 실측 (WCAG 2.1, sRGB 상대휘도):
+ *   ink      라이트 16.12:1 / 다크 18.00:1   (AAA)
+ *   ink-body 라이트  9.50:1 / 다크  9.62:1   (AAA)
+ *   ink-muted 라이트 6.01:1 / 다크  5.79:1   (AA)
+ *   accent   라이트  5.72:1 / 다크  7.35:1   (AA / AAA)
+ *   accent 위 글자   라이트 6.29:1 / 다크 7.35:1 (AA / AAA)
+ *
+ * 액센트가 모드별로 다른 이유: 같은 색을 두 배경에 쓸 수 없기 때문이다.
+ * 로즈 #fb7185 는 다크에서 7.35:1 이지만 라이트 배경에서는 2.9:1 로 떨어져
+ * 본문 링크에 못 쓴다. 같은 색조의 어두운 값(#be123c)으로 갈아끼워
+ * 색감은 유지하고 대비만 확보한다.
+ */
+
 :root {
-  --color-bg: #000000;
-  --color-bg-2: #0a0a0a;
-  --color-bg-card: #111111;
-  --color-bg-card-hover: #1a1a1a;
-  --color-border: #222222;
-  --color-border-subtle: #1a1a1a;
-  --color-surface: #333333;
-  --color-muted: #52525b;
-  --color-text-secondary: #a1a1aa;
-  --color-text: #ffffff;
+  color-scheme: light dark;
+
+  /* 배경 — 카드는 이 명도차로 구분하지 않는다. 명도차가 1.1:1 수준이라
+     눈에 안 잡히기 때문. 면 구분은 --line 이 담당한다. raised/hover 는
+     호버 피드백처럼 '순간 변화'에만 쓴다. */
+  --bg:           light-dark(#f4f4f5, #0a0a0b);
+  --bg-raised:    light-dark(#fbfbfc, #131316);
+  --bg-hover:     light-dark(#e9e9ec, #1c1c21);
+
+  /* 경계 */
+  --line:         light-dark(#d8d8dc, #26262c);
+  --line-strong:  light-dark(#b8b8c0, #3a3a42);
+
+  /* 글자 3단 */
+  --ink:          light-dark(#18181b, #f4f4f5);
+  --ink-body:     light-dark(#3f3f46, #b4b4bd);
+  --ink-muted:    light-dark(#5c5c66, #8a8a94);
+
+  /* 액센트 — 페이지 전체에서 이것 하나만 */
+  --accent:       light-dark(#be123c, #fb7185);
+  --accent-ink:   light-dark(#ffffff, #0a0a0b);
 }
+
+/* 수동 토글. color-scheme 만 고정하면 위 light-dark() 가 전부 따라온다. */
+:root[data-theme="light"] { color-scheme: light; }
+:root[data-theme="dark"]  { color-scheme: dark; }

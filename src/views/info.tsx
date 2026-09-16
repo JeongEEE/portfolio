@@ -1,27 +1,53 @@
 import React from "react";
+import { Link } from "react-scroll";
+import { ArrowRight, Github } from "lucide-react";
+import Reveal from "/src/components/reveal";
 import { CAREER } from "/src/constants";
 
+/*
+ * 예전 히어로는 자기소개 여섯 줄이었는데, "열정", "커뮤니케이션", "지속적 성장"처럼
+ * 어느 이력서에나 있는 말이라 읽는 사람 머리에 남는 게 없었다. 정작 강한 내용은
+ * 아래 경력 섹션에 묻혀 있었다. 무엇을 만드는 사람인지 먼저 말한다.
+ */
 const Info = () => {
   return (
-    // 부모 App.tsx가 이미 max-w-5xl mx-auto px-6 md:px-8 h-[600px] 컨테이너 제공
-    // 내부에서 별도 컨테이너 불필요, 별도 배경색 불필요
-    <div className="h-full flex flex-col justify-center py-16">
-      {/* 직함 */}
-      <p className="text-sm md:text-base text-zinc-400 tracking-widest uppercase mb-2">Web Frontend Developer</p>
-      {/* 이름 */}
-      <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">김규정 포트폴리오</h1>
-      {/* 구분선 */}
-      <div className="h-0.5 w-16 bg-white mb-8"></div>
-      {/* 자기소개 6줄 */}
-      <div className="space-y-1 text-sm md:text-base leading-7 text-zinc-400">
-        <p>안녕하세요! 저는 {CAREER}년차 웹 프론트엔드 개발자로, Vue와 React를 중점적으로 다루고 있습니다.</p>
-        <p>저는 프론트엔드 개발에 열정을 가지고 있으며, 새로운 기술과 트렌드를 항상 주시하고 적용하는 것에 관심이 많습니다.</p>
-        <p>또한 팀 프로젝트에서 원활한 커뮤니케이션과 협업을 통해 공동 목표를 달성하는 것을 중요시합니다.</p>
-        <p>문제 해결 능력과 창의성을 발휘하여 유연하고 효율적인 코드를 작성하며</p>
-        <p>사용자와 개발자 모두에게 만족스러운 결과물을 제공하고자 합니다.</p>
-        <p>함께 일하면서 지속적인 성장과 개발 역량을 향상시키는데 기여하고 싶습니다. 감사합니다.</p>
+    <Reveal stagger className="py-16">
+      <p className="text-xs md:text-sm font-mono uppercase tracking-[0.2em] text-ink-muted mb-6">
+        Web Frontend Developer
+      </p>
+
+      <h1 className="text-4xl md:text-5xl lg:text-6xl font-semibold text-ink tracking-tight leading-[1.2] mb-6">
+        비식별화 SaaS를
+        <br />
+        글로벌 서비스로 만듭니다
+      </h1>
+
+      <p className="text-base md:text-lg text-ink-body leading-relaxed max-w-[52ch] mb-10">
+        {CAREER}년차 프론트엔드 개발자 김규정입니다. Vue와 React를 주로 쓰고,
+        필요하면 서버와 배포까지 맡습니다.
+      </p>
+
+      <div className="flex flex-wrap items-center gap-3">
+        <Link
+          to="projects"
+          smooth={true}
+          className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-accent text-accent-ink font-semibold cursor-pointer hover:opacity-85 active:scale-[0.98] transition-all"
+        >
+          프로젝트 보기
+          <ArrowRight size={18} />
+        </Link>
+
+        <a
+          href="https://github.com/JeongEEE"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-line-strong text-ink font-semibold hover:bg-hover active:scale-[0.98] transition-all"
+        >
+          <Github size={18} />
+          GitHub
+        </a>
       </div>
-    </div>
+    </Reveal>
   );
 };
 

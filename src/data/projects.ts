@@ -1,0 +1,106 @@
+import type { Work } from "./types";
+
+export const projects: Work[] = [
+  {
+    title: "다이어리 v2",
+    period: "2025.12 ~ 서비스 중",
+    stack: ["Vue 3.5", "Quasar 2.x", "TypeScript 5.x", "Pinia 3.x", "Vue Router 4", "Vite 7.x", "Tiptap 3.x", "Chart.js 4.x", "PixiJS 8.x", "Socket.io-client 4.x", "VueUse", "PWA (Workbox 7)", "Playwright"],
+    features: ["메모장", "차계부", "가계부", "주차장", "내문서", "게시판", "휴지통", "달력", "지도", "게임", "글꼴 커스터마이징", "모바일 지원", "PUSH 알림"],
+    highlights: [
+      "Vue 2 + Vuetify 기반 서비스를 Vue 3 + Quasar + TypeScript 로 전면 마이그레이션 (2025.12 ~ 2026.03 완료)",
+      "빌드 시스템을 webpack(Vue CLI) → Vite 로 전환, rollup-plugin-visualizer 로 번들 분석 환경 구축",
+      "상태 관리를 Vuex → Pinia 로 교체, 도메인별 스토어 분리 및 타입 안전성 확보",
+    ],
+    details: [
+      "텍스트 에디터를 CKEditor4 → Tiptap 3.x 로 교체, 코드 블록·테이블·이미지·색상 커스텀 확장 구성",
+      "VueUse 컴포저블로 공통 상호작용 로직 추상화, 코드 재사용성 향상",
+      "Workbox 7 기반 PWA 서비스워커 전략 재설계 (캐시 만료·라우팅·프리캐싱 정책 세분화)",
+      "Playwright E2E 테스트 및 codegen 기반 자동화 테스트",
+      "PostHog 를 활용한 에러 추적 및 분석",
+    ],
+    images: ["images/diary_v2-1.webp"],
+  },
+  {
+    title: "다이어리",
+    period: "2021.03 ~ 2026.03",
+    links: [{ label: "URL", url: "https://purplediary.kr" }],
+    stack: ["Vue 2.7", "Vuetify 2.x", "Vuex 3", "Vue Router 3", "JavaScript", "Socket.io-client 4.x", "Chart.js 3.x", "PixiJS 8.x", "matter-js 0.20", "CKEditor4", "PWA (Workbox)", "SimpleWebAuthn", "crypto-js", "Playwright"],
+    features: ["메모장", "차계부", "가계부", "주차장", "내문서", "게시판", "휴지통", "달력", "지도", "게임", "글꼴 커스터마이징", "모바일 지원", "PUSH 알림"],
+    highlights: [
+      "메모·게시판·달력·가계부·차계부·코드북 등 10여 개 도메인을 아우르는 개인용 올인원 다이어리 설계 및 개발",
+      "SimpleWebAuthn 으로 WebAuthn(패스키·생체인증) 로그인 흐름 구현",
+      "PixiJS + matter-js 물리 엔진 기반 미니게임 9종 구현 (pinball, candy crush, tetris, snake, brick breaker 등)",
+    ],
+    details: [
+      "PC·태블릿·모바일 어느 환경에서나 쓸 수 있도록 구성",
+      "글꼴·글자크기 커스터마이징 지원",
+      "Chart.js 로 가계부 지출 통계 및 시각화 대시보드 구현",
+      "Socket.io 기반 실시간 데이터 동기화 및 Web Push 알림 연동",
+      "Vue CLI PWA 플러그인 + Workbox 로 오프라인 지원 및 서비스워커 설정",
+      "서버 모니터링·사용자 관리·SSH 터미널을 포함한 관리자 페이지 구현",
+      "Playwright E2E 테스트 작성 및 자동화 스크립트 구성",
+    ],
+    images: Array.from({ length: 10 }, (_, i) => `images/diary_screenshot${i + 1}.webp`),
+  },
+  {
+    title: "다이어리 서버",
+    period: "2024.01 ~ 유지보수 중",
+    stack: ["Express.js 5", "TypeScript 5.x", "Prisma 7.x (MariaDB)", "Redis (ioredis)", "MinIO", "JWT", "Socket.io 4.x", "web-push", "nodemailer", "sharp", "winston", "ssh2", "Mocha / Chai / Supertest", "Google GenAI"],
+    features: ["다이어리 서버", "DB 관리", "외부 API 호출"],
+    highlights: [
+      "Express.js 5 + TypeScript 기반 RESTful API 서버 설계 및 개발 (메모·가계부·달력·차계부·게시판·지도·게임 전 도메인)",
+      "JWT 인증과 SimpleWebAuthn 서버 라이브러리를 활용한 WebAuthn(패스키) 인증 흐름 설계 및 구현",
+      "Prisma ORM 으로 스키마 관리·트랜잭션 처리, MariaDB + Redis 이중 저장소 아키텍처 운영",
+    ],
+    details: [
+      "API Key 발급·권한 체크·사용량 쿼터 미들웨어로 외부 연동용 인증 레이어 구축",
+      "MinIO 오브젝트 스토리지 연동으로 첨부파일·이미지 업로드/다운로드 처리, sharp 로 서버사이드 리사이징",
+      "web-push 및 nodemailer 로 푸시 알림·이메일 발송 구현",
+      "Google GenAI SDK 연동 AI 서비스 API 개발",
+      "express-rate-limit 기반 요청 제한, winston + daily-rotate-file 로 구조화 로깅 구축",
+      "Mocha / Chai / Supertest 기반 단위·E2E 테스트 작성",
+    ],
+    images: Array.from({ length: 3 }, (_, i) => `images/diary_backend${i + 1}.webp`),
+  },
+  {
+    title: "웹 포트폴리오",
+    period: "2023.04 ~",
+    links: [
+      { label: "URL", url: "https://portfolio.purplediary.kr" },
+      { label: "GitHub", url: "https://github.com/JeongEEE/portfolio" },
+    ],
+    /* 기술 스택을 실제 package.json 기준으로 정정했다. 이전에 적혀 있던
+       Recoil·MUI·Emotion 은 쓰지 않고, Three.js·Firebase SDK 는 제거했다. */
+    stack: ["React 18", "TypeScript", "Vite 7", "Tailwind CSS v4", "vite-react-ssg", "Swiper", "Firebase Hosting"],
+    features: ["자기소개", "경력·프로젝트", "기술 스택", "라이트/다크 모드", "모바일 지원"],
+    highlights: [
+      "제출과 열람이 편하도록 만든 단일 페이지 포트폴리오",
+      "vite-react-ssg 로 정적 생성해 초기 렌더와 공유 카드(OG) 대응",
+      "CSS light-dark() 기반 토큰으로 라이트·다크 두 모드를 한 벌의 값으로 관리",
+    ],
+    images: Array.from({ length: 4 }, (_, i) => `images/port${i + 1}.webp`),
+  },
+  {
+    title: "쇼핑몰",
+    period: "2023.02",
+    links: [
+      { label: "URL", url: "https://shopping-react-ece42.firebaseapp.com" },
+      { label: "GitHub", url: "https://github.com/JeongEEE/shopping-react-nextjs" },
+    ],
+    stack: ["React", "Next.js", "TypeScript", "Recoil", "MUI", "Emotion", "Firebase"],
+    features: [
+      "Firebase 로그인/회원가입",
+      "상품 목록·검색·카테고리 (Pagination)",
+      "오늘의 Hot 상품",
+      "장바구니·찜 리스트·마이페이지",
+      "결제 페이지(모의)·주문 목록",
+      "관리자 상품/카테고리 관리",
+      "상품 할인·할인 쿠폰",
+    ],
+    highlights: [
+      "Next.js 기반 React 쇼핑몰. 서버사이드 렌더링 학습을 목표로 개발",
+      "상태 관리는 Recoil, 레이아웃은 MUI, 스타일은 Emotion 으로 구성",
+    ],
+    images: Array.from({ length: 6 }, (_, i) => `images/shopping${i + 1}.webp`),
+  },
+];

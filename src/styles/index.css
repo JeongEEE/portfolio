@@ -1,4 +1,37 @@
 @import "tailwindcss";
 @source "../";
+
+/* 폰트
+   Pretendard 는 통짜(2.0MB)가 아니라 동적 서브셋을 쓴다. unicode-range 로
+   92조각 분할돼 있어 브라우저가 페이지에 실제 등장한 글자의 조각만 받는다. */
+@import "pretendard/dist/web/variable/pretendardvariable-dynamic-subset.css";
+@import "@fontsource-variable/geist/wght.css";
+@import "@fontsource-variable/geist-mono/wght.css";
+
 @import "./tokens.css";
 @import "./globals.css";
+
+/* dark: 유틸은 data-theme 을 본다. 초기 스크립트(index.html)가 data-theme 을
+   항상 설정하므로 토큰의 light-dark() 와 판정이 어긋나지 않는다. */
+@custom-variant dark (&:where([data-theme="dark"], [data-theme="dark"] *));
+
+@theme inline {
+  /* 이름 주의: --color-page 로 두면 Tailwind v4 가 bg-page 유틸을 만들지 않는다.
+     빌드는 성공하고 클래스만 조용히 무효가 되므로 canvas 로 쓴다. */
+  --color-canvas:      var(--bg);
+  --color-raised:      var(--bg-raised);
+  --color-hover:       var(--bg-hover);
+  --color-line:        var(--line);
+  --color-line-strong: var(--line-strong);
+  --color-ink:         var(--ink);
+  --color-ink-body:    var(--ink-body);
+  --color-ink-muted:   var(--ink-muted);
+  --color-accent:      var(--accent);
+  --color-accent-ink:  var(--accent-ink);
+
+  /* 한글이 섞이면 Pretendard 가 받는다. Geist 는 라틴 전용이라 앞에 둬도
+     한글은 자동으로 다음 폰트로 넘어간다. */
+  --font-sans:    "Pretendard Variable", system-ui, sans-serif;
+  --font-display: "Geist Variable", "Pretendard Variable", system-ui, sans-serif;
+  --font-mono:    "Geist Mono Variable", ui-monospace, monospace;
+}

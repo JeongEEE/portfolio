@@ -6,8 +6,8 @@ const Footer = () => {
     setTodayYear(new Date().getFullYear().toString());
   }, []);
   return (
-    <div className="py-8 text-center">
-      <p className="text-zinc-500 text-sm">{"© " + todayYear + ". Kim Gyu Jeong. All rights reserved."}</p>
+    <div className="border-t border-line py-8 text-center">
+      <p className="text-ink-muted text-sm">{"© " + todayYear + ". Kim Gyu Jeong. All rights reserved."}</p>
     </div>
   );
 };
