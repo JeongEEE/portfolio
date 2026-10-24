@@ -16,12 +16,12 @@ export function careerYears(now: Date = new Date()): number {
 }
 
 /*
- * 마지막 퇴사월(자라소프트 2026.11)에서 연차를 멈춘다. 구직 기간까지 세면
+ * 마지막 퇴사월(자라소프트 2026.10)에서 연차를 멈춘다. 구직 기간까지 세면
  * 이력서의 재직 기간 합과 숫자가 어긋난다. 새 회사에 들어가면 이 값을 지우거나 옮긴다.
  *
  * SSG 라 이 값은 빌드 시점에 HTML 로 굳는다 (브라우저에서는 hydration 때 바로잡힌다).
  */
-const LAST_DAY = new Date(2026, 10, 30);
+const LAST_DAY = new Date(2026, 9, 31);
 
 export const CAREER = careerYears(new Date(Math.min(Date.now(), LAST_DAY.getTime())));
 
