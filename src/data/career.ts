@@ -9,12 +9,12 @@ export const companies: Company[] = [
   {
     name: "(주)자라소프트",
     logo: "images/jarasoft_logo_black_ver.svg",
-    period: "2025.02 ~ 현재",
+    period: "2025.02 ~ 2026.11",
     team: "응용기술팀",
     works: [
       {
         title: "Blur.me Enterprise",
-        period: "2025.08 ~ 현재",
+        period: "2025.08 ~ 2026.11",
         role: "웹 프론트엔드 (기여도 50%)",
         stack: ["Next.js 13", "React 18", "JavaScript", "Recoil", "MUI v5", "Joy UI", "X-DataGrid", "Mapbox GL", "ApexCharts", "react-hook-form", "i18next", "Framer Motion"],
         highlights: [
@@ -31,7 +31,7 @@ export const companies: Company[] = [
       },
       {
         title: "Blur.me",
-        period: "2025.02 ~ 현재",
+        period: "2025.02 ~ 2026.11",
         role: "웹 프론트엔드 (기여도 50%)",
         stack: ["Next.js 14", "React 18", "TypeScript", "Recoil", "Jotai", "Tailwind CSS", "MUI", "i18next", "React Konva", "Video.js", "WebAssembly", "Stripe", "Paddle", "AWS Cognito", "AWS S3", "Framer Motion"],
         highlights: [
