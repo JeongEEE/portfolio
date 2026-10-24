@@ -7,6 +7,7 @@ import "swiper/css/pagination";
 import { ChevronRight, ExternalLink } from "lucide-react";
 import ImageViewDialog from "/src/components/ImageViewDialog";
 import { imageSizes } from "/src/data/imageSizes";
+import { useTheme } from "/src/hooks/useTheme";
 import type { Work } from "/src/data/types";
 
 /**
@@ -26,6 +27,8 @@ const WorkCard = ({ work, variant = "nested" }: { work: Work; variant?: Variant 
   const [dialogIndex, setDialogIndex] = useState(0);
   const [dialogOpen, setDialogOpen] = useState(false);
   const entry = variant === "entry";
+  const theme = useTheme();
+  const images = theme === "dark" && work.darkImages ? work.darkImages : work.images;
 
   const openDialog = (index: number) => {
     setDialogIndex(index);
@@ -46,7 +49,7 @@ const WorkCard = ({ work, variant = "nested" }: { work: Work; variant?: Variant 
 
     한 작업 안에서는 크기가 고정되므로 슬라이드를 넘겨도 들썩이지 않는다.
   */
-  const dims = work.images.map((src) => imageSizes[src]).filter(Boolean);
+  const dims = images.map((src) => imageSizes[src]).filter(Boolean);
   const ratio = dims.length ? Math.min(...dims.map(([w, h]) => w / h)) : 16 / 9;
   const tallest = dims.length ? Math.max(...dims.map(([, h]) => h)) : 560;
 
@@ -164,7 +167,7 @@ const WorkCard = ({ work, variant = "nested" }: { work: Work; variant?: Variant 
           max-w/max-h 만 걸면 원본보다 커지지 않으므로 둘 다 사라진다. 방향을
           따로 판별할 필요도 없다 — 가로든 세로든 상자 안에 들어가기만 하면 된다.
         */}
-        {work.images.length > 0 && (
+        {images.length > 0 && (
           <Swiper
             modules={[Navigation, Pagination]}
             navigation
@@ -172,7 +175,7 @@ const WorkCard = ({ work, variant = "nested" }: { work: Work; variant?: Variant 
             className="w-full overflow-hidden rounded-lg border border-line"
             style={{ aspectRatio: ratio, maxHeight: `min(${tallest}px, 560px, 65vh)` }}
           >
-            {work.images.map((src, i) => {
+            {images.map((src, i) => {
               const [w, h] = imageSizes[src] ?? [];
               return (
                 <SwiperSlide key={src}>
@@ -195,7 +198,7 @@ const WorkCard = ({ work, variant = "nested" }: { work: Work; variant?: Variant 
         )}
 
         <ImageViewDialog
-          images={work.images}
+          images={images}
           initialIndex={dialogIndex}
           open={dialogOpen}
           onClose={() => setDialogOpen(false)}

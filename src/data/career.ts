@@ -27,7 +27,7 @@ export const companies: Company[] = [
           "API Key 발급·삭제 및 REST API 연동 관리 페이지 개발",
           "네트워크·시스템·보안 등 엔터프라이즈 설정 페이지 개발",
         ],
-        images: Array.from({ length: 16 }, (_, i) => `images/blurme_enterprise${i + 1}.webp`),
+        images: Array.from({ length: 12 }, (_, i) => `images/blurme_enterprise${i + 1}.webp`),
       },
       {
         title: "Blur.me",
@@ -51,7 +51,8 @@ export const companies: Company[] = [
           "next/font/local 로 Mona Sans 로컬 최적화(font-display: swap), Pretendard 는 non-blocking 비동기 로드, CDN 에 preconnect + dns-prefetch",
           "이미지 CDN 직접 연결로 서버리스 함수 실행 비용 제거 및 응답속도 개선",
         ],
-        images: Array.from({ length: 17 }, (_, i) => `images/blurme${i + 1}.webp`),
+        images: Array.from({ length: 14 }, (_, i) => `images/blurme${i + 1}.webp`),
+        darkImages: Array.from({ length: 14 }, (_, i) => `images/blurme_dark${i + 1}.webp`),
       },
     ],
   },

@@ -20,6 +20,8 @@ export type Work = {
   /** 접어서 보여줄 나머지. 버리지 않는다. */
   details?: string[];
   images: string[];
+  /** 다크 모드에서 images 대신 보여줄 스크린샷. images 와 같은 순서·같은 개수. */
+  darkImages?: string[];
   links?: { label: string; url: string }[];
   features?: string[];
 };
