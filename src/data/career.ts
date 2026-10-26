@@ -16,7 +16,7 @@ export const companies: Company[] = [
         title: "Blur.me",
         period: "2025.02 ~ 2026.10",
         role: "웹 프론트엔드 (기여도 30%)",
-        stack: ["Next.js 14", "React 18", "TypeScript", "Recoil", "Jotai", "Tailwind CSS", "MUI", "i18next", "React Konva", "Video.js", "WebAssembly", "Stripe", "Paddle", "AWS Cognito", "AWS S3", "Framer Motion", "PostHog", "Playwright", "Vitest"],
+        stack: ["Next.js 14", "React 18", "TypeScript", "Recoil", "Jotai", "Tailwind CSS", "MUI", "i18next", "React Konva", "Video.js", "WebAssembly", "Stripe", "Paddle", "AWS Cognito", "AWS S3", "PostHog", "Playwright", "Vitest"],
         highlights: [
           "영상·이미지·PDF 속 얼굴·번호판을 AI 로 자동 블러 처리하는 글로벌 비식별화 SaaS(17개 언어) 개발",
           "데스크톱 LCP 4.6초('느림') → 2.5초 이하: 코드 스플리팅, MUI·lodash 트리쉐이킹, CDN 캐시 전략, 폰트·이미지 최적화",
@@ -38,9 +38,7 @@ export const companies: Company[] = [
           "폴더 내보내기 진행 조회가 폴더 크기에 비례해 늘던 구조(500개 폴더 기준 최대 2,400회 요청)를 신규 파일만 묶어 조회하도록 바꿔 서버 부하 감소",
           "재편집한 파일 대신 이전 결과물이 내려가던 내보내기 정합성 문제를 경로별로 찾아 수정",
           "Playwright E2E 로 요금제·결제 진입 경로와 17개 언어 요금제 화면 검증 자동화",
-          "next-auth + AWS Cognito 기반 소셜 로그인 및 인증 플로우 구현",
           "react-i18next 기반 17개 언어 지원",
-          "Framer Motion 을 활용한 랜딩페이지 인터랙션 및 모바일 반응형 UI 개발",
           "Recoil 전역 상태 관리 및 Jotai SSR 대응 처리",
           "optimizePackageImports 로 MUI·lodash 트리쉐이킹, 번들 최적화",
           "공개 페이지 CDN 캐시와 정적 자산 장기 캐시 적용, 인증·개인화 페이지는 캐시 분리",
