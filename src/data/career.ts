@@ -13,23 +13,6 @@ export const companies: Company[] = [
     team: "응용기술팀",
     works: [
       {
-        title: "Blur.me Enterprise",
-        period: "2025.08 ~ 2026.10",
-        role: "웹 프론트엔드 (기여도 30%)",
-        stack: ["Next.js 13", "React 18", "JavaScript", "Recoil", "MUI v5", "Joy UI", "X-DataGrid", "Mapbox GL", "ApexCharts", "react-hook-form", "i18next", "Framer Motion"],
-        highlights: [
-          "기업 고객용 비식별화 솔루션 관리 대시보드(어드민) 개발 및 유지보수",
-          "MUI X-DataGrid 기반 작업 상태 보드와 대용량 목록 관리 UI 구현",
-          "ApexCharts 로 처리 현황·사용량 통계 대시보드 구현",
-        ],
-        details: [
-          "워크스페이스·사용자 권한 관리 및 조직 단위 멤버 초대/관리 기능 구현",
-          "API Key 발급·삭제 및 REST API 연동 관리 페이지 개발",
-          "네트워크·시스템·보안 등 엔터프라이즈 설정 페이지 개발",
-        ],
-        images: Array.from({ length: 12 }, (_, i) => `images/blurme_enterprise${i + 1}.webp`),
-      },
-      {
         title: "Blur.me",
         period: "2025.02 ~ 2026.10",
         role: "웹 프론트엔드 (기여도 30%)",
@@ -64,6 +47,23 @@ export const companies: Company[] = [
         ],
         images: Array.from({ length: 14 }, (_, i) => `images/blurme${i + 1}.webp`),
         darkImages: Array.from({ length: 14 }, (_, i) => `images/blurme_dark${i + 1}.webp`),
+      },
+      {
+        title: "Blur.me Enterprise",
+        period: "2025.08 ~ 2026.10",
+        role: "웹 프론트엔드 (기여도 30%)",
+        stack: ["Next.js 13", "React 18", "JavaScript", "Recoil", "MUI v5", "Joy UI", "X-DataGrid", "Mapbox GL", "Chart.js", "react-hook-form", "i18next", "Framer Motion"],
+        highlights: [
+          "기업 고객용 비식별화 솔루션 관리 대시보드(어드민) 개발 및 유지보수",
+          "MUI X-DataGrid 기반 작업 상태 보드와 대용량 목록 관리 UI 구현",
+          "Chart.js 로 처리 현황·사용량 통계 대시보드 구현",
+        ],
+        details: [
+          "워크스페이스·사용자 권한 관리 및 조직 단위 멤버 초대/관리 기능 구현",
+          "API Key 발급·삭제 및 REST API 연동 관리 페이지 개발",
+          "네트워크·시스템·보안 등 엔터프라이즈 설정 페이지 개발",
+        ],
+        images: Array.from({ length: 12 }, (_, i) => `images/blurme_enterprise${i + 1}.webp`),
       },
       {
         title: "Blur.me Admin",
