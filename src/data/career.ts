@@ -15,7 +15,7 @@ export const companies: Company[] = [
       {
         title: "Blur.me",
         period: "2025.02 ~ 2026.10",
-        role: "웹 프론트엔드 (기여도 50%)",
+        role: "웹 프론트엔드 (기여도 30%)",
         stack: ["Next.js 14", "React 18", "TypeScript", "Recoil", "Jotai", "Tailwind CSS", "MUI", "i18next", "React Konva", "Video.js", "WebAssembly", "Stripe", "Paddle", "AWS Cognito", "AWS S3", "Framer Motion", "PostHog", "Playwright", "Vitest"],
         highlights: [
           "영상·이미지·PDF 속 얼굴·번호판을 AI 로 자동 블러 처리하는 글로벌 비식별화 SaaS(17개 언어) 개발",
@@ -48,7 +48,7 @@ export const companies: Company[] = [
       {
         title: "Blur.me Admin",
         period: "2025.02 ~ 2025.10",
-        role: "웹 프론트엔드",
+        role: "웹 프론트엔드 (기여도 50%)",
         stack: ["Next.js 14", "React 18", "TypeScript", "Recoil", "Chart.js", "react-window", "react-datepicker"],
         highlights: [
           "Blur.me 운영팀용 내부 관리자 페이지 개발: 사용자·업로드·크레딧·구독 내역 조회",
