@@ -63,7 +63,7 @@ export const companies: Company[] = [
           "API Key 발급·삭제 및 REST API 연동 관리 페이지 개발",
           "네트워크·시스템·보안 등 엔터프라이즈 설정 페이지 개발",
         ],
-        images: Array.from({ length: 12 }, (_, i) => `images/blurme_enterprise${i + 1}.webp`),
+        images: Array.from({ length: 11 }, (_, i) => `images/blurme_enterprise${i + 1}.webp`),
       },
       {
         title: "Blur.me Admin",
