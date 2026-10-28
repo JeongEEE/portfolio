@@ -13,7 +13,7 @@ import { imageSizes } from "/src/data/imageSizes";
 const Career = () => {
   return (
     <div className="py-24 md:py-32">
-      <SectionHeader index="03" title="CAREER" />
+      <SectionHeader index="02" title="CAREER" />
 
       <div className="flex flex-col gap-20">
         {companies.map((company) => (

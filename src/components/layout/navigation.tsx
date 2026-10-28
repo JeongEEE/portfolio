@@ -5,8 +5,8 @@ import ThemeToggle from "/src/components/themeToggle"
 
 const navItems = [
   { to: "about", label: "About" },
-  { to: "projects", label: "Projects" },
   { to: "career", label: "Career" },
+  { to: "projects", label: "Projects" },
 ]
 
 const Navigation = ({ show }: { show: boolean }) => {

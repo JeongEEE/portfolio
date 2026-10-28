@@ -90,27 +90,4 @@ export const projects: Work[] = [
     ],
     images: Array.from({ length: 4 }, (_, i) => `images/port${i + 1}.webp`),
   },
-  {
-    title: "쇼핑몰",
-    period: "2023.02",
-    links: [
-      { label: "URL", url: "https://shopping-react-ece42.firebaseapp.com" },
-      { label: "GitHub", url: "https://github.com/JeongEEE/shopping-react-nextjs" },
-    ],
-    stack: ["React", "Next.js", "TypeScript", "Recoil", "MUI", "Emotion", "Firebase"],
-    features: [
-      "Firebase 로그인/회원가입",
-      "상품 목록·검색·카테고리 (Pagination)",
-      "오늘의 Hot 상품",
-      "장바구니·찜 리스트·마이페이지",
-      "결제 페이지(모의)·주문 목록",
-      "관리자 상품/카테고리 관리",
-      "상품 할인·할인 쿠폰",
-    ],
-    highlights: [
-      "Next.js 기반 React 쇼핑몰. 서버사이드 렌더링 학습을 목표로 개발",
-      "상태 관리는 Recoil, 레이아웃은 MUI, 스타일은 Emotion 으로 구성",
-    ],
-    images: Array.from({ length: 6 }, (_, i) => `images/shopping${i + 1}.webp`),
-  },
 ];

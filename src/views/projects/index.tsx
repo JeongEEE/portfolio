@@ -12,7 +12,7 @@ import { projects } from "/src/data/projects";
 const Projects = () => {
   return (
     <div className="py-24 md:py-32">
-      <SectionHeader index="02" title="PROJECTS" />
+      <SectionHeader index="03" title="PROJECTS" />
 
       <div className="divide-y divide-line border-b border-line">
         {projects.map((project) => (

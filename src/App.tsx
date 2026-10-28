@@ -32,15 +32,15 @@ function App() {
         </div>
       </section>
 
-      <section id="projects">
-        <div className="max-w-5xl mx-auto w-full px-6 md:px-8">
-          <Projects />
-        </div>
-      </section>
-
       <section id="career">
         <div className="max-w-5xl mx-auto w-full px-6 md:px-8">
           <Career />
+        </div>
+      </section>
+
+      <section id="projects">
+        <div className="max-w-5xl mx-auto w-full px-6 md:px-8">
+          <Projects />
         </div>
       </section>
 
