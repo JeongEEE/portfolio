@@ -28,8 +28,12 @@ export type Work = {
 
 export type Company = {
   name: string;
+  /** 재직 이후 사명이 바뀐 경우의 현재 사명. 이름 옆에 덧붙여 보여준다. */
+  renamedTo?: string;
   logo: string;
   period: string;
   team: string;
+  /** 회사 단위 업무 요약. 프로젝트 목록 앞에서 한눈에 훑도록 세 줄 안팎으로 둔다. */
+  summary: string[];
   works: Work[];
 };

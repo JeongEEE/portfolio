@@ -32,11 +32,21 @@ const Career = () => {
                   />
                 </div>
                 <div>
-                  <h3 className="font-semibold text-ink">{company.name}</h3>
+                  <h3 className="font-semibold text-ink">
+                    {company.name}
+                    {company.renamedTo && (
+                      <span className="ml-2 text-sm font-normal text-ink-muted">(현 {company.renamedTo})</span>
+                    )}
+                  </h3>
                   <p className="font-mono text-sm text-ink-muted">{company.period}</p>
                   <p className="text-sm text-ink-muted">{company.team}</p>
                 </div>
               </header>
+              <ul className="mt-5 max-w-3xl list-disc space-y-1.5 pl-5 text-sm text-ink marker:text-ink-muted">
+                {company.summary.map((line) => (
+                  <li key={line}>{line}</li>
+                ))}
+              </ul>
             </Reveal>
 
             <div className="ml-4 divide-y divide-line border-l border-line pl-6 md:ml-8 md:pl-10">

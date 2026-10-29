@@ -11,6 +11,11 @@ export const companies: Company[] = [
     logo: "images/jarasoft_logo_black_ver.svg",
     period: "2025.02 ~ 2026.10",
     team: "응용기술팀",
+    summary: [
+      "영상·이미지·PDF 속 얼굴·번호판을 AI 로 자동 블러 처리하는 글로벌 비식별화 SaaS 프론트엔드 개발",
+      "기업 고객용 비식별화 솔루션 관리 대시보드(어드민) 개발 및 유지보수",
+      "Blur.me 운영팀용 내부 관리자 페이지 개발",
+    ],
     works: [
       {
         title: "Blur.me",
@@ -86,9 +91,15 @@ export const companies: Company[] = [
   },
   {
     name: "(주)알로이스",
+    renamedTo: "아틀라스링크",
     logo: "images/aloys_logo.webp",
     period: "2023.12 ~ 2024.12",
     team: "앱개발팀",
+    summary: [
+      "Mega Live Studio, 라이브 방송용 실시간 모션 그래픽 플랫폼의 화면, Express API, MySQL 개발",
+      "Lottie 오버레이 편집·송출, 큐시트 직접/AI 작성, 방송기기와 WebSocket 실시간 통신",
+      "스마트 접현등 관제 국가과제 수행",
+    ],
     works: [
       {
         title: "Mega Live Studio",
@@ -125,6 +136,11 @@ export const companies: Company[] = [
     logo: "images/beyless_logo4.webp",
     period: "2019.09 ~ 2023.11",
     team: "플랫폼팀",
+    summary: [
+      "USEN Camera CCTV 실시간 스트리밍 웹 프론트엔드 전체 개발",
+      "AI 무인 매대 관리 웹·모바일 앱, 실시간 매대 관리 개발",
+      "Beflyer 2.0 드론관제 Vue.js 리뉴얼, 페이스박스·Drone Management·캣휠·드론 배송 앱 개발",
+    ],
     works: [
       {
         title: "USEN Camera",
