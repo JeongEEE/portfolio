@@ -35,11 +35,11 @@ const Info = () => {
 
       <div className="flex flex-wrap items-center gap-3">
         <Link
-          to="projects"
+          to="career"
           smooth={true}
           className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-accent text-accent-ink font-semibold cursor-pointer hover:opacity-85 active:scale-[0.98] transition-all"
         >
-          프로젝트 보기
+          경력사항
           <ArrowRight size={18} />
         </Link>
 
