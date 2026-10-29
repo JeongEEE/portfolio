@@ -91,7 +91,7 @@ export const companies: Company[] = [
   },
   {
     name: "(주)알로이스",
-    renamedTo: "아틀라스링크",
+    renamedTo: "(주)아틀라스링크",
     logo: "images/aloys_logo.webp",
     period: "2023.12 ~ 2024.12",
     team: "앱개발팀",
