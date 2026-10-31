@@ -1,13 +1,6 @@
-import React, { useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Navigation, Pagination } from "swiper/modules";
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
+import React from "react";
 import { ChevronRight, ExternalLink } from "lucide-react";
-import ImageViewDialog from "/src/components/ImageViewDialog";
-import { imageSizes } from "/src/data/imageSizes";
-import { useTheme } from "/src/hooks/useTheme";
+import { WorkGallery } from "/src/components/workGallery";
 import type { Work } from "/src/data/types";
 
 /**
@@ -24,34 +17,7 @@ import type { Work } from "/src/data/types";
 type Variant = "entry" | "nested";
 
 const WorkCard = ({ work, variant = "nested" }: { work: Work; variant?: Variant }) => {
-  const [dialogIndex, setDialogIndex] = useState(0);
-  const [dialogOpen, setDialogOpen] = useState(false);
   const entry = variant === "entry";
-  const theme = useTheme();
-  const images = theme === "dark" && work.darkImages ? work.darkImages : work.images;
-
-  const openDialog = (index: number) => {
-    setDialogIndex(index);
-    setDialogOpen(true);
-  };
-
-  /*
-    캐러셀 크기. 높이를 픽셀로 못 박으면 폭이 좁아질 때(모바일) 이미지는
-    폭에 맞춰 작아지는데 상자만 그대로라 아래위가 텅 빈다. 그래서 높이 대신
-    '비율'을 주고 상한만 픽셀로 건다.
-
-      aspect-ratio  이 작업에서 가장 세로로 긴 이미지의 비율.
-                    폭이 줄면 상자도 같이 줄어든다.
-      max-height    세 가지 중 가장 작은 값.
-                    tallest  원본보다 큰 상자는 빈 공간만 남기므로 (FACE BOX 는 469px)
-                    560px    세로 스크린샷(1242x2208)이 화면을 독차지하지 않게
-                    65vh     화면이 낮을 때 캐러셀 하나가 시야를 다 먹지 않게
-
-    한 작업 안에서는 크기가 고정되므로 슬라이드를 넘겨도 들썩이지 않는다.
-  */
-  const dims = images.map((src) => imageSizes[src]).filter(Boolean);
-  const ratio = dims.length ? Math.min(...dims.map(([w, h]) => w / h)) : 16 / 9;
-  const tallest = dims.length ? Math.max(...dims.map(([, h]) => h)) : 560;
 
   return (
     <article className={entry ? "md:grid md:grid-cols-[minmax(0,13rem)_minmax(0,1fr)] md:gap-x-10" : ""}>
@@ -155,54 +121,7 @@ const WorkCard = ({ work, variant = "nested" }: { work: Work; variant?: Variant 
           </p>
         )}
 
-        {/*
-          상자를 없앤 대신 스크린샷에는 테두리를 남긴다. 이미지 가장자리가
-          배경과 같은 밝기면 어디까지가 화면인지 경계가 사라지기 때문.
-
-          높이를 고정하고 그 안에서 이미지를 가운데 맞춘다. 예전에는 슬라이드마다
-          w-full 로 늘려서 두 가지가 동시에 망가졌다.
-          - 세로 스크린샷(1242x2208)이 폭에 맞춰 늘어나 높이 1573px 를 차지했다.
-            화면 한 장 보는 데 스크롤이 두 번 필요했다.
-          - 작은 캡처(365x386)가 2.42배로 늘어나 글자가 뭉갰다.
-          max-w/max-h 만 걸면 원본보다 커지지 않으므로 둘 다 사라진다. 방향을
-          따로 판별할 필요도 없다 — 가로든 세로든 상자 안에 들어가기만 하면 된다.
-        */}
-        {images.length > 0 && (
-          <Swiper
-            modules={[Navigation, Pagination]}
-            navigation
-            pagination={{ clickable: true }}
-            className="w-full overflow-hidden rounded-lg border border-line"
-            style={{ aspectRatio: ratio, maxHeight: `min(${tallest}px, 560px, 65vh)` }}
-          >
-            {images.map((src, i) => {
-              const [w, h] = imageSizes[src] ?? [];
-              return (
-                <SwiperSlide key={src}>
-                  {/* pb 는 페이지네이션 점이 이미지를 밟지 않게 비워두는 자리 */}
-                  <div className="flex h-full items-center justify-center px-3 pt-3 pb-9">
-                    <img
-                      src={src}
-                      width={w}
-                      height={h}
-                      className="max-h-full max-w-full cursor-zoom-in object-contain"
-                      alt={`${work.title} 화면 ${i + 1}`}
-                      loading={i === 0 ? undefined : "lazy"}
-                      onClick={() => openDialog(i)}
-                    />
-                  </div>
-                </SwiperSlide>
-              );
-            })}
-          </Swiper>
-        )}
-
-        <ImageViewDialog
-          images={images}
-          initialIndex={dialogIndex}
-          open={dialogOpen}
-          onClose={() => setDialogOpen(false)}
-        />
+        <WorkGallery work={work} />
       </div>
     </article>
   );

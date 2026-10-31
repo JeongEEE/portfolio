@@ -1,7 +1,5 @@
 import React from "react";
-import { Link } from "react-scroll";
 import { ArrowRight, Github } from "lucide-react";
-import Reveal from "/src/components/reveal";
 
 /*
  * 예전 히어로는 자기소개 여섯 줄이었는데, "열정", "커뮤니케이션", "지속적 성장"처럼
@@ -17,7 +15,7 @@ import Reveal from "/src/components/reveal";
  */
 const Info = () => {
   return (
-    <Reveal stagger className="py-16">
+    <div className="hero-enter py-16">
       <p className="text-xs md:text-sm font-mono uppercase tracking-[0.2em] text-ink-muted mb-6">
         Realtime · Canvas · Maps
       </p>
@@ -34,26 +32,25 @@ const Info = () => {
       </p>
 
       <div className="flex flex-wrap items-center gap-3">
-        <Link
-          to="career"
-          smooth={true}
-          className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-accent text-accent-ink font-semibold cursor-pointer hover:opacity-85 active:scale-[0.98] transition-all"
+        <a
+          href="#career"
+          className="inline-flex items-center gap-2 px-5 py-3 rounded-full bg-accent text-accent-ink font-semibold cursor-pointer hover:opacity-85 active:scale-[0.98] transition-[color,background-color,opacity,transform]"
         >
           경력사항
           <ArrowRight size={18} />
-        </Link>
+        </a>
 
         <a
           href="https://github.com/JeongEEE"
           target="_blank"
           rel="noopener noreferrer"
-          className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-line-strong text-ink font-semibold hover:bg-hover active:scale-[0.98] transition-all"
+          className="inline-flex items-center gap-2 px-5 py-3 rounded-full border border-line-strong text-ink font-semibold hover:bg-hover active:scale-[0.98] transition-[color,background-color,opacity,transform]"
         >
           <Github size={18} />
           GitHub
         </a>
       </div>
-    </Reveal>
+    </div>
   );
 };
 

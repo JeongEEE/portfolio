@@ -1,10 +1,5 @@
-/* 자동 생성 파일. 직접 고치지 말 것 — scripts/optimize-images.mjs 가 다시 쓴다. */
-
-/**
- * 이미지별 원본 픽셀 크기. <img width height> 로 넘겨 브라우저가 파일을 받기
- * 전에 자리를 비워두게 한다. 없으면 이미지가 도착할 때 아래 내용이 밀린다.
- */
-export const imageSizes: Record<string, [number, number]> = {
+// 자동 생성: pnpm prepare:images
+export const imageSizes: Readonly<Record<string, readonly [number, number]>> = {
   "images/aloys_logo.webp": [671, 242],
   "images/aws_cp.webp": [300, 300],
   "images/baive1.webp": [475, 258],
@@ -93,6 +88,7 @@ export const imageSizes: Record<string, [number, number]> = {
   "images/hoverlight2.webp": [1460, 900],
   "images/hoverlight3.webp": [1384, 930],
   "images/hoverlight4.webp": [1387, 930],
+  "images/jarasoft_logo_black_ver.svg": [134, 33],
   "images/megalive1.webp": [1443, 929],
   "images/megalive10.webp": [1438, 920],
   "images/megalive11.webp": [1441, 927],

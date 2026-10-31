@@ -30,3 +30,6 @@ dist-ssr
 .firebase/
 # CodeGraph local index
 .codegraph/
+
+# 빌드 시 재생성되는 반응형 이미지
+public/images/responsive/

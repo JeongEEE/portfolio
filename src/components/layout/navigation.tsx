@@ -1,5 +1,4 @@
 import React, { useState } from "react"
-import { Link } from "react-scroll"
 import { Menu, X } from "lucide-react"
 import ThemeToggle from "/src/components/themeToggle"
 
@@ -27,26 +26,24 @@ const Navigation = ({ show }: { show: boolean }) => {
           왼쪽 끝이 어긋나는데, 선과 여백으로 읽히는 레이아웃에서는 바로 티가 난다. */}
       <div className="mx-auto flex w-full max-w-5xl items-center justify-between px-6 md:px-8">
         {/* 로고 */}
-        <span
+        <button type="button"
           className="text-2xl font-bold cursor-pointer hover:opacity-70 transition-opacity"
           onClick={scrollToTop}
         >
           김규정 Portfolio
-        </span>
+        </button>
 
         {/* 우측 그룹: 메뉴 + 테마 토글 + 모바일 hamburger */}
         <div className="flex items-center gap-2">
           <nav className="hidden md:flex items-center gap-8 mr-4">
             {navItems.map(({ to, label }) => (
-              <Link
+              <a
                 key={to}
-                to={to}
-                spy={true}
-                smooth={true}
+                href={`#${to}`}
                 className="cursor-pointer hover:opacity-70 transition-opacity font-bold"
               >
                 {label}
-              </Link>
+              </a>
             ))}
           </nav>
 
@@ -78,16 +75,14 @@ const Navigation = ({ show }: { show: boolean }) => {
         {/* 메뉴 항목 */}
         <nav className="flex flex-col items-center gap-8">
           {navItems.map(({ to, label }) => (
-            <Link
+            <a
               key={to}
-              to={to}
-              spy={true}
-              smooth={true}
+              href={`#${to}`}
               className="text-ink text-2xl font-bold cursor-pointer hover:opacity-70 transition-opacity"
               onClick={() => setOpen(false)}
             >
               {label}
-            </Link>
+            </a>
           ))}
         </nav>
       </div>
