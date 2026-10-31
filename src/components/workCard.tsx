@@ -111,7 +111,7 @@ const WorkCard = ({ work, variant = "nested" }: { work: Work; variant?: Variant 
           {work.stack.map((tech) => (
             <li
               key={tech}
-              className="rounded-full border border-line px-2.5 py-1 font-mono text-xs text-ink-muted"
+              className="rounded-full border border-line px-2.5 py-1 font-mono text-xs text-ink-chip"
             >
               {tech}
             </li>

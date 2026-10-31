@@ -6,9 +6,8 @@
  * (값을 두 벌 복사하지 않으므로 한쪽만 고치는 실수가 구조적으로 안 생긴다)
  *
  * 대비비 실측 (WCAG 2.1, sRGB 상대휘도):
- *   ink      라이트 16.12:1 / 다크 18.00:1   (AAA)
- *   ink-body 라이트  9.50:1 / 다크  9.62:1   (AAA)
- *   ink-muted 라이트 6.01:1 / 다크  5.79:1   (AA)
+ *   ink / ink-body / ink-muted 라이트 19.10:1 / 다크 19.79:1 (AAA)
+ *   ink-chip 라이트 6.01:1 / 다크 5.79:1 (AA)
  *   accent   라이트  6.10:1 / 다크  7.78:1   (AA / AAA)
  *   accent 위 글자   라이트 6.70:1 / 다크  7.78:1 (AA / AAA)
  *
@@ -32,10 +31,13 @@
   --line:         light-dark(#d8d8dc, #26262c);
   --line-strong:  light-dark(#b8b8c0, #3a3a42);
 
-  /* 글자 3단 */
-  --ink:          light-dark(#18181b, #f4f4f5);
-  --ink-body:     light-dark(#3f3f46, #b4b4bd);
-  --ink-muted:    light-dark(#5c5c66, #8a8a94);
+  /* 본문과 보조 설명 모두 선명하게. 위계는 크기·굵기·간격으로 구분한다. */
+  --ink:          light-dark(#000000, #ffffff);
+  --ink-body:     var(--ink);
+  --ink-muted:    var(--ink);
+
+  /* 기술스택 칩은 기존의 보조 색상을 유지한다. */
+  --ink-chip:     light-dark(#5c5c66, #8a8a94);
 
   /* 액센트 — 페이지 전체에서 이것 하나만 */
   --accent:       light-dark(#1d4ed8, #60a5fa);

@@ -26,6 +26,7 @@
   --color-ink:         var(--ink);
   --color-ink-body:    var(--ink-body);
   --color-ink-muted:   var(--ink-muted);
+  --color-ink-chip:    var(--ink-chip);
   --color-accent:      var(--accent);
   --color-accent-ink:  var(--accent-ink);
 
