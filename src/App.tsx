@@ -20,10 +20,22 @@ function App() {
   return (
     <div className="relative w-full overflow-x-clip">
       {/* min-h-screen 대신 100dvh: 모바일 주소창이 접힐 때 레이아웃이 튀지 않는다 */}
-      <section id="info" className="min-h-[100dvh] flex items-center">
+      <section id="info" className="relative min-h-[100dvh] flex items-center">
         <div className="max-w-5xl mx-auto w-full px-6 md:px-8">
           <Info />
         </div>
+
+        {/* 스크롤 유도. 장식이 아니라 아래 섹션으로 가는 링크이기도 하다. */}
+        <a
+          href="#about"
+          aria-label="아래로 스크롤"
+          className="scroll-cue absolute bottom-8 left-1/2 -translate-x-1/2 flex flex-col items-center gap-2 text-ink-muted hover:text-ink transition-colors"
+        >
+          <span className="text-xs font-mono uppercase tracking-[0.2em]">Scroll</span>
+          <span className="flex h-10 w-6 justify-center rounded-full border-2 border-current pt-2">
+            <span className="scroll-cue-dot h-2 w-1 rounded-full bg-current" />
+          </span>
+        </a>
       </section>
 
       <section id="about">
