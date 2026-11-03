@@ -27,8 +27,8 @@ const Info = () => {
       </h1>
 
       <p className="text-base md:text-lg text-ink-body leading-relaxed max-w-[52ch] mb-10">
-        영상 비식별화 편집기, CCTV 스트리밍, 드론 관제. 8년 동안 Canvas 와 소켓 위에서
-        도는 화면을 주로 만들었습니다.
+        영상 비식별화 편집기, CCTV 스트리밍, 드론 관제. Canvas 와 소켓 위에서 도는
+        화면을 주로 만들었습니다.
       </p>
 
       <div className="flex flex-wrap items-center gap-3">
